@@ -2,9 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 const HeaderStyles = styled.header`
-  color: red;
-  background-color: pink;
+  background-color: var(--primary-bg);
+  color: var(--primary-color-text);
 `;
-export default function Header() {
+function Header() {
   return <HeaderStyles>Logo</HeaderStyles>;
 }
+export default Header;

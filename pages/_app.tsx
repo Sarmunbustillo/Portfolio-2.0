@@ -1,14 +1,12 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable react/jsx-props-no-spreading */
-
+import { AppProps } from 'next/app';
 import Page from '../components/Page';
 
-function MyApp({ Component, pageProps, apollo }) {
+function MyApp({ Component, pageProps }: AppProps) {
   return (
-        <Page>
-          <Component {...pageProps} />
-        </Page>
+    <Page>
+      <Component {...pageProps} />
+    </Page>
   );
-};
+}
 
 export default MyApp;
