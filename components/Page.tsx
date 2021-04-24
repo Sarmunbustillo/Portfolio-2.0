@@ -148,7 +148,8 @@ const GlobalStyles = createGlobalStyle`
     
     &:hover {
       --button-bg: var(--highlight);
-      --button-border: var(--highlight)
+      --button-border: var(--highlight);
+      --button-color-text: var(--secondary-color-text)
     }
 
   }

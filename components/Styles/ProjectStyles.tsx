@@ -84,7 +84,6 @@ const ProjectsStyles = styled.div`
   .project-description {
     --animate-x: 25vw;
     max-width: 40ch;
-
   }
 `;
 
