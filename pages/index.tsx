@@ -1,3 +1,11 @@
+import Landing from '../components/Landing';
+import Projects from '../components/Projects';
+
 export default function Home() {
-  return <h1>hello</h1>;
+  return (
+    <>
+      <Landing />
+      <Projects />
+    </>
+  );
 }

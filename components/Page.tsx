@@ -4,6 +4,7 @@ import Header from './Header';
 
 const GlobalStyles = createGlobalStyle`
 
+
     :root {
       /* Font */
       --font-family:  'Nunito', sans-serif;
@@ -18,7 +19,6 @@ const GlobalStyles = createGlobalStyle`
       --small: 0.8rem;
 
       /* Colors */
-      /* primary */
       --white: hsl(0, 0%, 100%);
 
       --cyan:hsl(180, 52%, 28%);
@@ -38,10 +38,14 @@ const GlobalStyles = createGlobalStyle`
       --blue-60:hsl(212, 100%, 87%);
 
       /* Shadows */
-      --shadow-smallest: 0px 4px 8px rgba(0,0,0,0.12);
+      --shadow-smallest: 0px 4px 8px rgba(0,0,0,0.12);;
       --shadow-small: 0 5px 10px rgba(0,0,0,0.12);
       --shadow-medium: 0 8px 30px rgba(0,0,0,0.12);
       --shadow-large: 0 30px 60px rgba(0,0,0,0.12);
+
+     /* sizes */
+     --container-max-width:1400px;
+     --border-radius: 4px;
     }
 
   html {
@@ -54,28 +58,37 @@ const GlobalStyles = createGlobalStyle`
 
   *, *::before, *::after {
     box-sizing:inherit;
+    margin: 0;
+    padding: 0;
   }
 
   body {
     --primary-bg:  var(--white);
-    --secudary-bg:  var(--black);
-    --primary-color-text:  var(--secudary-bg);
-    --secundary-color-text:  var(--primary-bg);
-    background-color: var(--secudary-bg);
-    color : var( --secundary-color-text);
-    background-image: url('/images/glasses.jpg');
+    --secondary-bg:  var(--black);
+    --primary-color-text:  var(--secondary-bg);
+    --secondary-color-text:  var(--primary-bg);
+    --highlight: var(--cyan-20);
+    --highlight-lighter: var(--cyan-60);
+    --highlight-darker: var(--cyan);
+    background-color: var(--secondary-bg);
+    color : var( --secondary-color-text);
 
-    padding: 0;
-    margin: 0;
+    /* background-image: url('/images/glasses.jpg'); */
     background-size: cover;
     background-repeat: no-repeat;
+    padding: 0;
+    margin: 0;
     min-height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
   }
 
-  h1 {font-size: var(--h1)}
+  h1 {
+    font-size: var(--h1);
+    }
 
-  h2 {font-size: var(--h2)}
+  h2 {
+    font-size: var(--h2);
+  }
 
   h3 {font-size: var(--h3)}
 
@@ -83,25 +96,64 @@ const GlobalStyles = createGlobalStyle`
 
   h5 {font-size:var(--h5)}
 
+
   small, .small {font-size: var(--small)}
 
   a {
     text-decoration: none;
+    color: inherit;
 
     &:hover {
-      text-decoration: underline;
+      text-decoration: none;
     }
   }
 
-   p,a {
+   p, a {
    font-size: var(--text)
+  }
+  p{
+    margin-bottom: 1rem;
   }
   button {
     font-family: var(--font-family);
     line-height: var(--line-height)
   }
 
+.button {
+  --button-border: var(--highlight);
+  --button-bg: var(--highlight);
+  --button-color-text: var(--secondary-color-text);
+  box-shadow: var(--shadow-small);
+  display: inline-flex;
+  justify-content: center;
+  background-color: var(--button-bg);
+  color: var(--button-color-text);
+  padding: .5em 1em;
+  border-radius: var(--border-radius);
+  border: 2px solid var(--button-border);
+  transition: background-color .3s ease-in-out, color .3s ease-in-out, border .3s ease-in-out;
+  font-weight: bold;
+  min-width: 8.05rem;
   
+
+  &:hover {
+    --button-bg:var(--highlight-darker);
+    --button-border: var(--highlight-darker)
+  }
+
+  &.button-inverse {
+    --button-bg: var(--primary-bg);
+    --button-color-text: var(--primary-color-text);
+    margin-left: 2rem;
+    
+    &:hover {
+      --button-bg: var(--highlight);
+      --button-border: var(--highlight)
+    }
+
+  }
+}
+
 `;
 
 const InnerStyle = styled.div``;
