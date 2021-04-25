@@ -3,7 +3,6 @@ import styled from 'styled-components';
 const ProjectsStyles = styled.section`
   position: relative;
   border-top: 8px solid var(--highlight-lighter);
-  min-height: 100vh;
   background-color: var(--primary-bg);
   color: var(--primary-color-text);
 
