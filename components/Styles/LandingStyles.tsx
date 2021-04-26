@@ -16,7 +16,7 @@ const LandingStyles = styled.section`
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     position: absolute;
     top: 0;
@@ -32,9 +32,15 @@ const LandingStyles = styled.section`
   }
 
   .descripton {
+    --text: 1rem;
     max-width: 50ch;
     h1 {
       line-height: 0.6;
+    }
+    h2 {
+      span {
+        border: 0;
+      }
     }
   }
   .highlight {

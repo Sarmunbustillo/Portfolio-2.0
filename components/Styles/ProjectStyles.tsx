@@ -1,12 +1,29 @@
 import styled from 'styled-components';
+import { mediaQueries } from '../../lib/mediaQueries';
 
 const ProjectsStyles = styled.div`
   --animate-x: 25vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem 0;
+  margin-bottom: 8rem;
   position: relative;
+
+  @media (max-width: ${mediaQueries.desktop}) {
+    flex-direction: column;
+    flex-flow: column;
+    margin-bottom: 4rem;
+  }
+
+  &:first-of-type {
+    margin-top: 6rem;
+    @media (max-width: ${mediaQueries.desktop}) {
+      margin-top: 4rem;
+    }
+  }
+  &:last-of-type {
+    margin-bottom: 0rem;
+  }
 
   &.animate {
     .project-pictures,
@@ -19,6 +36,11 @@ const ProjectsStyles = styled.div`
   &.left {
     flex-direction: row-reverse;
     flex-flow: row-reverse;
+
+    @media (max-width: ${mediaQueries.desktop}) {
+      flex-direction: column;
+      flex-flow: column;
+    }
 
     &::before {
       content: '';
@@ -60,25 +82,26 @@ const ProjectsStyles = styled.div`
   }
   .project-pictures {
     --animate-x: -25vw;
-    --image-max-width: 500px;
-    --image-max-height: 250px;
-    --image-min-size: 150px;
+    --image-max-width: 700px;
+    --image-max-height: 400px;
+    --image-min-height: 250px;
+    --image-min-width: 400px;
+
     --image-offset: 15%;
     position: relative;
+
+    @media (max-width: ${mediaQueries.desktop}) {
+      --image-max-size: auto;
+    }
+    @media (max-width: ${mediaQueries.mobile}) {
+      --image-min-width: 100%;
+    }
+
     img {
       object-fit: cover;
       object-position: center;
-      height: clamp(var(--image-min-size), 42vw, var(--image-max-width));
-      width: clamp(var(--image-min-size), 23vw, var(--image-max-height));
-
-      &:last-of-type {
-        position: absolute;
-        top: 50%;
-        left: 0%;
-        transform: translate3d(var(--image-offset), -50%, 0);
-        width: clamp(var(--image-min-size), 42vw, var(--image-max-width));
-        height: clamp(var(--image-min-size), 23vw, var(--image-max-height));
-      }
+      height: clamp(var(--image-min-height), 29vw, var(--image-max-height));
+      width: clamp(var(--image-min-width), 50vw, var(--image-max-width));
     }
   }
   .project-description {

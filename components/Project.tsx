@@ -5,8 +5,6 @@ import ProjectsStyles from './Styles/ProjectStyles';
 type Props = {
   imgPath: string;
   alt: string;
-  imgPath2: string;
-  alt2: string;
   projectTitle: string;
   projectDescription: string;
   projectLink: string;
@@ -17,8 +15,6 @@ type Props = {
 const Project = ({
   imgPath,
   alt,
-  imgPath2,
-  alt2,
   projectTitle,
   projectDescription,
   projectLink,
@@ -30,14 +26,7 @@ const Project = ({
   return (
     <ProjectsStyles ref={ref} className={layout}>
       <div className="project-pictures">
-        <img src={imgPath} alt={alt} loading="lazy" height="500" width="250" />
-        <img
-          src={imgPath2}
-          alt={alt2}
-          loading="lazy"
-          height="250"
-          width="500"
-        />
+        <img src={imgPath} alt={alt} loading="lazy" height="400" width="700" />
       </div>
       <div className="project-description">
         <h3>{projectTitle}</h3>

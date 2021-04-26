@@ -17,10 +17,10 @@ export default function Landing() {
             Frontend <span className="highlight"> Developer</span>
           </h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
-            consequuntur rem distinctio beatae quod tempora sequi ad debitis
-            repudiandae odio sit quisquam numquam officia quidem dolor,
-            voluptatum libero. Natus, neque!
+            I'm a Self-taught Frontend Web-Dev based in Hamburg. I am highly
+            adaptable and driven by learning. I prefer to continue challenging
+            myself, keep learning, and in doing interesting things that matter.
+            I also like football.
           </p>
         </div>
       </ContainerStyles>

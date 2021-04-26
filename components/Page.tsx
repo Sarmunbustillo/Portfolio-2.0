@@ -1,10 +1,8 @@
 import { ReactNode } from 'react';
-import styled, { createGlobalStyle } from 'styled-components';
-import Header from './Header';
+import { createGlobalStyle } from 'styled-components';
+import { mediaQueries } from '../lib/mediaQueries';
 
 const GlobalStyles = createGlobalStyle`
-
-
     :root {
       /* Font */
       --font-family:  'Nunito', sans-serif;
@@ -40,13 +38,25 @@ const GlobalStyles = createGlobalStyle`
       /* Shadows */
       --shadow-smallest: 0px 4px 8px rgba(0,0,0,0.12);;
       --shadow-small: 0 5px 10px rgba(0,0,0,0.12);
+      --shadow-small: 0 5px 10px rgba(59, 186, 186, 0.17);
       --shadow-medium: 0 8px 30px rgba(0,0,0,0.12);
       --shadow-large: 0 30px 60px rgba(0,0,0,0.12);
 
      /* sizes */
      --container-max-width:1400px;
      --border-radius: 4px;
+
+
+      
+    @media(max-width: ${mediaQueries.mobile}) {
+        --h1: 2.052rem;
+        --h2:  var(--h4);
+        --h3: var(--h4);
+        --text: .90rem;
     }
+      
+  }
+    
 
   html {
     box-sizing: border-box;
@@ -54,6 +64,8 @@ const GlobalStyles = createGlobalStyle`
     font-family: var(--font-family);
     line-height:var(--line-height);
     font-weight: 400;
+    
+    overflow-x: hidden;
   }
 
   *, *::before, *::after {
@@ -88,6 +100,11 @@ const GlobalStyles = createGlobalStyle`
 
   h2 {
     font-size: var(--h2);
+    
+    span {
+      position: relative;
+      border-bottom: 5px solid var(--highlight);
+    }
   }
 
   h3 {font-size: var(--h3)}
@@ -134,6 +151,12 @@ const GlobalStyles = createGlobalStyle`
   transition: background-color .3s ease-in-out, color .3s ease-in-out, border .3s ease-in-out;
   font-weight: bold;
   min-width: 8.05rem;
+
+  @media (max-width: ${mediaQueries.mobile}) {
+      display: flex;
+      
+      margin-bottom: 1rem;
+    }
   
 
   &:hover {
@@ -145,6 +168,10 @@ const GlobalStyles = createGlobalStyle`
     --button-bg: var(--primary-bg);
     --button-color-text: var(--primary-color-text);
     margin-left: 2rem;
+
+    @media (max-width: ${mediaQueries.mobile}) {
+      margin-left: 0rem;
+    }
     
     &:hover {
       --button-bg: var(--highlight);
@@ -153,16 +180,12 @@ const GlobalStyles = createGlobalStyle`
     }
 
   }
-}
-
-`;
-
-const InnerStyle = styled.div``;
+}`;
 
 const Page = ({ children }: { children: ReactNode }) => (
   <div>
     <GlobalStyles />
-    <InnerStyle>{children}</InnerStyle>
+    {children}
   </div>
 );
 export default Page;

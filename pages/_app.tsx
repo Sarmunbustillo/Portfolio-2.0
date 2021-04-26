@@ -1,4 +1,5 @@
 import { AppProps } from 'next/app';
+
 import Page from '../components/Page';
 
 function MyApp({ Component, pageProps }: AppProps) {

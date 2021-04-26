@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { mediaQueries } from '../../lib/mediaQueries';
 
 const ProjectsStyles = styled.section`
   position: relative;
@@ -6,14 +7,16 @@ const ProjectsStyles = styled.section`
   background-color: var(--primary-bg);
   color: var(--primary-color-text);
 
+  padding-bottom: 8rem;
+
+  @media (max-width: ${mediaQueries.mobile}) {
+    padding-bottom: 4rem;
+  }
+
   h2 {
+    margin-top: 1rem;
     text-align: center;
     font-size: var(--h1);
-
-    span {
-      position: relative;
-      border-bottom: 5px solid var(--highlight);
-    }
   }
   * {
     z-index: 2;
