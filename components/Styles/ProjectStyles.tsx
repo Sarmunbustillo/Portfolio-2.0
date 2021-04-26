@@ -48,7 +48,7 @@ const ProjectsStyles = styled.div`
       height: 126%;
       left: 50%;
       top: 50%;
-      transform: translate3d(-50%, -50%, 0);
+      transform: translate(-50%, -50%);
       position: absolute;
       z-index: 0;
       background-color: var(--highlight-lighter);
@@ -61,7 +61,7 @@ const ProjectsStyles = styled.div`
       height: 122%;
       left: 50%;
       top: 50%;
-      transform: translate3d(-50%, -50%, 0);
+      transform: translate(-50%, -50%);
       position: absolute;
       z-index: 1;
       background-color: var(--white);

@@ -49,7 +49,7 @@ const GlobalStyles = createGlobalStyle`
 
       
     @media(max-width: ${mediaQueries.mobile}) {
-        --h1: 2.052rem;
+        --h1: 2.000rem;
         --h2:  var(--h4);
         --h3: var(--h4);
         --text: .90rem;
