@@ -31,12 +31,16 @@ const Project = ({
       <div className="project-description">
         <h3>{projectTitle}</h3>
         <p>{projectDescription}</p>
-        <a href={projectLink} className="button">
-          See Website
-        </a>
-        <a href={projectGithub} className=" button button-inverse">
-          Github
-        </a>
+        <div className="project-buttons">
+          <span className="button-wrapper-border">
+            <a href={projectLink} className="button">
+              See Website
+            </a>
+          </span>
+          <a href={projectGithub} className=" button button-secondary">
+            Github
+          </a>
+        </div>
       </div>
     </ProjectsStyles>
   );

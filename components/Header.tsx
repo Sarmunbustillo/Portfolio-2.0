@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const HeaderStyles = styled.header`
-  background-color: var(--primary-bg);
-  color: var(--primary-color-text);
+  background-color: var(--brand-light);
+  color: var(--light-color-text);
 `;
 function Header() {
   return <HeaderStyles>Logo</HeaderStyles>;

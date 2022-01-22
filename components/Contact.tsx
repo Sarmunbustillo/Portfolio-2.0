@@ -6,16 +6,14 @@ export default function Contact() {
   return (
     <ContainerStyles>
       <ContactStyles>
-        <h2>
-          Let's <span>Talk</span>{' '}
-        </h2>
+        <h2>Let's Talk</h2>
         <div className="links">
-          <a href="mailto:sarmun.b@gmail.com" className="button">
+          <a href="mailto:sarmun.b@gmail.com" className="button button-third">
             Get in Touch
           </a>
           <a
             href="https://www.linkedin.com/in/sarmun-bustillo-947111199"
-            className="button"
+            className="button button-third"
             target="_blank"
             rel="noreferrer"
           >
@@ -23,7 +21,7 @@ export default function Contact() {
           </a>
           <a
             href="https://www.google.com"
-            className="button"
+            className="button button-third"
             target="_blank"
             rel="noreferrer"
           >

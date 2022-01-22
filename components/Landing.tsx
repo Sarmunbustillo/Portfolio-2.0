@@ -8,14 +8,10 @@ export default function Landing() {
   useParallax(sarRef);
   return (
     <LandingStyles>
-      <ContainerStyles>
+      <div>
         <div ref={sarRef} className="descripton">
-          <h1>
-            <span className="highlight">Sarmun</span> Bustillo
-          </h1>
-          <h2>
-            Frontend <span className="highlight"> Developer</span>
-          </h2>
+          <h1>Sarmun Bustillo</h1>
+          <h1>Frontend Developer</h1>
           <p>
             I'm a Self-taught Frontend Web-Dev based in Hamburg. I am highly
             adaptable and driven by learning. I prefer to continue challenging
@@ -23,7 +19,7 @@ export default function Landing() {
             I also like football.
           </p>
         </div>
-      </ContainerStyles>
+      </div>
       <div className="background-image" />
     </LandingStyles>
   );

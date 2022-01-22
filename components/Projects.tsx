@@ -1,15 +1,12 @@
 import React from 'react';
-import ContainerStyles from './Styles/ContainerStyles';
 import ProjectsStyles from './Styles/ProjectsStyles';
 import Project from './Project';
 
 export default function Projects() {
   return (
     <ProjectsStyles>
-      <ContainerStyles>
-        <h2>
-          Recent <span> Projects</span>
-        </h2>
+      <h2>Projects</h2>
+      <div className="project-grid">
         <Project
           imgPath="../images/projects/project1.png"
           alt="portfolio"
@@ -35,7 +32,7 @@ export default function Projects() {
           projectLink="#"
           projectGithub="#"
         />
-      </ContainerStyles>
+      </div>
     </ProjectsStyles>
   );
 }

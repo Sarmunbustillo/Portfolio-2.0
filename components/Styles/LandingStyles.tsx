@@ -3,7 +3,7 @@ import { mediaQueries } from '../../lib/mediaQueries';
 
 const fadeIn = keyframes`
   to {
-    opacity: .5;
+    opacity: .6;
   }
 `;
 const LandingStyles = styled.section`
@@ -21,7 +21,7 @@ const LandingStyles = styled.section`
     background-position: bottom;
     background-repeat: no-repeat;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     position: absolute;
     top: 0;
     left: 0;
@@ -42,7 +42,7 @@ const LandingStyles = styled.section`
     --text: 1rem;
     transform: translate(0, var(--parallax-y));
     -webkit-transform: translate(0, var(--parallax-y));
-    max-width: 50ch;
+    max-width: 92ch;
     position: fixed;
 
     @media (max-width: ${mediaQueries.mobile}) {
@@ -50,14 +50,23 @@ const LandingStyles = styled.section`
     }
 
     h1 {
-      line-height: 0.6;
+      line-height: 1.1;
+      background: var(--linear-gradient-1) fixed;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 12.4ch 7.6ch;
+      &:last-of-type {
+        margin-bottom: 1rem;
+      }
     }
+
     h2 {
       span {
         border: 0;
       }
     }
   }
+
   .highlight {
     color: var(--highlight);
   }

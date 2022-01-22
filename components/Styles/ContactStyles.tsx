@@ -7,19 +7,23 @@ const ContactStyles = styled.section`
   flex-direction: column;
   flex-flow: column;
   justify-content: center;
+  padding-block: var(--size-11);
+  @media (max-width: ${mediaQueries.mobile}) {
+    padding-block: var(--size-8);
+  }
   h2 {
-    margin: 1rem 0 2rem 0;
+    margin-bottom: var(--size-8);
     text-align: center;
   }
 
   .links {
-    margin-bottom: 4rem;
+    display: flex;
+    gap: var(--size-6);
     @media (max-width: ${mediaQueries.mobile}) {
       width: 100%;
     }
     a {
       @media (min-width: ${mediaQueries.mobile}) {
-        margin: 0 1rem;
       }
     }
   }

@@ -3,24 +3,46 @@ import { mediaQueries } from '../../lib/mediaQueries';
 
 const ProjectsStyles = styled.section`
   position: relative;
-  border-top: 8px solid var(--highlight-lighter);
-  background-color: var(--primary-bg);
-  color: var(--primary-color-text);
+  background: var(--brand-dark);
+  padding-block: var(--size-11);
+  @media (max-width: ${mediaQueries.mobile}) {
+    padding-block: var(--size-8);
+  }
 
-  padding-bottom: 8rem;
-
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50vw;
+    right: 0;
+    width: 300vw;
+    height: 0.5rem;
+    background: var(--linear-gradient-2) fixed;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -50vw;
+    right: 0;
+    width: 300vw;
+    height: 0.5rem;
+    background: var(--linear-gradient-2) fixed;
+  }
+  .project-grid {
+    display: grid;
+    gap: var(--size-9);
+  }
   @media (max-width: ${mediaQueries.mobile}) {
     padding-bottom: 4rem;
   }
 
   h2 {
-    margin-top: 1rem;
     text-align: center;
-    font-size: var(--h1);
+    margin-bottom: var(--size-9);
   }
   * {
     z-index: 2;
-    position: relative;
   }
 `;
 
