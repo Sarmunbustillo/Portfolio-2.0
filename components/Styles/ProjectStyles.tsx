@@ -64,6 +64,51 @@ const ProjectsStyles = styled.div`
       p {
         max-width: 60ch;
       }
+      ul {
+        display: grid;
+        gap: var(--size-2);
+      }
+      li {
+        display: grid;
+        gap: var(--size-3);
+        grid-template-columns: 1rem 1fr;
+        align-items: flex-start;
+
+        &::marker {
+          content: none;
+        }
+
+        &::before {
+          content: '';
+          background: var(--linear-gradient-2) fixed;
+          width: 100%;
+          height: 0.5rem;
+          position: relative;
+          top: 1rem;
+          border-radius: 2px;
+
+          @supports (-moz-appearance: none) {
+            background: var(--indigo-4);
+          }
+        }
+      }
+    }
+
+    &-tags {
+      display: flex;
+      gap: var(--size-3);
+      span {
+        font-size: var(--font-size-1);
+        background: var(--linear-gradient-2) fixed;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        @supports (-moz-appearance: none) {
+          background: var(--linear-gradient-1);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
     }
 
     &-buttons {

@@ -299,12 +299,19 @@ const GlobalStyles = createGlobalStyle`
 
   h4 {font-size: var( --font-size-fluid-1)}
 
-  h5 {font-size:var(--h5)}
+
 
 h2,h3,h4,h5,h6 {
+
   background: var(--linear-gradient-2) fixed;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  @supports (-moz-appearance:none ){
+    background: var(--indigo-4) ;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    }
 }
   small, .small {font-size: var(--font-size-0)}
 
@@ -312,12 +319,12 @@ h2,h3,h4,h5,h6 {
     text-decoration: none;
     color: inherit;
 
-    &:hover {
+    &:hover, &:focus-visible {
       text-decoration: none;
     }
   }
 
-   p, a , button{
+   p, a , button, ul , ol{
    font-size: var(--font-size-2)
   }
 
@@ -340,6 +347,10 @@ h2,h3,h4,h5,h6 {
     background: var(--linear-gradient-2) fixed ;
     display: inline-flex;
     border-radius: var(--border-radius);
+
+    @supports (-moz-appearance:none ){
+      background: var(--indigo-4)  ;
+      }
   }
 
 .button {
@@ -360,10 +371,10 @@ h2,h3,h4,h5,h6 {
 
   @media (max-width: ${mediaQueries.mobile}) {
       display: flex;
-      margin-bottom: 1rem;
+      width: 100%;
     }
   
-  &:hover {
+  &:hover, &:focus-visible {
     --button-bg: transparent;
     --button-border: var(--highlight-darker);
     --button-color-text: var( --dark-color-text);
@@ -374,9 +385,8 @@ h2,h3,h4,h5,h6 {
     --button-border:  var(--highlight);
     --button-color-text: var(--light-color-text);
      border: .3rem solid var(--button-border);
-
     
-    &:hover {
+    &:hover, &:focus-visible {
       --button-bg: var(--transparent);
       -button-color-text: var( --light-color-text);
     }
@@ -386,12 +396,11 @@ h2,h3,h4,h5,h6 {
       --button-border:  var(--highlight);
       border: .3rem solid var(--button-border);
 
-      &:hover {
+      &:hover, &:focus-visible {
         --button-bg: var(--highlight);
-    }
+      }
     }
 }
-
 `;
 
 const Page = ({ children }: { children: ReactNode }) => (

@@ -6,9 +6,10 @@ type Props = {
   imgPath: string;
   alt: string;
   projectTitle: string;
+  technologies: string[];
   projectDescription: string;
+  workDone: string[];
   projectLink: string;
-  projectGithub: string;
   layout?: string;
 };
 
@@ -16,9 +17,10 @@ const Project = ({
   imgPath,
   alt,
   projectTitle,
+  technologies,
   projectDescription,
+  workDone,
   projectLink,
-  projectGithub,
   layout,
 }: Props) => {
   const ref = useRef<HTMLElement>(null);
@@ -29,17 +31,29 @@ const Project = ({
         <img src={imgPath} alt={alt} loading="lazy" height="400" width="700" />
       </div>
       <div className="project-description">
+        <div className="project-tags">
+          {technologies.map((label, i) => (
+            <span key={`tag-${i}`}>{label}</span>
+          ))}
+        </div>
         <h3>{projectTitle}</h3>
         <p>{projectDescription}</p>
+        <ul>
+          {workDone.map((list, i) => (
+            <li key={`list-${i}`}>{list}</li>
+          ))}
+        </ul>
         <div className="project-buttons">
           <span className="button-wrapper-border">
-            <a href={projectLink} className="button">
+            <a
+              href={projectLink}
+              target="_blank"
+              rel="noreferrer"
+              className="button"
+            >
               See Website
             </a>
           </span>
-          <a href={projectGithub} className=" button button-secondary">
-            Github
-          </a>
         </div>
       </div>
     </ProjectsStyles>

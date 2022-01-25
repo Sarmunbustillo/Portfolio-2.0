@@ -18,13 +18,11 @@ const ContactStyles = styled.section`
 
   .links {
     display: flex;
+    flex-wrap: wrap;
     gap: var(--size-6);
+
     @media (max-width: ${mediaQueries.mobile}) {
       width: 100%;
-    }
-    a {
-      @media (min-width: ${mediaQueries.mobile}) {
-      }
     }
   }
 `;
