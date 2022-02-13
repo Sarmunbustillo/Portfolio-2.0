@@ -20,9 +20,10 @@ const ContactStyles = styled.section`
     display: flex;
     flex-wrap: wrap;
     gap: var(--size-6);
-
-    @media (max-width: ${mediaQueries.mobile}) {
-      width: 100%;
+    > * {
+      @media (max-width: ${mediaQueries.mobile}) {
+        width: 100%;
+      }
     }
   }
 `;

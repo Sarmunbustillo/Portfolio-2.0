@@ -1,6 +1,6 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import { useOnVieport } from '../lib/useOnVieport';
-import ProjectsStyles from './Styles/ProjectStyles';
+import SingleProjectStyles from './Styles/SingleProjectStyles';
 
 type Props = {
   imgPath: string;
@@ -26,7 +26,7 @@ const Project = ({
   const ref = useRef<HTMLElement>(null);
   useOnVieport(ref);
   return (
-    <ProjectsStyles ref={ref} className={layout}>
+    <SingleProjectStyles ref={ref} className={layout}>
       <div className="project-pictures">
         <img src={imgPath} alt={alt} loading="lazy" height="400" width="700" />
       </div>
@@ -56,7 +56,7 @@ const Project = ({
           </span>
         </div>
       </div>
-    </ProjectsStyles>
+    </SingleProjectStyles>
   );
 };
 

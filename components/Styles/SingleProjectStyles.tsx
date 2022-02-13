@@ -17,6 +17,7 @@ const ProjectsStyles = styled.div`
   @media (max-width: ${mediaQueries.desktop}) {
     flex-direction: column;
     flex-flow: column;
+    --row-gap: var(--size-7);
   }
 
   &.animate {
@@ -88,7 +89,7 @@ const ProjectsStyles = styled.div`
           border-radius: 2px;
 
           @supports (-moz-appearance: none) {
-            background: var(--indigo-4);
+            background: var(--highlight);
           }
         }
       }

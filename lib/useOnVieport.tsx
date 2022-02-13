@@ -7,9 +7,8 @@ const useOnVieport = (ref: React.MutableRefObject<HTMLElement>): void => {
       const rect = ref.current.getBoundingClientRect();
 
       const visible =
-        rect.top >= 0 &&
-        rect.bottom <=
-          (window.innerHeight || document.documentElement.clientHeight);
+        rect.bottom - rect.height / 2 <=
+        (window.innerHeight || document.documentElement.clientHeight);
 
       return visible ? ref?.current.classList.add('animate') : '';
     };

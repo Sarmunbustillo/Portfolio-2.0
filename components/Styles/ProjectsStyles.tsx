@@ -5,6 +5,7 @@ const ProjectsStyles = styled.section`
   position: relative;
   background: var(--brand-dark);
   padding-block: var(--size-11);
+
   @media (max-width: ${mediaQueries.mobile}) {
     padding-block: var(--size-8);
   }
@@ -19,6 +20,7 @@ const ProjectsStyles = styled.section`
     height: 0.5rem;
     background: var(--linear-gradient-2) fixed;
   }
+
   &::after {
     content: '';
     position: absolute;
@@ -29,10 +31,12 @@ const ProjectsStyles = styled.section`
     height: 0.5rem;
     background: var(--linear-gradient-2) fixed;
   }
+
   .project-grid {
     display: grid;
-    gap: var(--size-9);
+    gap: var(--size-10);
   }
+
   @media (max-width: ${mediaQueries.mobile}) {
     padding-bottom: 4rem;
   }
@@ -41,6 +45,7 @@ const ProjectsStyles = styled.section`
     text-align: center;
     margin-bottom: var(--size-9);
   }
+
   * {
     z-index: 2;
   }

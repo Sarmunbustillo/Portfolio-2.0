@@ -1,6 +1,5 @@
 import { useRef } from 'react';
 import LandingStyles from './Styles/LandingStyles';
-import ContainerStyles from './Styles/ContainerStyles';
 import { useParallax } from '../lib/useParallax';
 
 export default function Landing() {
@@ -13,10 +12,12 @@ export default function Landing() {
           <h1>Sarmun Bustillo</h1>
           <h1>Frontend Developer</h1>
           <p>
-            I'm a Self-taught Frontend Web-Dev based in Hamburg. I am highly
-            adaptable and driven by learning. I prefer to continue challenging
-            myself, keep learning, and in doing interesting things that matter.
-            I also like football.
+            I'm a Self-taught Frontend Web-Dev based in Hamburg devoted to
+            crafting exceptional web experiences. Currently, I'm focused on
+            building accessible, stylish and meaningful products at{' '}
+            <a href="https://www.f7.de/" target="_blank" rel="noreferrer">
+              F7 Media GmbH
+            </a>
           </p>
         </div>
       </div>

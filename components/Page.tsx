@@ -50,7 +50,7 @@ const GlobalStyles = createGlobalStyle`
   --font-size-fluid-4: clamp(var(--font-size-6), 9vw, var(--font-size-8));
 
 /* sizes */
---size-000: -0.8rem;
+  --size-000: -0.8rem;
   --size-00: -0.4rem;
   --size-1: 0.4rem;
   --size-2: 0.8rem;
@@ -254,12 +254,11 @@ const GlobalStyles = createGlobalStyle`
     --light-color-text:  var(--gray-0);
     --dark-color-text:  var(--brand-dark);
     --highlight: var(--indigo-4);
-    --highlight-lighter: var(--indigo-5);
-    --highlight-darker: var(--indigo-3);
+    --highlight-lighter: var(--indigo-3);
+    --highlight-darker: var(--indigo-5);
     --line-height: 1.75;
     background-color: var(--brand-dark);
     color : var( --light-color-text);
-
     /* background-image: url('/images/glasses.jpg'); */
     background-size: cover;
     background-repeat: no-repeat;
@@ -302,17 +301,24 @@ const GlobalStyles = createGlobalStyle`
 
 
 h2,h3,h4,h5,h6 {
-
-  background: var(--linear-gradient-2) fixed;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  @supports (-moz-appearance:none ){
-    background: var(--indigo-4) ;
+&:not(.not-multicolor) {
+    background: var(--linear-gradient-2) fixed;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    
+    @supports (-moz-appearance:none ){
+      background: var(--highlight) ;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
+  }
+
+  &.not-multicolor{
+    color: var(--highlight);
+  }
 }
+
+
   small, .small {font-size: var(--font-size-0)}
 
   a {
@@ -332,6 +338,12 @@ h2,h3,h4,h5,h6 {
     margin-bottom: 1rem;
   }
 
+  a:not(.button) {
+    border-bottom: 1px solid;
+    border-image-slice: 1;
+    border-width: 3px;
+    border-image-source: var(--linear-gradient-2);
+  }
   button {
     font-family: var(--font-family);
     line-height: var(--line-height)
