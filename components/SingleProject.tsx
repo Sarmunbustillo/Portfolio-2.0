@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React, { useRef } from 'react';
 import { useOnVieport } from '../lib/useOnVieport';
 import SingleProjectStyles from './Styles/SingleProjectStyles';
@@ -28,7 +29,7 @@ const Project = ({
   return (
     <SingleProjectStyles ref={ref} className={layout}>
       <div className="project-pictures">
-        <img src={imgPath} alt={alt} loading="lazy" height="400" width="700" />
+        <Image src={imgPath} alt={alt} height="400" width="700" />
       </div>
       <div className="project-description">
         <div className="project-tags">

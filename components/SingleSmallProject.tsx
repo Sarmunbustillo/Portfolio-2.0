@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React, { useRef } from 'react';
 import { useOnVieport } from '../lib/useOnVieport';
 import SingleSmallProjectStyles from './Styles/SingleSmallProjectStyles';
@@ -16,12 +17,12 @@ const SmallProject = ({ imgPath, alt, projectTitle, projectLink }: Props) => {
     <SingleSmallProjectStyles ref={ref}>
       <div className="project-picture">
         <a href={projectLink} target="_blank" rel="noreferrer" className="">
-          <img
+          <Image
             src={imgPath}
             alt={alt}
             loading="lazy"
-            height="400"
-            width="700"
+            height="180"
+            width="320"
           />
         </a>
       </div>

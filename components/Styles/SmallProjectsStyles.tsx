@@ -5,7 +5,7 @@ const SmallProjectsStyles = styled.div`
   position: relative;
   background: var(--brand-dark);
   text-align: center;
-  padding-block-start: var(--size-10);
+  padding-block-start: var(--size-11);
   @media (max-width: ${mediaQueries.mobile}) {
     padding-block-start: var(--size-8);
   }
@@ -26,7 +26,7 @@ const SmallProjectsStyles = styled.div`
 
   h3 {
     text-align: center;
-    margin-bottom: var(--size-8);
+    margin-bottom: var(--size-6);
   }
   * {
     z-index: 2;

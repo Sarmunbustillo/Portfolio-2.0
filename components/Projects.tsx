@@ -7,10 +7,10 @@ export default function Projects() {
   return (
     <>
       <ProjectsStyles>
-        <h2>Projects - Playground</h2>
+        <h2>Projects </h2>
         <div className="project-grid">
           <SingleProject
-            imgPath="../images/projects/LSS.png"
+            imgPath="/images/projects/LSS.png"
             alt="Language Service Solutions"
             projectTitle="Language Service Solutions"
             technologies={['Styled-JSX', 'React', 'Next', 'Vercel']}
@@ -23,7 +23,7 @@ export default function Projects() {
           />
           <SingleProject
             layout="left"
-            imgPath="../images/projects/LSS.png"
+            imgPath="/images/projects/LSS.png"
             alt="portfolio"
             projectTitle="Portfolio"
             technologies={['React', 'Next', 'Styled-JSX']}
@@ -34,7 +34,7 @@ export default function Projects() {
             projectLink="#"
           />
           <SingleProject
-            imgPath="../images/projects/LSS.png"
+            imgPath="/images/projects/LSS.png"
             alt="portfolio"
             projectTitle="Portfolio"
             technologies={['React', 'Next', 'Styled-JSX']}
