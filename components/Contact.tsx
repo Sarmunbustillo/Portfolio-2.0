@@ -5,7 +5,7 @@ import ContainerStyles from './Styles/ContainerStyles';
 export default function Contact() {
   return (
     <ContainerStyles>
-      <ContactStyles>
+      <ContactStyles id="contact">
         <h2>Let's Talk</h2>
         <div className="links">
           <span className="button-wrapper-border">

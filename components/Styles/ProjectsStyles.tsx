@@ -1,14 +1,9 @@
 import styled from 'styled-components';
-import { mediaQueries } from '../../lib/mediaQueries';
 
 const ProjectsStyles = styled.section`
   position: relative;
   background: var(--brand-dark);
-  padding-block: var(--size-11);
-
-  @media (max-width: ${mediaQueries.mobile}) {
-    padding-block: var(--size-8);
-  }
+  padding-block: clamp(var(--size-9), 4vw, var(--size-11));
 
   &::before {
     content: '';
@@ -34,16 +29,13 @@ const ProjectsStyles = styled.section`
 
   .project-grid {
     display: grid;
-    gap: var(--size-10);
-  }
-
-  @media (max-width: ${mediaQueries.mobile}) {
-    padding-bottom: 4rem;
+    gap: clamp(var(--size-8), 4vw, var(--size-10));
   }
 
   h2 {
     text-align: center;
-    margin-bottom: var(--size-9);
+
+    margin-bottom: clamp(var(--size-8), 4vw, var(--size-9));
   }
 
   * {

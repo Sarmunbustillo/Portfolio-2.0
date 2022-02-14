@@ -2,13 +2,11 @@ import styled from 'styled-components';
 import { mediaQueries } from '../../lib/mediaQueries';
 
 const SmallProjectsStyles = styled.div`
+  display: grid;
   position: relative;
   background: var(--brand-dark);
   text-align: center;
-  padding-block-start: var(--size-11);
-  @media (max-width: ${mediaQueries.mobile}) {
-    padding-block-start: var(--size-8);
-  }
+  padding-block-start: clamp(var(--size-10), 4vw, var(--size-11));
 
   .small-projects-grid {
     display: flex;
@@ -18,10 +16,6 @@ const SmallProjectsStyles = styled.div`
     scroll-padding: 0 50%;
     scroll-snap-type: x mandatory;
     padding: var(--size-2) 0;
-  }
-
-  @media (max-width: ${mediaQueries.mobile}) {
-    padding-bottom: 4rem;
   }
 
   h3 {

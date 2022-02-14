@@ -338,7 +338,7 @@ h2,h3,h4,h5,h6 {
     margin-bottom: 1rem;
   }
 
-  a:not(.button) {
+  :where(a:not(.button)) {
     border-bottom: 1px solid;
     border-image-slice: 1;
     border-width: 3px;

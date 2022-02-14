@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import LandingStyles from './Styles/LandingStyles';
 import { useParallax } from '../lib/useParallax';
+import ContactButton from './ContactButton';
 
 export default function Landing() {
   const sarRef = useRef(null);
@@ -22,6 +23,7 @@ export default function Landing() {
         </div>
       </div>
       <div className="background-image" />
+      <ContactButton />
     </LandingStyles>
   );
 }
