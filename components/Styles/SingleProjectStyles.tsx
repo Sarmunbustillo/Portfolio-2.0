@@ -97,7 +97,14 @@ const ProjectsStyles = styled.div`
 
     &-tags {
       display: flex;
-      gap: var(--size-3);
+      flex-wrap: wrap;
+      column-gap: var(--size-3);
+      row-gap: var(--size-1);
+
+      @media (max-width: ${mediaQueries.mobile}) {
+        margin-bottom: var(--size-2);
+      }
+
       span {
         font-size: var(--font-size-1);
         background: var(--linear-gradient-2) fixed;
