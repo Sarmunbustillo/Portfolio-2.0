@@ -27,6 +27,12 @@ export default function SmallProjects() {
           projectLink="https://www.tma-milk.com/"
         />
         <SmallProject
+          imgPath="/images/projects/Fta.png"
+          alt="Fta"
+          projectTitle="FTA GmnH"
+          projectLink="https://www.fta-gmbh.de/"
+        />
+        <SmallProject
           imgPath="/images/projects/Aidshilfe.png"
           alt="Aidshilfe Hamburg"
           projectTitle="Aidshilfe Hamburg"

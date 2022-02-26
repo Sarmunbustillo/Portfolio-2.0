@@ -354,6 +354,7 @@ h2,h3,h4,h5,h6 {
     width: auto;
     height:auto;
   }
+  
   .button-wrapper-border {
     padding: .3rem;
     background: var(--linear-gradient-2) fixed ;
@@ -416,9 +417,9 @@ h2,h3,h4,h5,h6 {
 `;
 
 const Page = ({ children }: { children: ReactNode }) => (
-  <div>
-    <GlobalStyles />
-    {children}
-  </div>
+    <div>
+        <GlobalStyles />
+        {children}
+    </div>
 );
 export default Page;

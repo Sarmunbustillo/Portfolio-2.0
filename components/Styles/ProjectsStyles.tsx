@@ -29,7 +29,7 @@ const ProjectsStyles = styled.section`
 
   .project-grid {
     display: grid;
-    gap: clamp(var(--size-8), 4vw, var(--size-10));
+    gap: clamp(var(--size-8), 8vw, var(--size-10));
   }
 
   h2 {

@@ -23,13 +23,22 @@ export default function Projects() {
           />
           <SingleProject
             layout="left"
-            imgPath="/images/projects/LSS.png"
-            alt="portfolio"
-            projectTitle="Portfolio"
-            technologies={['React', 'Next', 'Styled-JSX']}
-            projectDescription="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus inventore neque quos quam natus repellat? Qui sit assumenda alias cumque sint dolor. Nulla atque harum officia deserunt necessitatibus reiciendis ducimus."
+            imgPath="/images/projects/Bonita-cafe.png"
+            alt="Bonita cafe"
+            projectTitle="Bonita Cafe"
+            technologies={[
+              'React',
+              'Next',
+              'vercel',
+              'DatoCMS',
+              'Styled-JSX',
+              'CSS Modules',
+            ]}
+            projectDescription="Colombian Coffee shop part of a restaurant and flower shop franchise"
             workDone={[
-              'Modernized web stack to improve website performance, have better web vitals, and overall modern look and feel',
+              'Design layout',
+              'Concept and strategies to increase online sells and brand marketing',
+              ' Full stack website with a CSM ',
             ]}
             projectLink="#"
           />
