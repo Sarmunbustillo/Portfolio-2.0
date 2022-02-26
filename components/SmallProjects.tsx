@@ -29,7 +29,7 @@ export default function SmallProjects() {
         <SmallProject
           imgPath="/images/projects/Fta.png"
           alt="Fta"
-          projectTitle="FTA GmnH"
+          projectTitle="FTA GmbH"
           projectLink="https://www.fta-gmbh.de/"
         />
         <SmallProject
