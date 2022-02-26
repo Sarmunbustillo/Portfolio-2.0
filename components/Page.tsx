@@ -417,9 +417,9 @@ h2,h3,h4,h5,h6 {
 `;
 
 const Page = ({ children }: { children: ReactNode }) => (
-    <div>
-        <GlobalStyles />
-        {children}
-    </div>
+  <div>
+    <GlobalStyles />
+    {children}
+  </div>
 );
 export default Page;
