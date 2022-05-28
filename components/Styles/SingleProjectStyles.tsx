@@ -20,6 +20,10 @@ const ProjectsStyles = styled.div`
     --row-gap: var(--size-7);
   }
 
+  .test {
+    position: relative;
+  }
+
   &.animate {
     .project-pictures,
     .project-description {
@@ -40,7 +44,7 @@ const ProjectsStyles = styled.div`
   .project {
     &-pictures,
     &-description {
-      transform: translate3d(var(--animate-x), 0%, 0);
+      /* transform: translate3d(var(--animate-x), 0%, 0); */
       opacity: 0;
       transition: transform 0.6s cubic-bezier(0, -0.01, 0, 0.6),
         opacity 0.8s cubic-bezier(0, -0.01, 0, 0.6) 0.1s;

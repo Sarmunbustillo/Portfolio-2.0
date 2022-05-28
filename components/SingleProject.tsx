@@ -37,7 +37,9 @@ const Project = ({
             <span key={`tag-${i}`}>{label}</span>
           ))}
         </div>
-        <h3>{projectTitle}</h3>
+        <div className="test">
+          <h3>{projectTitle}</h3>
+        </div>
         <p>{projectDescription}</p>
         <ul>
           {workDone.map((list, i) => (

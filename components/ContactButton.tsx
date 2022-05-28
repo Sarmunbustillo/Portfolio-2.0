@@ -3,7 +3,7 @@ import ContactButtonStyles from './Styles/ContactButtonStyles';
 
 function ContactButton() {
   return (
-    <ContactButtonStyles href="#contact">
+    <ContactButtonStyles href="#contact" title="contact" aria-label="contact">
       <svg
         focusable="false"
         aria-hidden="true"
