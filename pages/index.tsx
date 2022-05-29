@@ -7,13 +7,13 @@ import Contact from '../components/Contact';
 export default function Home() {
   return (
     <>
-      <Head key="22">
+      <Head>
         <title>Sarmun</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="Sarmun's portfolio"
-          content="Showcase of my past work and skills"
+          content="Showcase of Sarmun's frontend skills with projects and information about him"
         />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <Landing />
       <Projects />

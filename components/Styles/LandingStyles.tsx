@@ -13,6 +13,7 @@ const LandingStyles = styled.section`
   grid-template-rows: repeat(4, 1fr);
 
   .background-image {
+    background-color: var(--black);
     background-image: url('/images/Sarmun.jpg');
     background-size: cover;
     -webkit-background-size: cover;

@@ -29,13 +29,13 @@ const ProjectsStyles = styled.section`
 
   .project-grid {
     display: grid;
-    gap: clamp(var(--size-8), 8vw, var(--size-10));
+    gap: clamp(var(--size-8), 14vw, var(--size-11));
   }
 
   h2 {
     text-align: center;
 
-    margin-bottom: clamp(var(--size-8), 4vw, var(--size-9));
+    margin-bottom: clamp(var(--size-8), 10vw, var(--size-9));
   }
 
   * {

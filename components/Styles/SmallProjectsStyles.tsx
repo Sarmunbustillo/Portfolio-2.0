@@ -6,7 +6,7 @@ const SmallProjectsStyles = styled.div`
   position: relative;
   background: var(--brand-dark);
   text-align: center;
-  padding-block-start: clamp(var(--size-10), 4vw, var(--size-11));
+  padding-block-start: clamp(var(--size-10), 12vw, var(--size-13));
 
   .small-projects-grid {
     display: flex;
