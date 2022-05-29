@@ -15,10 +15,7 @@ export default function Landing() {
           <p>
             I'm a Self-taught Frontend Web-Dev based in Hamburg devoted to
             crafting exceptional web experiences. Currently, I'm focused on
-            building accessible, stylish and meaningful products at{' '}
-            <a href="https://www.f7.de/" target="_blank" rel="noreferrer">
-              F7 Media GmbH
-            </a>
+            building accessible, stylish and meaningful web products.
           </p>
         </div>
       </div>

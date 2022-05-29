@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { mediaQueries } from '../../lib/mediaQueries';
 
 const SmallProjectStyles = styled.div`
   position: relative;

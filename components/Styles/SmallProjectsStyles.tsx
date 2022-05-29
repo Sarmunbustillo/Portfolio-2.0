@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { mediaQueries } from '../../lib/mediaQueries';
 
 const SmallProjectsStyles = styled.div`
   display: grid;

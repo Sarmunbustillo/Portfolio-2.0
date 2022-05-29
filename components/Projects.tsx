@@ -42,17 +42,6 @@ export default function Projects() {
             ]}
             projectLink="#"
           />
-          <SingleProject
-            imgPath="/images/projects/LSS.png"
-            alt="portfolio"
-            projectTitle="Portfolio"
-            technologies={['React', 'Next', 'Styled Components', 'Typescript']}
-            projectDescription="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus inventore neque quos quam natus repellat? Qui sit assumenda alias cumque sint dolor. Nulla atque harum officia deserunt necessitatibus reiciendis ducimus."
-            workDone={[
-              'Modernized web stack to improve website performance, have better web vitals, and overall modern look and feel',
-            ]}
-            projectLink="#"
-          />
         </div>
         <SmallProjects />
       </ProjectsStyles>
