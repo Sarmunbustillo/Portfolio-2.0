@@ -3,12 +3,32 @@ import { createGlobalStyle } from 'styled-components';
 import { mediaQueries } from '../lib/mediaQueries';
 
 const GlobalStyles = createGlobalStyle`
- 
+ @font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-Regular.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 400;
+    font-display: optional;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+        U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,
+        U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-Bold.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 700;
+    font-display: optional;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+        U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,
+        U+2215, U+FEFF, U+FFFD;
+}
 :root {
     /* Font */
     --font-mono: Dank Mono, Operator Mono, Inconsolata, Fira Mono, ui-monospace,
     SF Mono, Monaco, Droid Sans Mono, Source Code Pro, monospace;
-    /* --font-family:  'Poppins', sans-serif; */
+    --font-family:  'Poppins', sans-serif;
     --font-size: 62.5%; /*16px*/
     --font-weight-1: 100;
     --font-weight-2: 200;
@@ -234,9 +254,7 @@ const GlobalStyles = createGlobalStyle`
       
   html {
     box-sizing: border-box;
-    /* font-family: var(--font-family); */
-    line-height:var(--line-height);
-    font-weight: 400;
+ font-size: var(--font-size);
     
     overflow-x: hidden;
   }
@@ -258,6 +276,10 @@ const GlobalStyles = createGlobalStyle`
     --line-height: 1.75;
     background-color: var(--brand-dark);
     color : var( --light-color-text);
+    font-family: var(--font-family);
+    font-family: var(--font-family);
+    line-height:var(--line-height);
+    font-weight: 400;
     /* background-image: url('/images/glasses.jpg'); */
     background-size: cover;
     background-repeat: no-repeat;
@@ -268,10 +290,15 @@ const GlobalStyles = createGlobalStyle`
   }
 
   ::selection {
-  background: var(--brand-light);
-  color:var(--indigo-9) ;
+  background: rgba(255, 255, 255, 0.301);
+  color:var(--highlight) ;
 }
-
+p , li, a {
+  ::selection {
+  background: var(--highlight) ;
+  color: var(--dark-color-text)
+}
+}
   #__next > div  {
     display: grid;
     grid-template-columns: var(--size-fluid-4) 1fr var(--size-fluid-4);
@@ -280,11 +307,8 @@ const GlobalStyles = createGlobalStyle`
 
     > * {
       grid-column: 2;
-    
     }
   }
-
-
 
   h1 {
     font-size: var( --font-size-fluid-4);
