@@ -1,0 +1,40 @@
+.projects {
+    position: relative;
+    background: var(--brand-dark);
+    padding-block: clamp(var(--size-9), 4vw, var(--size-11));
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -50vw;
+        right: 0;
+        width: 300vw;
+        height: 0.5rem;
+        background: var(--linear-gradient-2) fixed;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: -50vw;
+        right: 0;
+        width: 300vw;
+        height: 0.5rem;
+        background: var(--linear-gradient-2) fixed;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: clamp(var(--size-8), 10vw, var(--size-9));
+    }
+
+    * {
+        z-index: 2;
+    }
+    > div:first-of-type {
+        display: grid;
+        gap: clamp(var(--size-8), 14vw, var(--size-11));
+    }
+}

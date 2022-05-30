@@ -1,0 +1,16 @@
+@import '../../styles/mixins';
+.button {
+    position: fixed;
+    right: var(--size-2);
+    bottom: var(--size-2);
+    background-color: var(--highlight);
+    display: grid;
+    place-items: center;
+    padding: var(--size-2);
+    border-radius: var(--border-radius);
+    z-index: 99;
+    border: none;
+    @include device-down(mobile) {
+        display: none;
+    }
+}

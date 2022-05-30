@@ -1,0 +1,25 @@
+.projects {
+    display: grid;
+    position: relative;
+    background: var(--brand-dark);
+    text-align: center;
+    padding-block-start: clamp(var(--size-10), 12vw, var(--size-13));
+
+    > div {
+        display: flex;
+        gap: var(--size-6);
+        max-width: calc(100vw - var(--size-fluid-4) * 2);
+        overflow-x: scroll;
+        scroll-padding: 0 50%;
+        scroll-snap-type: x mandatory;
+        padding: var(--size-2) 0;
+    }
+
+    h3 {
+        text-align: center;
+        margin-bottom: var(--size-6);
+    }
+    * {
+        z-index: 2;
+    }
+}
