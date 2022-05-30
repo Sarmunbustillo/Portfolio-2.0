@@ -42,7 +42,7 @@ export default class myDocument extends Document {
                         sizes="16x16"
                         href="favicon/favicon.ico"
                     />
-                    <link rel="manifest" href="/site.webmanifest" />
+                    <link rel="manifest" href="favicon/site.webmanifest" />
                 </Head>
                 <body>
                     <Main />

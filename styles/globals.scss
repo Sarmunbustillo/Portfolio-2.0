@@ -260,8 +260,8 @@
 html {
     box-sizing: border-box;
     font-size: var(--font-size);
-
     overflow-x: hidden;
+    background-color: var(--black);
 }
 
 *,
@@ -281,7 +281,7 @@ body {
     --highlight-lighter: var(--indigo-3);
     --highlight-darker: var(--indigo-5);
     --line-height: 1.75;
-    background-color: var(--brand-dark);
+
     color: var(--light-color-text);
     font-family: var(--font-family);
     font-family: var(--font-family);
