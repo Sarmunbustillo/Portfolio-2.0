@@ -10,7 +10,12 @@ export default function Home() {
             <Head>
                 <title>Sarmun Bustillo</title>
                 <meta
-                    name="Sarmun's portfolio"
+                    property="og:title"
+                    content="Sarmun's portfolio"
+                    key="title"
+                />
+                <meta
+                    name="description"
                     content="Showcase of Sarmun's frontend skills with projects and information about him"
                 />
                 <meta
