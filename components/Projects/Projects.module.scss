@@ -1,33 +1,34 @@
+@import '../../styles/mixins';
 .projects {
     position: relative;
-    background: var(--brand-dark);
+    background: var(--brand);
     padding-block: clamp(var(--size-9), 4vw, var(--size-11));
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -50vw;
-        right: 0;
-        width: 300vw;
-        height: 0.5rem;
-        background: var(--linear-gradient-2) fixed;
-    }
+    // &::before {
+    //     content: '';
+    //     position: absolute;
+    //     top: 0;
+    //     left: -50vw;
+    //     right: 0;
+    //     width: 300vw;
+    //     height: 0.1rem;
+    //     background: var(--linear-gradient-1) fixed;
+    // }
 
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: -50vw;
-        right: 0;
-        width: 300vw;
-        height: 0.5rem;
-        background: var(--linear-gradient-2) fixed;
-    }
+    // &::after {
+    //     content: '';
+    //     position: absolute;
+    //     bottom: 0;
+    //     left: -50vw;
+    //     right: 0;
+    //     width: 300vw;
+    //     height: 0.1rem;
+    //     background: var(--linear-gradient-1) fixed;
+    // }
 
     h2 {
-        text-align: center;
         margin-bottom: clamp(var(--size-8), 10vw, var(--size-9));
+        text-align: center;
     }
 
     * {

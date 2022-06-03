@@ -255,13 +255,28 @@
     /* sizes */
     --container-max-width: 1400px;
     --border-radius: 4px;
+
+    // custom
+    --url-img-dark: url('/images/Sarmun.jpg');
+    --url-img-light: url('/images/Sarmun-light.jpg');
+    --brand-light: var(--gray-0);
+    --brand-dark: var(--black);
+    --light-color-text: var(--gray-0);
+    --dark-color-text: var(--gray-9);
+
+    --brand: var(--brand-dark);
+    --color-text: var(--light-color-text);
+    --highlight: var(--indigo-4);
+    --highlight-lighter: var(--indigo-3);
+    --highlight-darker: var(--indigo-5);
+    --url-img: var(--url-img-dark);
+    --line-height: 1.75;
 }
 
 html {
     box-sizing: border-box;
     font-size: var(--font-size);
     overflow-x: hidden;
-    background-color: var(--black);
 }
 
 *,
@@ -272,18 +287,39 @@ html {
     padding: 0;
 }
 
-body {
-    --brand-light: var(--gray-0);
-    --brand-dark: var(--black);
-    --light-color-text: var(--gray-0);
-    --dark-color-text: var(--brand-dark);
-    --highlight: var(--indigo-4);
-    --highlight-lighter: var(--indigo-3);
-    --highlight-darker: var(--indigo-5);
-    --line-height: 1.75;
+[data-theme='light'] {
+    --brand: var(--brand-light);
+    --color-text: var(--dark-color-text);
+    --highlight: var(--blue-6);
+    --highlight-lighter: var(--indigo-4);
+    --highlight-darker: var(--indigo-8);
+    --url-img: var(--url-img-light);
 
-    color: var(--light-color-text);
-    font-family: var(--font-family);
+    --linear-gradient-1: linear-gradient(
+        var(--gradient-direction),
+        var(--blue-4),
+        var(--indigo-4)
+    );
+    --linear-gradient-2: linear-gradient(
+        to bottom,
+        var(--blue-4),
+        var(--indigo-4),
+        var(--blue-6),
+        var(--indigo-6)
+    );
+
+    .button {
+        --button-color-text: var(--highlight);
+        &:hover,
+        &:focus-visible {
+            --button-color-text: var(--light-color-text);
+        }
+    }
+}
+
+body {
+    color: var(--color-text);
+    background-color: var(--brand);
     font-family: var(--font-family);
     line-height: var(--line-height);
     font-weight: 400;
@@ -311,6 +347,7 @@ body {
     background: rgba(255, 255, 255, 0.301);
     color: var(--highlight);
 }
+
 p,
 li,
 a {
@@ -345,7 +382,7 @@ h3,
 h4,
 h5,
 h6 {
-    &:not(.not-multicolor) {
+    &.colored {
         background: var(--linear-gradient-2) fixed;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -355,10 +392,6 @@ h6 {
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-    }
-
-    &.not-multicolor {
-        color: var(--highlight);
     }
 }
 
@@ -391,12 +424,6 @@ p {
     margin-bottom: 1rem;
 }
 
-:where(a:not(.button)) {
-    border-bottom: 1px solid;
-    border-image-slice: 1;
-    border-width: 3px;
-    border-image-source: var(--linear-gradient-2);
-}
 button {
     font-family: var(--font-family);
     line-height: var(--line-height);
@@ -420,8 +447,8 @@ img {
 }
 
 .button {
-    --button-bg: var(--black);
-    --button-color-text: var(--light-color-text);
+    --button-bg: var(--brand);
+    --button-color-text: var(--color-text);
     box-shadow: var(--shadow-small);
     display: inline-flex;
     justify-content: center;
@@ -456,7 +483,7 @@ img {
         &:hover,
         &:focus-visible {
             --button-bg: var(--transparent);
-            -button-color-text: var(--light-color-text);
+            --button-color-text: var(--light-color-text);
         }
     }
 

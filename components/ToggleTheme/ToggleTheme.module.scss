@@ -1,0 +1,123 @@
+@import '../../styles/mixins';
+.toggleWrapper {
+    position: absolute;
+    top: var(--size-3);
+    left: 0;
+}
+
+.toggle {
+    --size: 3rem;
+    --icon-fill: hsl(210 10% 30%);
+    --icon-fill-hover: hsl(210 10% 15%);
+    background: none;
+    border: none;
+    padding: 0;
+    inline-size: var(--size);
+    block-size: var(--size);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    cursor: pointer;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    outline-offset: 5px;
+
+    &:is(:hover, :focus-visible) {
+        .svg {
+            :is(.moon, .sun) {
+                fill: var(--icon-fill-hover);
+            }
+            .beams {
+                stroke: var(--icon-fill-hover);
+            }
+        }
+    }
+}
+
+.svg {
+    inline-size: 100%;
+    block-size: 100%;
+    stroke-linecap: round;
+
+    :is(.moon, .sun, .beams) {
+        transform-origin: center center;
+    }
+    :is(.moon, .sun) {
+        fill: var(--icon-fill);
+    }
+
+    .beams {
+        stroke: var(--icon-fill);
+        stroke-width: 2px;
+    }
+}
+
+[data-theme='dark'] {
+    .toggle {
+        --icon-fill: hsl(210 10% 70%);
+        --icon-fill-hover: hsl(210 15% 90%);
+    }
+
+    .svg {
+        .sun {
+            transform: scale(1.75);
+        }
+        .beams {
+            opacity: 0;
+        }
+
+        .moon > circle {
+            transform: translate(-7px);
+        }
+    }
+}
+
+@supports (cx: 1) {
+    [data-theme='dark'] .svg > .moon > circle {
+        transform: translate(0);
+        cx: 17;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .svg {
+        .sun {
+            transition: transform 0.5s ease;
+        }
+        .beams {
+            transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+        .moon > circle {
+            transition: transform 0.25s ease;
+        }
+    }
+
+    @supports (cx: 1) {
+        .svg .moon > circle {
+            transition: cx 0.25s ease;
+        }
+    }
+
+    [data-theme='dark'] {
+        .svg {
+            .beams {
+                transform: rotate(-25deg);
+                transition-duration: 0.15s;
+            }
+            .moon > circle {
+                transition-delay: 0.25s;
+                transition-duration: 0.5s;
+            }
+            .sun {
+                transform: scale(1.75);
+                transition-timing-function: ease;
+                transition-duration: 0.25s;
+            }
+        }
+    }
+}
+
+@media (hover: none) {
+    .toggle {
+        --size: 40px;
+    }
+}

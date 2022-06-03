@@ -2,6 +2,7 @@ import styles from './Landing.module.scss';
 import { useRef } from 'react';
 import { useParallax } from '../../lib/useParallax';
 import ContactButton from '../ContactButton';
+import ToggleTheme from '../ToggleTheme';
 
 export default function Landing() {
     const sarRef = useRef(null);
@@ -21,6 +22,7 @@ export default function Landing() {
                 </div>
             </div>
             <div className={styles.image} />
+            <ToggleTheme />
             <ContactButton />
         </section>
     );

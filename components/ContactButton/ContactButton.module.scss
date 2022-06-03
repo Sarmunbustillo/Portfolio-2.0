@@ -1,16 +1,32 @@
 @import '../../styles/mixins';
-.button {
-    position: fixed;
-    right: var(--size-2);
-    bottom: var(--size-2);
-    background-color: var(--highlight);
-    display: grid;
+.contactLinks {
+    position: absolute;
+    right: 0;
+    top: var(--size-3);
+    display: flex;
+    gap: var(--size-fluid-3);
     place-items: center;
-    padding: var(--size-2);
-    border-radius: var(--border-radius);
     z-index: 99;
-    border: none;
-    @include device-down(mobile) {
-        display: none;
+
+    a {
+        position: relative;
+        display: flex;
+        &::after {
+            content: '';
+            height: 0.1rem;
+            width: 100%;
+            position: absolute;
+            bottom: -0.1rem;
+            background-color: var(--highlight);
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+
+        &:hover,
+        &:focus-visible {
+            &::after {
+                opacity: 1;
+            }
+        }
     }
 }

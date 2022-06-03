@@ -22,12 +22,12 @@ export default function Contact() {
                 </span>
                 <span className="button-wrapper-border">
                     <a
-                        href="https://www.google.com"
+                        href="https://twitter.com/sarmunbustillo"
                         className="button "
                         target="_blank"
                         rel="noreferrer"
                     >
-                        Resume
+                        Twitter
                     </a>
                 </span>
             </div>
