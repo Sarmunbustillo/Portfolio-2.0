@@ -12,7 +12,6 @@ export default function Landing() {
             <div>
                 <div ref={sarRef} className={styles.descripton}>
                     <h1>Sarmun Bustillo</h1>
-                    <h1>Frontend Developer</h1>
                     <p>
                         I'm a Self-taught Frontend Web-Dev based in Hamburg
                         devoted to crafting exceptional web experiences.

@@ -78,10 +78,13 @@
         .image {
             border-radius: 50%;
             right: 0;
-            height: var(--size-15);
-            width: var(--size-15);
+            height: clamp(var(--size-13), 30vw, var(--size-15));
+            width: clamp(var(--size-13), 30vw, var(--size-15));
             grid-row: 2 / span 1;
             box-shadow: var(--shadow-medium);
+            @include device-down(mobile) {
+                display: none;
+            }
         }
     }
 }
