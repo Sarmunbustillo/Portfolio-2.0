@@ -21,6 +21,7 @@ export default function Landing() {
                 </div>
             </div>
             <div className={styles.image} />
+            <div className={styles.image} />
             <ToggleTheme />
             <ContactButton />
         </section>

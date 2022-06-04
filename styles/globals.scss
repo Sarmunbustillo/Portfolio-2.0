@@ -258,7 +258,7 @@
 
     // custom
     --url-img-dark: url('/images/Sarmun.jpg');
-    --url-img-light: url('/images/Sarmun-light.jpg');
+    --url-img-light: url('/images/Sarmun-light.png');
     --brand-light: var(--gray-0);
     --brand-dark: var(--black);
     --light-color-text: var(--gray-0);
@@ -269,7 +269,6 @@
     --highlight: var(--indigo-4);
     --highlight-lighter: var(--indigo-3);
     --highlight-darker: var(--indigo-5);
-    --url-img: var(--url-img-dark);
     --line-height: 1.75;
 }
 
@@ -341,6 +340,10 @@ body {
             grid-column: 2;
         }
     }
+}
+
+section:not(.landing) {
+    z-index: 2;
 }
 
 ::selection {
