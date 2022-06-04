@@ -97,9 +97,10 @@
             -webkit-text-fill-color: transparent;
 
             @supports (-moz-appearance: none) {
-                background: var(--linear-gradient-1);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
+                color: var(--highlight);
+                background: unset;
+                -webkit-background-clip: unset;
+                -webkit-text-fill-color: unset;
             }
         }
     }
