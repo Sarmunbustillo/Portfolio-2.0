@@ -1,13 +1,13 @@
 @import '../../styles/mixins';
 
 .landing {
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
     display: grid;
     grid-template-rows: repeat(6, 1fr);
 
     @include device-down(mobile) {
-        grid-template-rows: 14rem repeat(4, 1fr);
+        grid-template-rows: 14rem auto auto;
     }
 
     .image {
@@ -34,13 +34,15 @@
     }
 
     .descripton {
-        --parallax-y: 0;
-        --text: 1rem;
-        transform: translate(0, var(--parallax-y));
-        -webkit-transform: translate(0, var(--parallax-y));
         max-width: 92ch;
-        position: fixed;
         z-index: 2;
+
+        @include device-up(mobile) {
+            --parallax-y: 0;
+            position: fixed;
+            transform: translate(0, var(--parallax-y));
+            -webkit-transform: translate(0, var(--parallax-y));
+        }
 
         @include device-down(mobile) {
             width: 77vw;
@@ -86,15 +88,14 @@
             }
             &:nth-of-type(even) {
                 opacity: 0;
+                width: 0px;
+                position: absolute;
             }
         }
     }
 }
 [data-theme='light'] {
     .landing {
-        .descripton {
-            background-color: var(--brand);
-        }
         .image {
             border-radius: 50%;
             height: clamp(var(--size-14), 60vw, 60rem);
@@ -105,13 +106,16 @@
 
             &:nth-of-type(odd) {
                 opacity: 0;
+                width: 0px;
+                position: absolute;
             }
 
             @include device-up(mobile) {
                 right: 0;
             }
             @include device-down(mobile) {
-                grid-row: 4 / span 1;
+                grid-row: 3;
+                position: relative;
             }
 
             &::before {
