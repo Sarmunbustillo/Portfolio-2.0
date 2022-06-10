@@ -10,6 +10,10 @@ export default function Home() {
             <Head>
                 <title>Sarmun Bustillo</title>
                 <meta
+                    name="google-site-verification"
+                    content="y8Q8ReoePegJKsHOCGsjfhot0Q9uiH0C8EEDKbTSviA"
+                />
+                <meta
                     property="og:title"
                     content="Sarmun's portfolio"
                     key="title"
