@@ -8,6 +8,24 @@ export default function Projects() {
             <h2>Projects</h2>
             <div>
                 <Project
+                    imgPath="/images/projects/NFT-market.png"
+                    alt="NFT Market"
+                    projectTitle="NFT Market"
+                    technologies={[
+                        'React',
+                        'Next',
+                        'vercel',
+                        'Solidity',
+                        'Typescript',
+                        'Tailwind',
+                    ]}
+                    projectDescription="NFT market place: Buy, sell and transfer NFTs"
+                    workDone={[
+                        'Fun little project to learn and practice new technologies',
+                    ]}
+                    projectLink="https://nft-market-psi.vercel.app/"
+                />
+                <Project
                     imgPath="/images/projects/LSS.png"
                     alt="Language Service Solutions"
                     projectTitle="Language Service Solutions"
@@ -20,7 +38,7 @@ export default function Projects() {
                     projectLink="https://languageservicesolutions.com/services"
                 />
 
-                <Project
+                {/* <Project
                     imgPath="/images/projects/Bonita-cafe.png"
                     alt="Bonita cafe"
                     projectTitle="Bonita Cafe"
@@ -38,7 +56,7 @@ export default function Projects() {
                         ' Full stack website with a CSM ',
                     ]}
                     projectLink="#"
-                />
+                /> */}
             </div>
             <SmallProjects />
         </section>
