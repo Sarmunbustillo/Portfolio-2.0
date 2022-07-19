@@ -22,7 +22,7 @@ const Project = ({
     workDone,
     projectLink,
 }: Props) => {
-    const ref = useRef<HTMLDivElement>(null);
+    const ref = useRef() as React.MutableRefObject<HTMLInputElement>;
     const isOnViewport = useOnVieport(ref);
     return (
         <div

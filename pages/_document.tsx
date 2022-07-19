@@ -1,7 +1,8 @@
 import Document, { Html, Head, NextScript, Main } from 'next/document';
+import React from 'react';
 
 export default class myDocument extends Document {
-    render() {
+    override render() {
         return (
             <Html lang="en" data-theme="dark">
                 <Head>
