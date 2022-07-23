@@ -1,62 +1,39 @@
 import styles from './Projects.module.scss';
 import Project from './Project/Project';
 import SmallProjects from '../SmallProjects/SmallProjects';
-
+import allProjects from '../../public/projects/big-projects.json';
+const { projects } = allProjects;
 export default function Projects() {
     return (
         <section className={styles.projects}>
             <h2>Projects</h2>
             <div>
-                <Project
-                    imgPath="/images/projects/NFT-market.png"
-                    alt="NFT Market"
-                    projectTitle="NFT Market"
-                    technologies={[
-                        'React',
-                        'Next',
-                        'vercel',
-                        'Solidity',
-                        'Typescript',
-                        'Tailwind',
-                    ]}
-                    projectDescription="NFT market place: Buy, sell and transfer NFTs"
-                    workDone={[
-                        'Fun little project to learn and practice new technologies',
-                    ]}
-                    projectLink="https://nft-market-psi.vercel.app/"
-                />
-                <Project
-                    imgPath="/images/projects/LSS.png"
-                    alt="Language Service Solutions"
-                    projectTitle="Language Service Solutions"
-                    technologies={['SCSS', 'React', 'Next', 'Vercel']}
-                    projectDescription="LSS has over 20 years of experience providing translation and interpretation services as well as consulting around language services for organizations and communities. "
-                    workDone={[
-                        'Modernized web stack to improve website performance, have better web vitals, and overall modern look and feel',
-                        'implemented a pixel perfect redesign',
-                    ]}
-                    projectLink="https://languageservicesolutions.com/services"
-                />
-
-                {/* <Project
-                    imgPath="/images/projects/Bonita-cafe.png"
-                    alt="Bonita cafe"
-                    projectTitle="Bonita Cafe"
-                    technologies={[
-                        'React',
-                        'Next',
-                        'vercel',
-                        'DatoCMS',
-                        'SCSS',
-                    ]}
-                    projectDescription="Colombian Coffee shop part of a restaurant and flower shop franchise"
-                    workDone={[
-                        'Design layout',
-                        'Concept and strategies to increase online sells and brand marketing',
-                        ' Full stack website with a CSM ',
-                    ]}
-                    projectLink="#"
-                /> */}
+                {projects.map(
+                    ({
+                        projectTitle,
+                        projectDescription,
+                        projectLink,
+                        workDone,
+                        imgPath,
+                        technologies,
+                        id,
+                    }) => {
+                        // hide bonita cafe for now
+                        return id !== 'Bonita_Cafe' ? (
+                            <Project
+                                projectTitle={projectTitle}
+                                projectDescription={projectDescription}
+                                projectLink={projectLink}
+                                workDone={workDone}
+                                imgPath={imgPath}
+                                technologies={technologies}
+                                key={id}
+                            />
+                        ) : (
+                            ''
+                        );
+                    }
+                )}
             </div>
             <SmallProjects />
         </section>

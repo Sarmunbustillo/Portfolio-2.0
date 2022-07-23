@@ -1,7 +1,7 @@
 import styles from './Landing.module.scss';
 import { useRef } from 'react';
 import { useParallax } from '../../lib/useParallax';
-import ContactButton from '../ContactButton';
+import NavbarLinks from '../NavbarLinks';
 import ToggleTheme from '../ToggleTheme';
 
 export default function Landing() {
@@ -28,7 +28,7 @@ export default function Landing() {
             <div className={styles.image} />
             <div className={styles.image} />
             <ToggleTheme />
-            <ContactButton />
+            <NavbarLinks />
         </section>
     );
 }

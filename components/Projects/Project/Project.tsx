@@ -5,7 +5,6 @@ import { useOnVieport } from '../../../lib/useOnVieport';
 
 type Props = {
     imgPath: string;
-    alt: string;
     projectTitle: string;
     technologies: string[];
     projectDescription: string;
@@ -15,7 +14,6 @@ type Props = {
 };
 const Project = ({
     imgPath,
-    alt,
     projectTitle,
     technologies,
     projectDescription,
@@ -32,7 +30,12 @@ const Project = ({
             } `}
         >
             <div className={styles.pictures}>
-                <Image src={imgPath} alt={alt} height="400" width="700" />
+                <Image
+                    src={imgPath}
+                    alt={projectTitle}
+                    height="400"
+                    width="700"
+                />
             </div>
             <div className={styles.description}>
                 <div className={styles.tags}>

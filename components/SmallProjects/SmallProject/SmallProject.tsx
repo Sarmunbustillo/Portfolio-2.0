@@ -5,13 +5,12 @@ import styles from './SmallProject.module.scss';
 
 type Props = {
     imgPath: string;
-    alt: string;
     projectTitle: string;
     projectLink: string;
 };
 
-const SmallProject = ({ imgPath, alt, projectTitle, projectLink }: Props) => {
-    const ref = useRef<HTMLDivElement>(null);
+const SmallProject = ({ imgPath, projectTitle, projectLink }: Props) => {
+    const ref = useRef() as React.MutableRefObject<HTMLDivElement>;
     useOnVieport(ref);
     return (
         <div ref={ref} className={styles.project}>
@@ -24,7 +23,7 @@ const SmallProject = ({ imgPath, alt, projectTitle, projectLink }: Props) => {
                 >
                     <Image
                         src={imgPath}
-                        alt={alt}
+                        alt={projectTitle}
                         loading="lazy"
                         height="180"
                         width="320"

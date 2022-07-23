@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import styles from './ToggleTheme.module.scss';
 
 const ToggleTheme = () => {
-    const storageKey = 'theme-preference';
+    // const storageKey = 'theme-preference';
     const [toggle, setToggle] = useState('dark');
 
     const triggerToggle = (): void => {
@@ -10,7 +10,7 @@ const ToggleTheme = () => {
     };
 
     useEffect(() => {
-        document.firstElementChild.setAttribute('data-theme', toggle);
+        document.firstElementChild?.setAttribute('data-theme', toggle);
     }, [toggle]);
 
     return (
