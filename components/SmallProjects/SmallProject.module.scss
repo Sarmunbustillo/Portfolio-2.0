@@ -13,6 +13,23 @@
         scroll-padding: 0 50%;
         scroll-snap-type: x mandatory;
         padding: var(--size-2) 0;
+
+    
+        --scrollbar-foreground:#748ffc;
+        --scrollbar-background: #f8f9fa;
+        /* Foreground, Background */
+        scrollbar-color: var(--scrollbar-foreground) var(--scrollbar-background);
+       
+        &::-webkit-scrollbar {
+            width: 5px; /* Mostly for vertical scrollbars */
+            height: 5px; /* Mostly for horizontal scrollbars */
+        }
+        &::-webkit-scrollbar-thumb { /* Foreground */
+            background: var(--scrollbar-foreground);
+        }
+        &::-webkit-scrollbar-track { /* Background */
+            background: var(--scrollbar-background);
+        }
     }
 
     h3 {
