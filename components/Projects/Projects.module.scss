@@ -2,7 +2,6 @@
 .projects {
     position: relative;
     background: var(--brand);
-    padding-block: clamp(var(--size-9), 4vw, var(--size-11));
 
     // &::before {
     //     content: '';
@@ -26,16 +25,11 @@
     //     background: var(--linear-gradient-1) fixed;
     // }
 
-    h2 {
-        margin-bottom: clamp(var(--size-8), 10vw, var(--size-9));
-        text-align: center;
-    }
-
     * {
         z-index: 2;
     }
     > div:first-of-type {
         display: grid;
-        gap: clamp(var(--size-10), 14vw, var(--size-11));
+        gap: clamp(var(--size-8), 10vw, var(--size-10));
     }
 }

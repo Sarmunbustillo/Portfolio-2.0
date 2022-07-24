@@ -22,6 +22,10 @@
         transform: translateY(calc(-100% - var(--size-2)));
         font-size: var(--font-size-3);
         -webkit-text-fill-color: unset;
+
+        @include device-down(desktop) {
+            font-size: var(--font-size-1);
+        }
     }
 
     &.animate {

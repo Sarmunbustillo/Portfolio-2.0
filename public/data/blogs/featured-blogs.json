@@ -1,0 +1,22 @@
+{
+    "featured_blogs": [
+        {
+            "id": "featured_blog_1",
+            "text": "Detect when an element gets wrapped (Flexbox , Grid)",
+            "link": "https://dev.to/sarmunbustillo/detect-when-an-element-gets-wrapped-flexbox-grid-f96",
+            "external": true
+        },
+        {
+            "id": "featured_blog_2",
+            "text": "Reusable Parallax Effect With CSS Variables",
+            "link": "https://dev.to/sarmunbustillo/reusable-parallax-effect-with-css-variables-79d",
+            "external": true
+        },
+        {
+            "id": "featured_blog_3",
+            "text": "Custom animated Counter",
+            "link": "https://dev.to/sarmunbustillo/animated-counter-fjo",
+            "external": true
+        }
+    ]
+}

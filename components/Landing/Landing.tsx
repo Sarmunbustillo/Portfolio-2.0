@@ -6,7 +6,7 @@ export default function Landing() {
     const sarRef = useRef() as React.MutableRefObject<HTMLDivElement>;
     useParallax(sarRef);
     return (
-        <section className={styles.landing}>
+        <section id="landing" className={styles.landing}>
             <div>
                 <div ref={sarRef} className={styles.descripton}>
                     <h1>Sarmun Bustillo</h1>

@@ -1,8 +1,8 @@
 import styles from './Projects.module.scss';
 import Project from './Project/Project';
 import SmallProjects from '../SmallProjects/SmallProjects';
-import allProjects from '../../public/projects/big-projects.json';
-import { detailedProject } from '../../types/projects';
+import allProjects from '../../public/data/projects/big-projects.json';
+import { DetailedProject } from '../../types/projects';
 const { projects } = allProjects;
 export default function Projects() {
     return (
@@ -19,7 +19,7 @@ export default function Projects() {
                         technologies,
                         id,
                         supportHeadline,
-                    }: detailedProject) => {
+                    }: DetailedProject) => {
                         return (
                             <Project
                                 projectTitle={projectTitle}

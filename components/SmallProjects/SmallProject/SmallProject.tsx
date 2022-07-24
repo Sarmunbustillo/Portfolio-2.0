@@ -1,10 +1,14 @@
 import Image from 'next/image';
 import React, { useRef } from 'react';
 import { useOnVieport } from '../../../lib/useOnVieport';
-import { SmallProject } from '../../../types/projects';
+import { SimpleProject } from '../../../types/projects';
 import styles from './SmallProject.module.scss';
 
-const SmallProject = ({ imgPath, projectTitle, projectLink }: SmallProject) => {
+const SmallProject = ({
+    imgPath,
+    projectTitle,
+    projectLink,
+}: SimpleProject) => {
     const ref = useRef() as React.MutableRefObject<HTMLDivElement>;
     useOnVieport(ref);
     return (

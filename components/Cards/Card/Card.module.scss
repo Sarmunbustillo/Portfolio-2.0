@@ -1,0 +1,47 @@
+@import '../../../styles/mixins';
+.card {
+    position: relative;
+    background: linear-gradient(
+        var(--gradient-direction),
+        var(--cyan-4),
+        var(--indigo-4)
+    );
+
+    display: grid;
+    padding: var(--size-1);
+    border-radius: var(--border-radius);
+
+    > div {
+        background: var(--brand);
+
+        span {
+            display: grid;
+            padding: var(--size-3);
+            height: 100%;
+            align-content: space-between;
+            grid-auto-rows: max-content;
+        }
+    }
+
+    h3 {
+        font-size: var(--font-size-3);
+        margin: 0;
+    }
+
+    &:hover {
+        svg {
+            path {
+                stroke: var(--highlight);
+            }
+        }
+    }
+
+    svg {
+        width: var(--size-7);
+        justify-self: flex-end;
+
+        path {
+            transition: stroke 0.15s ease-in-out;
+        }
+    }
+}

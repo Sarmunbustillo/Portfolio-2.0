@@ -1,0 +1,16 @@
+@import '../../styles/mixins';
+.cards {
+    position: relative;
+    background: var(--brand);
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(min(100%, var(--size-8)), var(--size-14))
+        );
+        grid-auto-rows: var(--size-12);
+        column-gap: var(--size-8);
+        row-gap: var(--size-6);
+    }
+}

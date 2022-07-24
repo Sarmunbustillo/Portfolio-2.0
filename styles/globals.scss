@@ -1,4 +1,5 @@
 @import 'mixins';
+@import 'normalize.scss';
 @font-face {
     font-family: 'Poppins';
     src: url('/fonts/Poppins-Regular.woff2') format('woff2');
@@ -229,6 +230,8 @@
     --orange-7: #f76707;
     --orange-8: #e8590c;
     --orange-9: #d9480f;
+    --icon-fill: hsl(210 10% 30%);
+    --icon-fill-hover: hsl(210 10% 15%);
 
     /* Gradients */
     --gradient-direction: to bottom right;
@@ -253,7 +256,7 @@
     --shadow-large: 0 30px 60px rgba(0, 0, 0, 0.12);
 
     /* sizes */
-    --container-max-width: 1400px;
+    --container-max-width: 1200px;
     --border-radius: 4px;
 
     // custom
@@ -293,6 +296,8 @@ html {
     --highlight-lighter: var(--indigo-4);
     --highlight-darker: var(--indigo-8);
     --url-img: var(--url-img-light);
+    --icon-fill: hsl(210 10% 70%);
+    --icon-fill-hover: hsl(210 15% 90%);
 
     --linear-gradient-1: linear-gradient(
         var(--gradient-direction),
@@ -342,6 +347,18 @@ body {
     }
 }
 
+main {
+    > section {
+        &:nth-of-type(2)#cards {
+            padding-block-start: clamp(var(--size-9), 4vw, var(--size-11));
+        }
+
+        + section {
+            padding-block-end: clamp(var(--size-9), 6vw, var(--size-12));
+        }
+    }
+}
+
 section:not(.landing) {
     z-index: 2;
 }
@@ -367,6 +384,8 @@ h1 {
 h2 {
     font-size: var(--font-size-fluid-3);
 
+    margin-bottom: clamp(var(--size-7), 10vw, var(--size-7));
+
     span {
         border-bottom: 5px solid var(--highlight);
     }
@@ -374,6 +393,7 @@ h2 {
 
 h3 {
     font-size: var(--font-size-fluid-2);
+    margin-bottom: clamp(var(--size-1), 5vw, var(--size-2));
 }
 
 h4 {
@@ -460,8 +480,8 @@ img {
     color: var(--button-color-text);
     padding: 0.5em 1em;
     border-radius: var(--border-radius);
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
-        border 0.3s ease-in-out;
+    transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out,
+        border 0.15s ease-in-out;
     font-weight: bold;
     min-width: 8.05rem;
     position: relative;

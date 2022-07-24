@@ -1,18 +1,21 @@
-export type detailedProject = {
+export type SimpleProject = {
     imgPath: string;
     projectTitle: string;
+    projectLink: string;
+    id: string;
+};
+
+export type DetailedProject = SimpleProject & {
     technologies: string[];
     projectDescription: string;
     workDone: string[];
-    projectLink: string;
     layout?: string;
-    id: string;
     supportHeadline?: string;
 };
 
-export type simpleProject = {
-    imgPath: string;
-    projectTitle: string;
-    projectLink: string;
-    id: string;
+export type SimpleCard = {
+    text: string;
+    link: string;
+    external?: boolean;
+    id?: string;
 };

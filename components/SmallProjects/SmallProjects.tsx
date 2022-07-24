@@ -1,8 +1,8 @@
 import React from 'react';
 import SmallProject from './SmallProject/SmallProject';
 import styles from './SmallProject.module.scss';
-import allProjects from '../../public/projects/small-projects.json';
-import { simpleProject } from '../../types/projects';
+import allProjects from '../../public/data/projects/small-projects.json';
+import { SimpleProject } from '../../types/projects';
 const { projects } = allProjects;
 export default function SmallProjects() {
     return (
@@ -15,7 +15,7 @@ export default function SmallProjects() {
                         projectLink,
                         imgPath,
                         id,
-                    }: simpleProject) => {
+                    }: SimpleProject) => {
                         return (
                             <SmallProject
                                 projectTitle={projectTitle}
