@@ -2,6 +2,7 @@ import styles from './Projects.module.scss';
 import Project from './Project/Project';
 import SmallProjects from '../SmallProjects/SmallProjects';
 import allProjects from '../../public/projects/big-projects.json';
+import { detailedProject } from '../../types/projects';
 const { projects } = allProjects;
 export default function Projects() {
     return (
@@ -17,7 +18,7 @@ export default function Projects() {
                         imgPath,
                         technologies,
                         id,
-                    }) => {
+                    }: detailedProject) => {
                         // hide bonita cafe for now
                         return id !== 'Bonita_Cafe' ? (
                             <Project
@@ -28,6 +29,7 @@ export default function Projects() {
                                 imgPath={imgPath}
                                 technologies={technologies}
                                 key={id}
+                                id={id}
                             />
                         ) : (
                             ''

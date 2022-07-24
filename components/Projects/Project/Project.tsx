@@ -2,16 +2,8 @@ import styles from './Project.module.scss';
 import Image from 'next/image';
 import React, { useRef } from 'react';
 import { useOnVieport } from '../../../lib/useOnVieport';
+import { BigProject } from '../../../types/projects';
 
-type Props = {
-    imgPath: string;
-    projectTitle: string;
-    technologies: string[];
-    projectDescription: string;
-    workDone: string[];
-    projectLink: string;
-    layout?: string;
-};
 const Project = ({
     imgPath,
     projectTitle,
@@ -19,7 +11,7 @@ const Project = ({
     projectDescription,
     workDone,
     projectLink,
-}: Props) => {
+}: BigProject) => {
     const ref = useRef() as React.MutableRefObject<HTMLInputElement>;
     const isOnViewport = useOnVieport(ref);
     return (
