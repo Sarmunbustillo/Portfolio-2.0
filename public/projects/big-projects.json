@@ -41,7 +41,8 @@
                 " Full stack website with a CSM "
             ],
             "imgPath": "/images/projects/Bonita-cafe.png",
-            "technologies": ["React", "Next", "vercel", "DatoCMS", "SCSS"]
+            "technologies": ["React", "Next", "vercel", "DatoCMS", "SCSS"],
+            "supportHeadline": "Coming soon"
         }
     ]
 }

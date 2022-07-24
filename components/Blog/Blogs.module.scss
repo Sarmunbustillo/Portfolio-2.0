@@ -1,0 +1,29 @@
+@import '../../styles/mixins';
+.contact {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-flow: column;
+    justify-content: center;
+    padding-block: var(--size-11);
+    @include device-down(mobile) {
+        padding-block: var(--size-8);
+    }
+
+    h2 {
+        margin-bottom: var(--size-8);
+
+        text-align: center;
+    }
+
+    > div {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--size-6);
+        > * {
+            @include device-down(mobile) {
+                width: 100%;
+            }
+        }
+    }
+}

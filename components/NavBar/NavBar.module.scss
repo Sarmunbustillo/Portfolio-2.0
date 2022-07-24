@@ -1,0 +1,14 @@
+@import '../../styles/mixins';
+
+.navigation {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: var(--size-3) 0;
+    @include device-down(mobile) {
+    }
+}
+// [data-theme='dark'] {
+// }
+// [data-theme='light'] {
+// }

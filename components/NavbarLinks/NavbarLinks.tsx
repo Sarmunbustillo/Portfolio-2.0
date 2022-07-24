@@ -4,6 +4,11 @@ import styles from './NavbarLinks.module.scss';
 function NavbarLinks() {
     return (
         <div className={styles.NavbarLinks}>
+            <Link href="/">
+                <a title="home" aria-label="home">
+                    Home
+                </a>
+            </Link>
             <Link href="/blog">
                 <a title="Blog" aria-label="Blog">
                     Blog

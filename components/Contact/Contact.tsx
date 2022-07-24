@@ -2,7 +2,7 @@ import styles from './Contact.module.scss';
 
 export default function Contact() {
     return (
-        <section id="contact" className={styles.contact}>
+        <footer id="contact" className={styles.contact}>
             <h2>Let's Talk</h2>
             <div className="links">
                 <span className="button-wrapper-border">
@@ -31,6 +31,6 @@ export default function Contact() {
                     </a>
                 </span>
             </div>
-        </section>
+        </footer>
     );
 }

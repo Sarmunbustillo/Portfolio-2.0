@@ -15,6 +15,15 @@
         --row-gap: var(--size-7);
     }
 
+    .headline {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(calc(-100% - var(--size-2)));
+        font-size: var(--font-size-3);
+        -webkit-text-fill-color: unset;
+    }
+
     &.animate {
         --_opacity: 1;
     }

@@ -36,6 +36,6 @@
     }
     > div:first-of-type {
         display: grid;
-        gap: clamp(var(--size-8), 14vw, var(--size-11));
+        gap: clamp(var(--size-10), 14vw, var(--size-11));
     }
 }

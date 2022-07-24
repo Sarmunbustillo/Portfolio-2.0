@@ -7,6 +7,7 @@ export type detailedProject = {
     projectLink: string;
     layout?: string;
     id: string;
+    supportHeadline?: string;
 };
 
 export type simpleProject = {

@@ -330,13 +330,13 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
 
-    > div {
+    > #__next {
         display: grid;
         grid-template-columns: var(--size-fluid-4) 1fr var(--size-fluid-4);
         max-width: var(--container-max-width);
         margin: 0 auto;
 
-        > * {
+        > *:is(header, main, footer, div) {
             grid-column: 2;
         }
     }

@@ -1,5 +1,6 @@
 import Document, { Html, Head, NextScript, Main } from 'next/document';
 import React from 'react';
+import NavBar from '../components/NavBar';
 
 export default class myDocument extends Document {
     override render() {
@@ -45,6 +46,7 @@ export default class myDocument extends Document {
                     />
                     <link rel="manifest" href="favicon/site.webmanifest" />
                 </Head>
+
                 <body>
                     <Main />
                     <NextScript />

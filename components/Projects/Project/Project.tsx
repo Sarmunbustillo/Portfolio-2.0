@@ -2,7 +2,7 @@ import styles from './Project.module.scss';
 import Image from 'next/image';
 import React, { useRef } from 'react';
 import { useOnVieport } from '../../../lib/useOnVieport';
-import { BigProject } from '../../../types/projects';
+import { detailedProject } from '../../../types/projects';
 
 const Project = ({
     imgPath,
@@ -11,7 +11,8 @@ const Project = ({
     projectDescription,
     workDone,
     projectLink,
-}: BigProject) => {
+    supportHeadline,
+}: detailedProject) => {
     const ref = useRef() as React.MutableRefObject<HTMLInputElement>;
     const isOnViewport = useOnVieport(ref);
     return (
@@ -21,6 +22,9 @@ const Project = ({
                 isOnViewport === true ? styles.animate : ''
             } `}
         >
+            {supportHeadline && (
+                <span className={styles.headline}>{supportHeadline}</span>
+            )}
             <div className={styles.pictures}>
                 <Image
                     src={imgPath}

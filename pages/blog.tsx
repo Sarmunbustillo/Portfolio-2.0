@@ -1,9 +1,7 @@
+import Blogs from '../components/Blog';
 
+const Blog = () => {
+    return <Blogs />;
+};
 
-const blog = () => {
-  return (
-    <div>blog</div>
-  )
-}
-
-export default blog
+export default Blog;

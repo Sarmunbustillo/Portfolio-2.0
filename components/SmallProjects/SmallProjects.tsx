@@ -16,7 +16,6 @@ export default function SmallProjects() {
                         imgPath,
                         id,
                     }: simpleProject) => {
-                        // hide bonita cafe for now
                         return (
                             <SmallProject
                                 projectTitle={projectTitle}

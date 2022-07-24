@@ -18,9 +18,9 @@ export default function Projects() {
                         imgPath,
                         technologies,
                         id,
+                        supportHeadline,
                     }: detailedProject) => {
-                        // hide bonita cafe for now
-                        return id !== 'Bonita_Cafe' ? (
+                        return (
                             <Project
                                 projectTitle={projectTitle}
                                 projectDescription={projectDescription}
@@ -30,9 +30,8 @@ export default function Projects() {
                                 technologies={technologies}
                                 key={id}
                                 id={id}
+                                supportHeadline={supportHeadline}
                             />
-                        ) : (
-                            ''
                         );
                     }
                 )}
