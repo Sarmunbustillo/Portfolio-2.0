@@ -340,6 +340,8 @@ body {
         grid-template-columns: var(--size-fluid-4) 1fr var(--size-fluid-4);
         max-width: var(--container-max-width);
         margin: 0 auto;
+        min-height: 100vh;
+        align-content: space-between;
 
         > *:is(header, main, footer, div) {
             grid-column: 2;
@@ -485,7 +487,7 @@ img {
     font-weight: bold;
     min-width: 8.05rem;
     position: relative;
-    @include device-down(mobile) {
+    @include decive-down(tablet) {
         display: flex;
         width: 100%;
     }

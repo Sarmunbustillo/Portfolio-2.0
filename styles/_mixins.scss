@@ -1,25 +1,37 @@
-@mixin device-down($breakpoint) {
+@mixin decive-down($breakpoint) {
     @if $breakpoint == desktop {
         @media only screen and (max-width: 1192px) {
             @content;
         }
     }
 
-    @if $breakpoint == mobile {
+    @if $breakpoint == tablet {
         @media only screen and (max-width: 980px) {
             @content;
         }
     }
+
+    @if $breakpoint == mobile {
+        @media only screen and (max-width: 580px) {
+            @content;
+        }
+    }
 }
-@mixin device-up($breakpoint) {
+
+@mixin decive-up($breakpoint) {
     @if $breakpoint == desktop {
         @media only screen and (min-width: 1192px) {
             @content;
         }
     }
 
-    @if $breakpoint == mobile {
+    @if $breakpoint == tablet {
         @media only screen and (min-width: 980px) {
+            @content;
+        }
+    }
+    @if $breakpoint == mobile {
+        @media only screen and (min-width: 580px) {
             @content;
         }
     }

@@ -6,7 +6,7 @@
     flex-flow: column;
     justify-content: center;
     padding-block: var(--size-11);
-    @include device-down(mobile) {
+    @include decive-down(tablet) {
         padding-block: var(--size-8);
     }
 
@@ -15,7 +15,7 @@
         flex-wrap: wrap;
         gap: var(--size-6);
         > * {
-            @include device-down(mobile) {
+            @include decive-down(tablet) {
                 width: 100%;
             }
         }

@@ -22,10 +22,10 @@ const Project = ({
                 isOnViewport === true ? styles.animate : ''
             } `}
         >
-            {supportHeadline && (
-                <span className={styles.headline}>{supportHeadline}</span>
-            )}
             <div className={styles.pictures}>
+                {supportHeadline && (
+                    <span className={styles.support}>{supportHeadline}</span>
+                )}
                 <Image
                     src={imgPath}
                     alt={projectTitle}

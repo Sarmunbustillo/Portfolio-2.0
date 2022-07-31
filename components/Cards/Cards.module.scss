@@ -12,5 +12,9 @@
         grid-auto-rows: var(--size-12);
         column-gap: var(--size-8);
         row-gap: var(--size-6);
+
+        @include decive-down(mobile) {
+            grid-template-columns: 100%;
+        }
     }
 }
