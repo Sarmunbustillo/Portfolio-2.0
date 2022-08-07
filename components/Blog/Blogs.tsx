@@ -1,19 +1,30 @@
-import { CardsGrid, ScrollContainer } from '../Layout/Containers';
+import { Articles, CardsGrid, ScrollContainer } from '../Layout/Containers';
 import styles from './Blogs.module.scss';
-import blogs from '../../public/data/blogs/featured-blogs.json';
+import blog from '../../public/data/blog/posts.json';
 import alldemos from '../../public/data/demos/demos.json';
-import { Card } from '../Card/Card';
-import { SimpleCard } from '../../types/projects';
-const { featured_blogs } = blogs;
+import { Card, CardArticlePreview } from '../Card/Card';
+import { ArticlePreview, SimpleCard } from '../../types/projects';
+const { posts } = blog;
 const { demos } = alldemos;
+
 const Blogs = () => {
     return (
         <section id="blogs" className={styles.blogs}>
-            <CardsGrid headline="Posts">
-                {featured_blogs.map(
-                    ({ text, link, external, id }: SimpleCard) => {
+            <Articles
+                headline="Posts"
+                text="Sometimes I like to write about Demos I've done or deep diving into technical deep dive."
+            >
+                {posts.map(
+                    ({
+                        headline,
+                        text,
+                        link,
+                        external,
+                        id,
+                    }: ArticlePreview) => {
                         return (
-                            <Card
+                            <CardArticlePreview
+                                headline={headline}
                                 text={text}
                                 link={link}
                                 external={external}
@@ -22,15 +33,15 @@ const Blogs = () => {
                         );
                     }
                 )}
-            </CardsGrid>
+            </Articles>
             <ScrollContainer
                 headline="Demos"
                 text="Little demos I've built to learn from and teach others"
             >
-                {demos.map(({ text, link, external, id }: SimpleCard) => {
+                {demos.map(({ headline, link, external, id }: SimpleCard) => {
                     return (
                         <Card
-                            text={text}
+                            headline={headline}
                             link={link}
                             external={external}
                             key={id}

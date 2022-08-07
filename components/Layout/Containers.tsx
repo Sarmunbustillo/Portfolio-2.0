@@ -62,4 +62,24 @@ const OddEvenRows = ({
     );
 };
 
-export { ScrollContainer, CardsGrid, OddEvenRows };
+const Articles = ({
+    headline,
+    text,
+    children,
+}: {
+    headline?: string;
+    text?: string;
+    children: React.ReactNode;
+}) => {
+    return (
+        <section id="articles">
+            {headline && (
+                <h2 className={text && styles.headline}>{headline}</h2>
+            )}
+            {text && <p>{text}</p>}
+            <div className={styles.articlePreview}>{children}</div>
+        </section>
+    );
+};
+
+export { ScrollContainer, CardsGrid, OddEvenRows, Articles };

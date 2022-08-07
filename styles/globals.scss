@@ -264,12 +264,15 @@
     --url-img-light: url('/images/sarmunLight.png');
     --brand-light: var(--gray-0);
     --brand-dark: var(--black);
-    --light-color-text: var(--gray-0);
-    --dark-color-text: var(--gray-9);
+    --light-color-headline: var(--gray-0);
+    --dark-color-headline: var(--gray-9);
+    --light-color-text: var(--gray-5);
+    --dark-color-text: var(--gray-8);
     --nav-bg-overlay-dark: rgba(0, 0, 0, 0.801);
     --nav-bg-overlay-light: rgba(248, 249, 250, 0.8);
 
     --brand: var(--brand-dark);
+    --color-headline: var(--light-color-headline);
     --color-text: var(--light-color-text);
     --nav-bg-overlay: var(--nav-bg-overlay-dark);
     --highlight: var(--indigo-4);
@@ -293,6 +296,7 @@ html {
 
 [data-theme='light'] {
     --brand: var(--brand-light);
+    --color-headline: var(--dark-color-headline);
     --color-text: var(--dark-color-text);
     --highlight: var(--blue-6);
     --nav-bg-overlay: var(--nav-bg-overlay-light);
@@ -319,13 +323,13 @@ html {
         --button-color-text: var(--highlight);
         &:hover,
         &:focus-visible {
-            --button-color-text: var(--light-color-text);
+            --button-color-text: var(--light-color-headline);
         }
     }
 }
 
 body {
-    color: var(--color-text);
+    color: var(--color-headline);
     background-color: var(--brand);
     font-family: var(--font-family);
     line-height: var(--line-height);
@@ -389,11 +393,13 @@ a {
     }
 }
 
-h1 {
+h1,
+.h1 {
     font-size: var(--font-size-fluid-4);
 }
 
-h2 {
+h2,
+.h2 {
     font-size: var(--font-size-fluid-3);
 
     margin-bottom: clamp(var(--size-7), 10vw, var(--size-7));
@@ -403,13 +409,14 @@ h2 {
     }
 }
 
-h3 {
-    font-size: var(--font-size-fluid-2);
-    margin-bottom: clamp(var(--size-1), 5vw, var(--size-2));
+h3,
+.h3 {
+    font-size: var(--font-size-5);
 }
 
-h4 {
-    font-size: var(--font-size-fluid-1);
+h4,
+.h4 {
+    font-size: var(--font-size-3);
 }
 
 h2,
@@ -434,9 +441,11 @@ small,
 .small {
     font-size: var(--font-size-0);
 }
+
 .highlight {
     color: var(--highlight);
 }
+
 a {
     text-decoration: none;
     color: inherit;
@@ -453,6 +462,13 @@ button,
 ul,
 ol {
     font-size: var(--font-size-2);
+}
+
+p,
+button,
+ul,
+ol {
+    color: var(--color-text);
 }
 
 p {
@@ -483,7 +499,7 @@ img {
 
 .button {
     --button-bg: var(--brand);
-    --button-color-text: var(--color-text);
+    --button-color-text: var(--color-headline);
     box-shadow: var(--shadow-small);
     display: inline-flex;
     justify-content: center;
@@ -512,13 +528,13 @@ img {
     &.button-secondary {
         --button-bg: var(--highlight);
         --button-border: var(--highlight);
-        --button-color-text: var(--light-color-text);
+        --button-color-text: var(--light-color-headline);
         border: 0.3rem solid var(--button-border);
 
         &:hover,
         &:focus-visible {
             --button-bg: var(--transparent);
-            --button-color-text: var(--light-color-text);
+            --button-color-text: var(--light-color-headline);
         }
     }
 

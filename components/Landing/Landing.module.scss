@@ -68,6 +68,10 @@
             background: var(--linear-gradient-1) fixed;
             margin-top: var(--size-2);
         }
+
+        p {
+            color: var(--color-headline);
+        }
     }
 
     @keyframes fadeIn {

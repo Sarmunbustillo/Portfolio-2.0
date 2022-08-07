@@ -70,6 +70,10 @@
         gap: clamp(var(--size-8), 10vw, var(--size-10));
     }
 }
+.articlePreview {
+    display: grid;
+    gap: var(--size-4);
+}
 
 .headline {
     margin-bottom: 0;

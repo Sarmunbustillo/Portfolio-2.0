@@ -2,115 +2,115 @@
     "demos": [
         {
             "id": "demo_1",
-            "text": "Hangman",
+            "headline": "Hangman",
             "link": "https://sarmunbustillo.github.io/Hangman/",
             "external": true
         },
         {
             "id": "demo_2",
-            "text": "Check list animation",
+            "headline": "Check list animation",
             "link": "https://sarmunbustillo.github.io/Check-List-Animation/",
             "external": true
         },
         {
             "id": "demo_3",
-            "text": "CSS only cellphone",
+            "headline": "CSS only cellphone",
             "link": "https://sarmunbustillo.github.io/Mobile-3D/",
             "external": true
         },
         {
             "id": "demo_4",
-            "text": "CSS only cellphone",
+            "headline": "CSS only cellphone",
             "link": "https://sarmunbustillo.github.io/Mobile-3D/",
             "external": true
         },
         {
             "id": "demo_5",
-            "text": "Memory game",
+            "headline": "Memory game",
             "link": "https://sarmunbustillo.github.io/Memory-Game/",
             "external": true
         },
         {
             "id": "demo_6",
-            "text": "Whack a mole",
+            "headline": "Whack a mole",
             "link": "https://sarmunbustillo.github.io/Whack-a-Mole/",
             "external": true
         },
         {
             "id": "demo_7",
-            "text": "Connect four",
+            "headline": "Connect four",
             "link": "https://sarmunbustillo.github.io/Connect-Four/",
             "external": true
         },
         {
             "id": "demo_8",
-            "text": "Snake game",
+            "headline": "Snake game",
             "link": "https://sarmunbustillo.github.io/Snake-Game/",
             "external": true
         },
         {
             "id": "demo_9",
-            "text": "Exchange rate calculator",
+            "headline": "Exchange rate calculator",
             "link": "https://sarmunbustillo.github.io/Exchange-Rate-Calculator/",
             "external": true
         },
         {
             "id": "demo_10",
-            "text": "Random rich person generator",
+            "headline": "Random rich person generator",
             "link": "https://sarmunbustillo.github.io/Random-rich-person-generator/",
             "external": true
         },
         {
             "id": "demo_11",
-            "text": "Neumorphic buttons",
+            "headline": "Neumorphic buttons",
             "link": "https://sarmunbustillo.github.io/Neumorphic-buttons/",
             "external": true
         },
         {
             "id": "demo_12",
-            "text": "Animated counter",
+            "headline": "Animated counter",
             "link": "https://sarmunbustillo.github.io/animated-counter/",
             "external": true
         },
         {
             "id": "demo_13",
-            "text": "Flexbox transition",
+            "headline": "Flexbox transition",
             "link": "https://sarmunbustillo.github.io/FlexBox-transition/",
             "external": true
         },
         {
             "id": "demo_14",
-            "text": "CSS Perspective",
+            "headline": "CSS Perspective",
             "link": "https://sarmunbustillo.github.io/CSS-Perspective/",
             "external": true
         },
         {
             "id": "demo_15",
-            "text": "SVG Text Animation",
+            "headline": "SVG Text Animation",
             "link": "https://sarmunbustillo.github.io/Svg-text-animation/",
             "external": true
         },
         {
             "id": "demo_16",
-            "text": "Landing page with parallax",
+            "headline": "Landing page with parallax",
             "link": "https://sarmunbustillo.github.io/Collage-Layout/",
             "external": true
         },
         {
             "id": "demo_17",
-            "text": "Card hover open up effect",
+            "headline": "Card hover open up effect",
             "link": "https://sarmunbustillo.github.io/CSS-Card/",
             "external": true
         },
         {
             "id": "demo_18",
-            "text": "Drumset on keybinding",
+            "headline": "Drumset on keybinding",
             "link": "https://sarmunbustillo.github.io/Drum-set/",
             "external": true
         },
         {
             "id": "demo_19",
-            "text": "Analog clock",
+            "headline": "Analog clock",
             "link": "https://sarmunbustillo.github.io/Clock/",
             "external": true
         }

@@ -144,9 +144,10 @@
     .description {
         grid-column: var(--_position, unset);
         grid-row: var(--_position, unset);
-        p {
-            max-width: 60ch;
+        h3 {
+            margin-bottom: var(--size-2);
         }
+
         ul {
             display: grid;
             gap: var(--size-2);
@@ -190,12 +191,14 @@
         span {
             font-size: var(--font-size-1);
             background: var(--linear-gradient-2) fixed;
+            background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
 
             @supports (-moz-appearance: none) {
                 color: var(--highlight);
                 background: unset;
+                background-clip: unset;
                 -webkit-background-clip: unset;
                 -webkit-text-fill-color: unset;
             }

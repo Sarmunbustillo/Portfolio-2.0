@@ -14,8 +14,12 @@ export type DetailedProject = SimpleProject & {
 };
 
 export type SimpleCard = {
-    text: string;
+    headline?: string;
     link: string;
     external?: boolean;
     id?: string;
+};
+
+export type ArticlePreview = SimpleCard & {
+    text: string;
 };

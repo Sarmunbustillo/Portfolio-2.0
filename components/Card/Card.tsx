@@ -1,7 +1,11 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRef } from 'react';
-import { DetailedProject, SimpleCard } from '../../types/projects';
+import {
+    ArticlePreview,
+    DetailedProject,
+    SimpleCard,
+} from '../../types/projects';
 import { useOnVieport } from '../../lib/useOnVieport';
 import { SimpleProject } from '../../types/projects';
 import styles from './Card.module.scss';
@@ -20,19 +24,19 @@ const ArrowIcon = () => {
     );
 };
 
-const Card = ({ text, link, external = false }: SimpleCard) => {
+const Card = ({ headline, link, external = false }: SimpleCard) => {
     if (external) {
         return (
             <a
                 className={styles.card}
                 target="_blank"
                 href={link}
-                title={text}
-                aria-label={text}
+                title={headline}
+                aria-label={headline}
             >
                 <div>
                     <span>
-                        <h3>{text}</h3>
+                        <h3 className="h4">{headline}</h3>
                         <ArrowIcon />
                     </span>
                 </div>
@@ -41,12 +45,46 @@ const Card = ({ text, link, external = false }: SimpleCard) => {
     }
     return (
         <Link className={styles.card} href={link}>
-            <a title={text} aria-label={text}>
+            <a title={headline} aria-label={headline}>
                 <div>
                     <span>
-                        <h3>{text}</h3>
+                        <h3 className="h4">{headline}</h3>
                         <ArrowIcon />
                     </span>
+                </div>
+            </a>
+        </Link>
+    );
+};
+
+const CardArticlePreview = ({
+    headline,
+    text,
+    link,
+    external = false,
+}: ArticlePreview) => {
+    if (external) {
+        return (
+            <a
+                className={styles.articlePreview}
+                target="_blank"
+                href={link}
+                title={headline}
+                aria-label={headline}
+            >
+                <div>
+                    <h3>{headline}</h3>
+                    <p>{text}</p>
+                </div>
+            </a>
+        );
+    }
+    return (
+        <Link className={styles.card} href={link}>
+            <a title={text} aria-label={text}>
+                <div>
+                    <h3>{headline}</h3>
+                    <p>{text}</p>
                 </div>
             </a>
         </Link>
@@ -74,7 +112,7 @@ const CardImage = ({ imgPath, projectTitle, projectLink }: SimpleProject) => {
                     />
                 </a>
             </div>
-            <h4 className="not-multicolor">{projectTitle}</h4>
+            <h3 className="not-multicolor">{projectTitle}</h3>
         </div>
     );
 };
@@ -140,4 +178,4 @@ const CardProject = ({
     );
 };
 
-export { Card, CardImage, CardProject };
+export { Card, CardImage, CardProject, CardArticlePreview };

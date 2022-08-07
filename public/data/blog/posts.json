@@ -1,0 +1,25 @@
+{
+    "posts": [
+        {
+            "id": "blog_1",
+            "headline": "Detect when an element gets wrapped (Flexbox , Grid)",
+            "text": "Let's say we have a parent container (flex or grid) that contains items that will wrap when they don't fit in the same row at different screen sizes.",
+            "link": "https://dev.to/sarmunbustillo/detect-when-an-element-gets-wrapped-flexbox-grid-f96",
+            "external": true
+        },
+        {
+            "id": "blog_2",
+            "headline": "Reusable Parallax Effect With CSS Variables",
+            "text": "CSS variables offers us a very neat way to share information between CSS and JavaScript. The perk of connecting these two with CSS variables is that we can access them and modify them in CSS and in JS at any time.",
+            "link": "https://dev.to/sarmunbustillo/reusable-parallax-effect-with-css-variables-79d",
+            "external": true
+        },
+        {
+            "id": "blog_3",
+            "headline": "Custom animated Counter",
+            "text": "A counter that can be easily customized and animated",
+            "link": "https://dev.to/sarmunbustillo/animated-counter-fjo",
+            "external": true
+        }
+    ]
+}
