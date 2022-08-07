@@ -42,4 +42,24 @@ const CardsGrid = ({
     );
 };
 
-export { ScrollContainer, CardsGrid };
+const OddEvenRows = ({
+    headline,
+    text,
+    children,
+}: {
+    headline?: string;
+    text?: string;
+    children: React.ReactNode;
+}) => {
+    return (
+        <section id="oddEven" className={styles.oddEven}>
+            {headline && (
+                <h2 className={text && styles.headline}>{headline}</h2>
+            )}
+            {text && <p>{text}</p>}
+            <div className={styles.grid}>{children}</div>
+        </section>
+    );
+};
+
+export { ScrollContainer, CardsGrid, OddEvenRows };

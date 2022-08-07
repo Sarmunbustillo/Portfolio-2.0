@@ -58,6 +58,19 @@
     }
 }
 
+.oddEven {
+    position: relative;
+    background: var(--brand);
+
+    * {
+        z-index: 2;
+    }
+    > div:first-of-type {
+        display: grid;
+        gap: clamp(var(--size-8), 10vw, var(--size-10));
+    }
+}
+
 .headline {
     margin-bottom: 0;
 
