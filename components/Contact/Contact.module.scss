@@ -1,14 +1,10 @@
 @import '../../styles/mixins';
 .contact {
     display: flex;
-    align-items: center;
     flex-direction: column;
     flex-flow: column;
     justify-content: center;
-    padding-block: var(--size-11);
-    @include decive-down(tablet) {
-        padding-block: var(--size-8);
-    }
+    padding-block-end: clamp(var(--size-9), 4vw, var(--size-11));
 
     > div {
         display: flex;

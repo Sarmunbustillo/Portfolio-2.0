@@ -266,9 +266,12 @@
     --brand-dark: var(--black);
     --light-color-text: var(--gray-0);
     --dark-color-text: var(--gray-9);
+    --nav-bg-overlay-dark: rgba(0, 0, 0, 0.801);
+    --nav-bg-overlay-light: rgba(248, 249, 250, 0.8);
 
     --brand: var(--brand-dark);
     --color-text: var(--light-color-text);
+    --nav-bg-overlay: var(--nav-bg-overlay-dark);
     --highlight: var(--indigo-4);
     --highlight-lighter: var(--indigo-3);
     --highlight-darker: var(--indigo-5);
@@ -278,7 +281,6 @@
 html {
     box-sizing: border-box;
     font-size: var(--font-size);
-    overflow-x: hidden;
 }
 
 *,
@@ -293,6 +295,7 @@ html {
     --brand: var(--brand-light);
     --color-text: var(--dark-color-text);
     --highlight: var(--blue-6);
+    --nav-bg-overlay: var(--nav-bg-overlay-light);
     --highlight-lighter: var(--indigo-4);
     --highlight-darker: var(--indigo-8);
     --url-img: var(--url-img-light);
@@ -333,7 +336,6 @@ body {
     padding: 0;
     margin: 0;
     min-height: 100vh;
-    overflow-x: hidden;
 
     > #__next {
         display: grid;
@@ -354,9 +356,17 @@ main {
         &:nth-of-type(2)#cards {
             padding-block-start: clamp(var(--size-9), 4vw, var(--size-11));
         }
+    }
 
+    section {
+        > section {
+            &:first-of-type {
+                padding-block-start: clamp(var(--size-9), 4vw, var(--size-11));
+                padding-block-end: clamp(var(--size-9), 4vw, var(--size-11));
+            }
+        }
         + section {
-            padding-block-end: clamp(var(--size-9), 6vw, var(--size-12));
+            padding-block-end: clamp(var(--size-9), 8vw, var(--size-12));
         }
     }
 }

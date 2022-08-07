@@ -1,8 +1,11 @@
 @import '../../styles/mixins';
 
 .navigation {
-    position: relative;
+    position: sticky;
+    top: 0;
     display: flex;
     justify-content: space-between;
     padding: var(--size-3) 0;
+    background-color: var(--nav-bg-overlay);
+    z-index: 99;
 }

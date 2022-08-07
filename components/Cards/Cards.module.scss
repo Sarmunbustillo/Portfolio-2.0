@@ -3,6 +3,13 @@
     position: relative;
     background: var(--brand);
 
+    .headline {
+        margin-bottom: 0;
+    }
+
+    > p {
+        margin-bottom: clamp(var(--size-7), 10vw, var(--size-7));
+    }
     .grid {
         display: grid;
         grid-template-columns: repeat(

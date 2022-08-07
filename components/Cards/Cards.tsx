@@ -1,15 +1,20 @@
 import styles from './Cards.module.scss';
 
 const Cards = ({
-    headline = 'Cards',
+    headline,
+    text,
     children,
 }: {
-    headline: string;
-    children?: React.ReactNode;
+    headline?: string;
+    text?: string;
+    children: React.ReactNode;
 }) => {
     return (
         <section id="cards" className={styles.cards}>
-            <h2>{headline}</h2>
+            {headline && (
+                <h2 className={text && styles.headline}>{headline}</h2>
+            )}
+            {text && <p>{text}</p>}
             <div className={styles.grid}>{children}</div>
         </section>
     );
