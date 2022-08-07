@@ -1,42 +1,68 @@
 import styles from './Projects.module.scss';
 import Project from './Project/Project';
-import SmallProjects from '../SmallProjects/SmallProjects';
+import { CardImage } from '../Card/Card';
+import { ScrollContainer } from '../Layout/Containers';
 import allProjects from '../../public/data/projects/big-projects.json';
-import { DetailedProject } from '../../types/projects';
+import smallProjects from '../../public/data/projects/small-projects.json';
+import { DetailedProject, SimpleProject } from '../../types/projects';
 const { projects } = allProjects;
+const { projects: smallP } = smallProjects;
+
 export default function Projects() {
     return (
-        <section className={styles.projects}>
-            <h2>Projects</h2>
-            <div>
-                {projects.map(
+        <>
+            <section className={styles.projects}>
+                <h2>Projects</h2>
+                <div>
+                    {projects.map(
+                        ({
+                            projectTitle,
+                            projectDescription,
+                            projectLink,
+                            workDone,
+                            imgPath,
+                            technologies,
+                            id,
+                            supportHeadline,
+                        }: DetailedProject) => {
+                            return (
+                                <Project
+                                    projectTitle={projectTitle}
+                                    projectDescription={projectDescription}
+                                    projectLink={projectLink}
+                                    workDone={workDone}
+                                    imgPath={imgPath}
+                                    technologies={technologies}
+                                    key={id}
+                                    id={id}
+                                    supportHeadline={supportHeadline}
+                                />
+                            );
+                        }
+                    )}
+                </div>
+            </section>
+
+            <ScrollContainer headline="Other Work">
+                {smallP.map(
                     ({
                         projectTitle,
-                        projectDescription,
                         projectLink,
-                        workDone,
                         imgPath,
-                        technologies,
                         id,
-                        supportHeadline,
-                    }: DetailedProject) => {
+                    }: SimpleProject) => {
                         return (
-                            <Project
+                            <CardImage
                                 projectTitle={projectTitle}
-                                projectDescription={projectDescription}
                                 projectLink={projectLink}
-                                workDone={workDone}
                                 imgPath={imgPath}
-                                technologies={technologies}
                                 key={id}
                                 id={id}
-                                supportHeadline={supportHeadline}
                             />
                         );
                     }
                 )}
-            </div>
-            <SmallProjects />
-        </section>
+            </ScrollContainer>
+        </>
     );
 }

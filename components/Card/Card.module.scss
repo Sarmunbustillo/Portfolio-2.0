@@ -1,4 +1,5 @@
-@import '../../../styles/mixins';
+@import '../../styles/mixins';
+
 .card {
     position: relative;
     background: linear-gradient(
@@ -6,10 +7,11 @@
         var(--cyan-4),
         var(--indigo-4)
     );
-
+    min-width: fit-content;
     display: grid;
     padding: var(--size-1);
     border-radius: var(--border-radius);
+    min-width: var(--size-13);
 
     > div {
         background: var(--brand);
@@ -20,6 +22,7 @@
             height: 100%;
             align-content: space-between;
             grid-auto-rows: max-content;
+            gap: var(--size-4);
         }
     }
 
@@ -42,6 +45,29 @@
 
         path {
             transition: stroke 0.15s ease-in-out;
+        }
+    }
+}
+
+.cardImage {
+    position: relative;
+    min-width: var(--size-14);
+
+    > div {
+        margin-bottom: var(--size-2);
+        position: relative;
+
+        a {
+            display: flex;
+            border: none;
+        }
+
+        img {
+            object-fit: cover;
+            object-position: center;
+            aspect-ratio: 16/9;
+            max-width: 70rem;
+            width: 100%;
         }
     }
 }

@@ -1,14 +1,15 @@
-import Cards from '../components/Cards';
-import Card from '../components/Cards/Card';
+import { CardsGrid } from '../components/Layout/Containers';
+import { Card } from '../components/Card/Card';
 import Landing from '../components/Landing/Landing';
 import Projects from '../components/Projects/Projects';
 import blogs from '../public/data/blogs/featured-blogs.json';
 const { featured_blogs } = blogs;
+
 export default function Home() {
     return (
         <>
             <Landing />
-            <Cards headline="Featured Posts">
+            <CardsGrid headline="Featured Posts">
                 {featured_blogs.map(({ text, link, external, id }) => {
                     return (
                         <Card
@@ -19,7 +20,7 @@ export default function Home() {
                         />
                     );
                 })}
-            </Cards>
+            </CardsGrid>
             <Projects />
         </>
     );

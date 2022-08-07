@@ -1,9 +1,29 @@
-.projects {
+@import '../../styles/mixins';
+
+.cards {
+    position: relative;
+    background: var(--brand);
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(min(100%, var(--size-8)), var(--size-14))
+        );
+        column-gap: var(--size-8);
+        row-gap: var(--size-6);
+
+        @include decive-down(mobile) {
+            grid-template-columns: 100%;
+        }
+    }
+}
+
+.scrollContainer {
     display: grid;
     position: relative;
     background: var(--brand);
     text-align: start;
-    padding-block-start: clamp(var(--size-9), 6vw, var(--size-12));
 
     > div {
         display: flex;
@@ -33,11 +53,15 @@
         }
     }
 
-    h3 {
-        text-align: start;
-        margin-bottom: var(--size-6);
-    }
     * {
         z-index: 2;
+    }
+}
+
+.headline {
+    margin-bottom: 0;
+
+    + p {
+        margin-bottom: clamp(var(--size-7), 10vw, var(--size-7));
     }
 }
