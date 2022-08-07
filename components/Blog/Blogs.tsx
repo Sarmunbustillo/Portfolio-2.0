@@ -9,10 +9,17 @@ const { demos } = alldemos;
 
 const Blogs = () => {
     return (
-        <section id="blogs" className={styles.blogs}>
+        <>
+            <section>
+                <h1>Writings</h1>
+                <p>
+                    Here is a copilations of some of my posts, demos and
+                    snippets I've done over the past few years
+                </p>
+            </section>
             <Articles
                 headline="Posts"
-                text="Sometimes I like to write about Demos I've done or deep diving into technical deep dive."
+                text="Sometimes I like to write articles about Demos I've done or deep divea into technical topics."
             >
                 {posts.map(
                     ({
@@ -49,7 +56,7 @@ const Blogs = () => {
                     );
                 })}
             </ScrollContainer>
-        </section>
+        </>
     );
 };
 export default Blogs;

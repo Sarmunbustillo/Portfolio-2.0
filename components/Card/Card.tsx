@@ -73,7 +73,7 @@ const CardArticlePreview = ({
                 aria-label={headline}
             >
                 <div>
-                    <h3>{headline}</h3>
+                    <h3 className="h4">{headline}</h3>
                     <p>{text}</p>
                 </div>
             </a>
@@ -83,7 +83,7 @@ const CardArticlePreview = ({
         <Link className={styles.card} href={link}>
             <a title={text} aria-label={text}>
                 <div>
-                    <h3>{headline}</h3>
+                    <h3 className="h4">{headline}</h3>
                     <p>{text}</p>
                 </div>
             </a>

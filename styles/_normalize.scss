@@ -56,7 +56,7 @@
     }
 
     :where(p, ul, ol, dl, h6) {
-        font-size: var(--font-size-2);
+        font-size: var(--font-size-1);
     }
 
     :where(a, u, ins, abbr) {
@@ -66,7 +66,7 @@
     :where(a[href], area, button, input, label[for], select, summary, textarea, [tabindex]:not([tabindex*='-'])) {
         cursor: pointer;
         touch-action: manipulation;
-        font-size: var(--font-size-2);
+        font-size: var(--font-size-1);
     }
 
     :where(a) {

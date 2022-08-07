@@ -278,7 +278,7 @@
     --highlight: var(--indigo-4);
     --highlight-lighter: var(--indigo-3);
     --highlight-darker: var(--indigo-5);
-    --line-height: 1.75;
+    --line-height: var(--font-lineheight-4);
 }
 
 html {
@@ -333,6 +333,7 @@ body {
     background-color: var(--brand);
     font-family: var(--font-family);
     line-height: var(--line-height);
+    font-size: var(--font-size-1);
     font-weight: 400;
     /* background-image: url('/images/glasses.jpg'); */
     background-size: cover;
@@ -355,20 +356,30 @@ body {
     }
 }
 
-main {
+:where(main) {
+    @include decive-up(tablet) {
+        overflow-x: hidden;
+    }
+
     > section {
         &:nth-of-type(2)#cards {
             padding-block-start: clamp(var(--size-9), 4vw, var(--size-11));
         }
     }
 
-    section {
+    :where(section) {
         > section {
             &:first-of-type {
                 padding-block-start: clamp(var(--size-9), 4vw, var(--size-11));
                 padding-block-end: clamp(var(--size-9), 4vw, var(--size-11));
             }
         }
+
+        &:first-of-type {
+            padding-block-start: clamp(var(--size-9), 4vw, var(--size-11));
+            padding-block-end: clamp(var(--size-9), 8vw, var(--size-12));
+        }
+
         + section {
             padding-block-end: clamp(var(--size-9), 8vw, var(--size-12));
         }
@@ -412,6 +423,16 @@ h2,
 h3,
 .h3 {
     font-size: var(--font-size-5);
+    margin-bottom: var(--size-1);
+
+    @include decive-down(tablet) {
+        font-size: var(--font-size-4);
+        margin-bottom: var(--size-2);
+        line-height: var(--line-height);
+    }
+    @include decive-down(mobile) {
+        font-size: var(--font-size-3);
+    }
 }
 
 h4,
@@ -435,6 +456,10 @@ h6 {
             -webkit-text-fill-color: transparent;
         }
     }
+
+    @include decive-down(tablet) {
+        line-height: var(--font-lineheight-3);
+    }
 }
 
 small,
@@ -454,14 +479,6 @@ a {
     &:focus-visible {
         text-decoration: none;
     }
-}
-
-p,
-a,
-button,
-ul,
-ol {
-    font-size: var(--font-size-2);
 }
 
 p,

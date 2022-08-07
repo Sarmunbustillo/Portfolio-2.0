@@ -7,6 +7,10 @@
     place-items: center;
     z-index: 99;
 
+    .hide {
+        display: none;
+    }
+
     a {
         position: relative;
         display: flex;
