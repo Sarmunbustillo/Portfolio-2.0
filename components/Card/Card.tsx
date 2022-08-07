@@ -115,7 +115,7 @@ const CardProject = ({
                     ))}
                 </div>
                 <div className="test">
-                    <h3 className="colored">{projectTitle}</h3>
+                    <h3>{projectTitle}</h3>
                 </div>
                 <p>{projectDescription}</p>
                 <ul>
