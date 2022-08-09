@@ -270,6 +270,8 @@
     --dark-color-text: var(--gray-8);
     --nav-bg-overlay-dark: rgba(0, 0, 0, 0.801);
     --nav-bg-overlay-light: rgba(248, 249, 250, 0.8);
+    --scrollbar-foreground: #748ffc;
+    --scrollbar-background: #f8f9fa;
 
     --brand: var(--brand-dark);
     --color-headline: var(--light-color-headline);
@@ -305,6 +307,8 @@ html {
     --url-img: var(--url-img-light);
     --icon-fill: hsl(210 10% 70%);
     --icon-fill-hover: hsl(210 15% 90%);
+    --scrollbar-foreground: #748ffc;
+    --scrollbar-background: var(--color-text);
 
     --linear-gradient-1: linear-gradient(
         var(--gradient-direction),

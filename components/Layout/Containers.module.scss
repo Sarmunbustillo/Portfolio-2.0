@@ -33,9 +33,9 @@
         scroll-padding: 0 50%;
         scroll-snap-type: x mandatory;
         padding: var(--size-2) 0 var(--size-6);
-
         --scrollbar-foreground: #748ffc;
-        --scrollbar-background: #f8f9fa;
+        --scrollbar-background: var(--color-text);
+
         /* Foreground, Background */
         scrollbar-color: var(--scrollbar-foreground) var(--scrollbar-background);
 
