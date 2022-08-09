@@ -22,7 +22,7 @@ function NavbarLinks() {
                     aria-label="/blog"
                     className={`${route === '/blog' ? styles.hide : ''}`}
                 >
-                    blog
+                    Blog
                 </a>
             </Link>
 
