@@ -8,7 +8,7 @@
     padding-block-end: 0;
 
     @include decive-down(tablet) {
-        grid-template-rows: 14rem auto auto;
+        grid-template-rows: unset;
     }
 
     @include decive-up(tablet) {
@@ -95,7 +95,7 @@
     .landing {
         .image {
             &:nth-of-type(odd) {
-                height: 100vh;
+                height: 100%;
                 width: 100vw;
                 top: 0;
                 left: calc(var(--size-fluid-4) * -1);
@@ -135,7 +135,6 @@
             }
 
             @include decive-down(tablet) {
-                grid-row: 3;
                 position: relative;
             }
 
@@ -155,6 +154,12 @@
                 left: 50%;
                 bottom: -10px;
                 transform: translate(-50%, 0);
+
+                @include decive-down(mobile) {
+                    height: 100%;
+                    width: 100%;
+                    bottom: 0px;
+                }
             }
         }
     }
