@@ -10,7 +10,7 @@ export default function Home() {
         <>
             <Landing />
             <CardsGrid headline="Featured Posts">
-                {posts.map(({ headline, link, external, id }) => {
+                {posts.slice(0, 3).map(({ headline, link, external, id }) => {
                     return (
                         <Card
                             headline={headline}

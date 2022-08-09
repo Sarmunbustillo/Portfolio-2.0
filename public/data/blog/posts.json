@@ -16,6 +16,13 @@
         },
         {
             "id": "blog_3",
+            "headline": "Custom double range slider",
+            "text": "o create our custom slider we will make use of the native input type range, well, two of them. The idea in a nutshell is to hide the inputs and set / update visually our custom slider based on the values of those inputs.",
+            "link": "https://dev.to/sarmunbustillo/custom-double-range-slider-3h8a",
+            "external": true
+        },
+        {
+            "id": "blog_4",
             "headline": "Custom animated Counter",
             "text": "A counter that can be easily customized and animated",
             "link": "https://dev.to/sarmunbustillo/animated-counter-fjo",

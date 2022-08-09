@@ -1,5 +1,5 @@
-import { Articles, CardsGrid, ScrollContainer } from '../Layout/Containers';
-import styles from './Blogs.module.scss';
+import { Articles, ScrollContainer } from '../Layout/Containers';
+
 import blog from '../../public/data/blog/posts.json';
 import alldemos from '../../public/data/demos/demos.json';
 import { Card, CardArticlePreview } from '../Card/Card';
@@ -19,7 +19,7 @@ const Blogs = () => {
             </section>
             <Articles
                 headline="Posts"
-                text="Sometimes I like to write articles about Demos I've done or deep divea into technical topics."
+                text="Sometimes I like to write articles about Demos I've done or deep dives into technical topics."
             >
                 {posts.map(
                     ({
