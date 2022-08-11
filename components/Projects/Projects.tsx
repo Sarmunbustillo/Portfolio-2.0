@@ -1,12 +1,14 @@
+import { DetailedProject, SimpleProject } from '../../types/projects';
 import { CardImage, CardProject } from '../Card/Card';
 import { OddEvenRows, ScrollContainer } from '../Layout/Containers';
-import allProjects from '../../public/data/projects/big-projects.json';
-import smallProjects from '../../public/data/projects/small-projects.json';
-import { DetailedProject, SimpleProject } from '../../types/projects';
-const { projects } = allProjects;
-const { projects: smallP } = smallProjects;
 
-export default function Projects() {
+export default function Projects({
+    projects,
+    smallerProjects,
+}: {
+    projects: DetailedProject[];
+    smallerProjects: SimpleProject[];
+}) {
     return (
         <>
             <OddEvenRows headline="Projects">
@@ -39,7 +41,7 @@ export default function Projects() {
             </OddEvenRows>
 
             <ScrollContainer headline="Other Work">
-                {smallP.map(
+                {smallerProjects.map(
                     ({
                         projectTitle,
                         projectLink,
