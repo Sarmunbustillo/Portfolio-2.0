@@ -2,11 +2,7 @@
 
 .card {
     position: relative;
-    background: linear-gradient(
-        var(--gradient-direction),
-        var(--cyan-4),
-        var(--indigo-4)
-    );
+    background: var(--linear-gradient-3);
     min-width: fit-content;
     display: grid;
     padding: var(--size-1);

@@ -248,6 +248,19 @@
         var(--cyan-4)
     );
 
+    --linear-gradient-3: linear-gradient(
+        var(--gradient-direction),
+        var(--cyan-4),
+        var(--indigo-4)
+    );
+
+    --linear-gradient-4: linear-gradient(
+        var(--indigo-2),
+        var(--indigo-1),
+        var(--gray-2),
+        var(--gray-1)
+    );
+
     /* Shadows */
     --shadow-smallest: 0px 4px 8px rgba(0, 0, 0, 0.12);
     --shadow-small: 0 5px 10px rgba(0, 0, 0, 0.12);

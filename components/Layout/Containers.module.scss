@@ -33,7 +33,7 @@
         scroll-padding: 0 50%;
         scroll-snap-type: x mandatory;
         padding: var(--size-2) 0 var(--size-6);
-        --scrollbar-foreground: #748ffc;
+        --scrollbar-foreground: var(--linear-gradient-3);
         --scrollbar-background: var(--color-text);
 
         /* Foreground, Background */
