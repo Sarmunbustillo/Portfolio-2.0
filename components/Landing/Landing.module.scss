@@ -100,9 +100,7 @@
                 width: 100vw;
                 top: 0;
                 left: calc(var(--size-fluid-4) * -1);
-                opacity: 0;
-                filter: blur(10px);
-                animation: fadeIn 0.1s ease-in-out forwards 0.3s;
+                opacity: 0.6;
                 z-index: -1;
                 @supports not (-webkit-touch-callout: none) {
                     background-attachment: fixed;
