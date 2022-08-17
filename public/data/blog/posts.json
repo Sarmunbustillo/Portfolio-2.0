@@ -1,6 +1,29 @@
 {
     "posts": [
         {
+            "id": "ts_1",
+            "headline": "Typescript Series - Pick Utility Type",
+            "text": "Let's break down and explore how the Pick Utility Type works under the hood.",
+            "link": "https://dev.to/sarmunbustillo/detect-when-an-element-gets-wrapped-flexbox-grid-f96",
+            "external": true
+        },
+        {
+            "id": "ts_2",
+            "headline": "Typescript Series - Readonly Utility Type",
+            "text": "The Readonly Utility Type can be very handy, let's see how we would implement it.",
+            "link": "https://dev.to/sarmunbustillo/detect-when-an-element-gets-wrapped-flexbox-grid-f96",
+            "external": true
+        },
+
+        {
+            "id": "ts_3",
+            "headline": "Typescript Series - Tuple to Object",
+            "text": "Let's create a custom Type in order to convert a Tuple into Object.",
+            "link": "https://dev.to/sarmunbustillo/typescript-series-tuple-to-object-1dl6",
+            "external": true
+        },
+
+        {
             "id": "blog_1",
             "headline": "Detect when an element gets wrapped (Flexbox , Grid)",
             "text": "Let's say we have a parent container (flex or grid) that contains items that will wrap when they don't fit in the same row at different screen sizes.",

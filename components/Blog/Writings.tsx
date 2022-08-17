@@ -18,6 +18,7 @@ const Blogs = ({
                     snippets I've done over the past few years
                 </p>
             </section>
+
             <Articles
                 headline="Posts"
                 text="Sometimes I like to write articles about Demos I've done or deep dives into technical topics."

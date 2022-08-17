@@ -1,0 +1,25 @@
+{
+    "ts_series": [
+        {
+            "id": "ts_1",
+            "headline": "Pick Utility Type Explained",
+            "text": "Let's break down and explore how the Pick Utility Type works under the hood",
+            "link": "https://dev.to/sarmunbustillo/typescript-series-pick-utility-type-46c0",
+            "external": true
+        },
+        {
+            "id": "ts_2",
+            "headline": "Readonly Utility Type Explained",
+            "text": "The Readonly Utility Type can be very handy, let's see how we would implement it.",
+            "link": "https://dev.to/sarmunbustillo/detect-when-an-element-gets-wrapped-flexbox-grid-f96",
+            "external": true
+        },
+        {
+            "id": "ts_3",
+            "headline": "Tuple to Object",
+            "text": "Let's create a custom Type in order to convert a Tuple into Object.",
+            "link": "https://dev.to/sarmunbustillo/typescript-series-tuple-to-object-1dl6",
+            "external": true
+        }
+    ]
+}
