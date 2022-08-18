@@ -22,7 +22,13 @@
             "link": "https://dev.to/sarmunbustillo/typescript-series-tuple-to-object-1dl6",
             "external": true
         },
-
+        {
+            "id": "ts_4",
+            "headline": "Typescript Series - First and Last of Array",
+            "text": "Using array destructuring let's create a type to get the first and last of element of an array",
+            "link": "https://dev.to/sarmunbustillo/typescript-series-first-and-last-of-array-type-5dmb",
+            "external": true
+        },
         {
             "id": "blog_1",
             "headline": "Detect when an element gets wrapped (Flexbox , Grid)",
