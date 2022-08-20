@@ -391,45 +391,38 @@ body {
 
     > section {
         &:nth-of-type(2)#cards {
-            padding-block-start: clamp(var(--size-9), 4vw, var(--size-11));
+            padding-block-start: clamp(var(--size-10), 4vw, var(--size-11));
         }
     }
 
     :where(section) {
         > section {
             &:first-of-type {
-                padding-block-start: clamp(var(--size-9), 4vw, var(--size-11));
-                padding-block-end: clamp(var(--size-9), 4vw, var(--size-11));
+                padding-block-start: clamp(var(--size-10), 4vw, var(--size-11));
+                padding-block-end: clamp(var(--size-10), 4vw, var(--size-11));
             }
         }
 
         &:first-of-type {
-            padding-block-start: clamp(var(--size-9), 4vw, var(--size-11));
-            padding-block-end: clamp(var(--size-9), 8vw, var(--size-12));
+            padding-block-start: clamp(var(--size-10), 4vw, var(--size-11));
+            padding-block-end: clamp(var(--size-10), 8vw, var(--size-12));
         }
 
         + section {
-            padding-block-end: clamp(var(--size-9), 8vw, var(--size-12));
+            padding-block-end: clamp(var(--size-10), 8vw, var(--size-12));
         }
     }
 }
 
 .gradient-to-right {
-    --linear-gradient-brand: var(--linear-gradient-2-right);
-
-    &-up-tablet {
-        @include decive-down(tablet) {
-            --linear-gradient-brand: var(--linear-gradient-2);
-        }
+    @include decive-up(tablet) {
+        --linear-gradient-brand: var(--linear-gradient-2-right);
     }
 }
 
 .scroll {
     --scrollbar-foreground: var(--highlight);
     --scrollbar-background: var(--color-text);
-
-    /* Foreground, Background */
-    scrollbar-color: var(--scrollbar-foreground) var(--scrollbar-background);
 
     &::-webkit-scrollbar {
         width: 4px; /* Mostly for vertical scrollbars */
@@ -445,6 +438,9 @@ body {
         /* Background */
         background: var(--scrollbar-background);
     }
+
+    /* Foreground, Background */
+    scrollbar-color: var(--scrollbar-foreground) var(--scrollbar-background);
 }
 
 section:not(.landing) {

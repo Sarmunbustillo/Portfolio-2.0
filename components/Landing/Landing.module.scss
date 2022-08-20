@@ -97,7 +97,8 @@
 
         h1 {
             line-height: 1.1;
-            background: var(--linear-gradient-1);
+            background: var(--linear-gradient-4);
+            background-size: 8ch 16ch;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             &:last-of-type {
@@ -112,7 +113,8 @@
         }
 
         span {
-            background: var(--linear-gradient-1);
+            background: var(--linear-gradient-4);
+            background-size: 8ch 16ch;
             margin-top: var(--size-2);
         }
 
@@ -128,85 +130,14 @@
         }
     }
 }
-// [data-theme='dark'] {
-//     .landing {
-//         .image {
-//             &:nth-of-type(odd) {
-//                 height: 100%;
-//                 width: 100vw;
-//                 top: 0;
-//                 left: calc(var(--size-fluid-4) * -1);
-//                 opacity: 0.6;
-//                 z-index: -1;
-//                 @supports not (-webkit-touch-callout: none) {
-//                     background-attachment: fixed;
-//                 }
-//             }
-//             &:nth-of-type(even) {
-//                 opacity: 0;
-//                 width: 0px;
-//                 position: absolute;
-//             }
-//         }
-//     }
-// }
-// [data-theme='light'] {
-//     .landing {
-//         .image {
-//             border-radius: 50%;
-//             height: clamp(var(--size-14), 60vw, 60rem);
-//             width: clamp(var(--size-14), 60vw, 60rem);
-//             grid-row: 2 / span 1;
-//             background-color: transparent;
-//             background-position: 0px 50px;
 
-//             &:nth-of-type(odd) {
-//                 opacity: 0;
-//                 width: 0px;
-//                 position: absolute;
-//             }
-
-//             @include decive-up(tablet) {
-//                 right: 0;
-//             }
-
-//             @include decive-down(tablet) {
-//                 position: relative;
-//             }
-
-//             &::before {
-//                 content: '';
-//                 position: absolute;
-//                 height: 80%;
-//                 width: 80%;
-//                 border-radius: 50%;
-//                 background: linear-gradient(
-//                     var(--indigo-2),
-//                     var(--indigo-1),
-//                     var(--gray-2),
-//                     var(--gray-1)
-//                 );
-//                 z-index: -1;
-//                 left: 50%;
-//                 bottom: -10px;
-//                 transform: translate(-50%, 0);
-
-//                 @include decive-down(mobile) {
-//                     height: 100%;
-//                     width: 100%;
-//                     bottom: 0px;
-//                 }
-//             }
-//         }
-//     }
-// }
 [data-theme='light'] {
     .landing {
         .descripton {
             h1,
             span {
                 background-image: var(--linear-gradient-1);
-
+                background-size: unset;
                 background-image: var(--linear-gradient-3);
             }
         }
