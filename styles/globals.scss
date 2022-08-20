@@ -422,7 +422,11 @@ body {
 
 .scroll {
     --scrollbar-foreground: var(--highlight);
-    --scrollbar-background: var(--color-text);
+    --scrollbar-background: var(--brand);
+
+    /* Foreground, Background */
+    scrollbar-color: var(--scrollbar-foreground) var(--scrollbar-background);
+    scrollbar-width: thin;
 
     &::-webkit-scrollbar {
         width: 4px; /* Mostly for vertical scrollbars */
@@ -438,9 +442,6 @@ body {
         /* Background */
         background: var(--scrollbar-background);
     }
-
-    /* Foreground, Background */
-    scrollbar-color: var(--scrollbar-foreground) var(--scrollbar-background);
 }
 
 section:not(.landing) {

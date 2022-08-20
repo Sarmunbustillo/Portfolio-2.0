@@ -73,8 +73,8 @@ const CardArticlePreview = ({
                 aria-label={headline}
             >
                 <div>
-                    <h3 className="h4">{headline}</h3>
-                    <p>{text}</p>
+                    {headline && <h3 className="h4">{headline}</h3>}
+                    {text && <p>{text}</p>}
                 </div>
             </a>
         );

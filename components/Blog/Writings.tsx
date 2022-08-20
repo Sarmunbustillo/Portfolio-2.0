@@ -5,9 +5,11 @@ import { ArticlePreview, SimpleCard } from '../../types/projects';
 const Blogs = ({
     demos,
     posts,
+    ts_series,
 }: {
     demos: SimpleCard[];
     posts: ArticlePreview[];
+    ts_series: ArticlePreview[];
 }) => {
     return (
         <>
@@ -24,6 +26,28 @@ const Blogs = ({
                 text="Sometimes I like to write articles about Demos I've done or deep dives into technical topics."
             >
                 {posts.map(
+                    ({
+                        headline,
+                        text,
+                        link,
+                        external,
+                        id,
+                    }: ArticlePreview) => {
+                        return (
+                            <CardArticlePreview
+                                headline={headline}
+                                text={text}
+                                link={link}
+                                external={external}
+                                key={id}
+                            />
+                        );
+                    }
+                )}
+            </Articles>
+
+            <Articles headline="Typescript series" text="">
+                {ts_series.map(
                     ({
                         headline,
                         text,

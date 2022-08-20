@@ -34,6 +34,13 @@
             "text": "Let's write, break down and explore all arount the Exclude Utility Type",
             "link": "https://dev.to/sarmunbustillo/typescript-series-first-and-last-of-array-type-5dmb",
             "external": true
+        },
+        {
+            "id": "ts_6",
+            "headline": "Length of a Tuple",
+            "text": "Let's write a Type to get the length of a tuple",
+            "link": "https://dev.to/sarmunbustillo/typescript-series-length-of-a-tuple-4d8m",
+            "external": true
         }
     ]
 }
