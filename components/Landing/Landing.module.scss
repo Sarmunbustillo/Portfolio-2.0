@@ -112,7 +112,7 @@
         }
 
         span {
-            background: var(--linear-gradient-1) fixed;
+            background: var(--linear-gradient-1);
             margin-top: var(--size-2);
         }
 
@@ -200,3 +200,15 @@
 //         }
 //     }
 // }
+[data-theme='light'] {
+    .landing {
+        .descripton {
+            h1,
+            span {
+                background-image: var(--linear-gradient-1);
+
+                background-image: var(--linear-gradient-3);
+            }
+        }
+    }
+}

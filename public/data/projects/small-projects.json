@@ -1,54 +1,65 @@
 {
     "projects": [
         {
-            "imgPath": "/images/projects/Muller-uk.png",
-            "alt": "Language Service Solutions",
+            "external": true,
+            "id": "molkerei-weihenstephan",
+            "headline": "Molkerei Weihenstephan",
+            "link": "https://www.molkerei-weihenstephan.de/"
+        },
+        {
+            "external": true,
             "id": "Müller_UK",
-            "projectTitle": "Müller UK",
-            "projectLink": "https://www.muller.co.uk/"
+            "headline": "Müller UK",
+            "link": "https://www.muller.co.uk/"
         },
 
         {
-            "imgPath": "/images/projects/Dermalog.png",
-            "alt": "Dermalog",
+            "external": true,
             "id": "Dermalog",
-            "projectTitle": "Dermalog",
-            "projectLink": "https://www.dermalog.com/"
+            "headline": "Dermalog",
+            "link": "https://www.dermalog.com/"
         },
         {
-            "imgPath": "/images/projects/Tma.png",
-            "alt": "TMA",
+            "external": true,
             "id": "TMA",
-            "projectTitle": "TMA",
-            "projectLink": "https://www.tma-milk.com/"
+            "headline": "TMA",
+            "link": "https://www.tma-milk.com/"
         },
         {
-            "imgPath": "/images/projects/Fta.png",
-            "alt": "Fta",
+            "external": true,
             "id": "FTA_GmbH",
-            "projectTitle": "FTA GmbH",
-            "projectLink": "https://www.fta-gmbh.de/"
+            "headline": "FTA GmbH",
+            "link": "https://www.fta-gmbh.de/"
         },
         {
-            "imgPath": "/images/projects/Aidshilfe.png",
-            "alt": "Aidshilfe Hamburg",
+            "external": true,
             "id": "Aidshilfe_Hamburg",
-            "projectTitle": "Aidshilfe Hamburg",
-            "projectLink": "https://www.aidshilfe-hamburg.de/"
+            "headline": "Aidshilfe Hamburg",
+            "link": "https://www.aidshilfe-hamburg.de/"
         },
         {
-            "imgPath": "/images/projects/Rainbowworld.png",
-            "alt": "rainbowworld",
+            "external": true,
             "id": "Rainbowworld",
-            "projectTitle": "Rainbowworld",
-            "projectLink": "https://www.rainbowworld.de/"
+            "headline": "Rainbowworld",
+            "link": "https://www.rainbowworld.de/"
         },
         {
-            "imgPath": "/images/projects/Hamburg-pride.png",
-            "alt": "Hamburg pride",
-            "id": "Hamburg_pride",
-            "projectTitle": "Hamburg pride",
-            "projectLink": "https://www.hamburg-pride.de/"
+            "external": true,
+            "id": "Bnitm",
+            "headline": "BNITM",
+            "link": "https://www.bnitm.de/"
+        },
+        {
+            "external": true,
+            "id": "hamburg-pride",
+            "headline": "Hamburg Pride",
+            "link": "https://www.hamburg-pride.de/"
+        },
+        {
+            "external": true,
+            "id": "sachsenmilch-cheese",
+            "headline": "Sachsenmilch Cheese",
+            "link": "https://www.sachsenmilch-cheese.com/"
         }
     ]
 }

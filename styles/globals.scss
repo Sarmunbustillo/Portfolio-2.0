@@ -234,12 +234,12 @@
     --icon-fill-hover: hsl(210 10% 15%);
 
     /* Gradients */
-    --gradient-direction: to bottom right;
     --linear-gradient-1: linear-gradient(
-        var(--gradient-direction),
+        to bottom right,
         var(--cyan-4),
         var(--pink-4)
     );
+
     --linear-gradient-2: linear-gradient(
         to bottom,
         var(--pink-4),
@@ -247,9 +247,22 @@
         var(--indigo-4),
         var(--cyan-4)
     );
+    --linear-gradient-2-right: linear-gradient(
+        to right,
+        var(--pink-4),
+        var(--violet-4),
+        var(--indigo-4),
+        var(--cyan-4)
+    );
 
     --linear-gradient-3: linear-gradient(
-        var(--gradient-direction),
+        to bottom right,
+        var(--cyan-4),
+        var(--indigo-4)
+    );
+
+    --linear-gradient-3-right: linear-gradient(
+        to right,
         var(--cyan-4),
         var(--indigo-4)
     );
@@ -277,6 +290,7 @@
     --url-img-light: url('/images/sarmunLight.png');
     --brand-light: var(--gray-0);
     --brand-dark: var(--black);
+    --linear-gradient-brand: var(--linear-gradient-2) fixed;
     --light-color-headline: var(--gray-0);
     --dark-color-headline: var(--gray-9);
     --light-color-text: var(--gray-5);
@@ -311,7 +325,8 @@ html {
     --brand: var(--brand-light);
     --color-headline: var(--dark-color-headline);
     --color-text: var(--dark-color-text);
-    --highlight: var(--blue-6);
+    --highlight: var(--blue-8);
+    --linear-gradient-brand: var(--linear-gradient-3);
     --nav-bg-overlay: var(--nav-bg-overlay-light);
     --highlight-lighter: var(--indigo-4);
     --highlight-darker: var(--indigo-8);
@@ -319,25 +334,25 @@ html {
     --icon-fill: hsl(210 10% 70%);
     --icon-fill-hover: hsl(210 15% 90%);
 
-    --linear-gradient-1: linear-gradient(
-        var(--gradient-direction),
-        var(--blue-4),
-        var(--indigo-4)
-    );
-    --linear-gradient-2: linear-gradient(
-        to bottom,
-        var(--blue-4),
-        var(--indigo-4),
-        var(--blue-6),
-        var(--indigo-6)
-    );
-
     .button {
         --button-color-text: var(--highlight);
         &:hover,
         &:focus-visible {
             --button-color-text: var(--light-color-headline);
         }
+    }
+
+    .button-wrapper-border {
+        background-attachment: inherit;
+    }
+
+    .scroll {
+        --scrollbar-foreground: var(--linear-gradient-3);
+        --scrollbar-background: var(--color-text);
+    }
+
+    .gradient-to-right {
+        --linear-gradient-brand: var(--linear-gradient-3-right);
     }
 }
 
@@ -396,6 +411,39 @@ body {
         + section {
             padding-block-end: clamp(var(--size-9), 8vw, var(--size-12));
         }
+    }
+}
+
+.gradient-to-right {
+    --linear-gradient-brand: var(--linear-gradient-2-right);
+
+    &-up-tablet {
+        @include decive-down(tablet) {
+            --linear-gradient-brand: var(--linear-gradient-2);
+        }
+    }
+}
+
+.scroll {
+    --scrollbar-foreground: var(--highlight);
+    --scrollbar-background: var(--color-text);
+
+    /* Foreground, Background */
+    scrollbar-color: var(--scrollbar-foreground) var(--scrollbar-background);
+
+    &::-webkit-scrollbar {
+        width: 4px; /* Mostly for vertical scrollbars */
+        height: 4px; /* Mostly for horizontal scrollbars */
+    }
+
+    &::-webkit-scrollbar-thumb {
+        /* Foreground */
+        background: var(--scrollbar-foreground);
+    }
+
+    &::-webkit-scrollbar-track {
+        /* Background */
+        background: var(--scrollbar-background);
     }
 }
 
@@ -459,7 +507,7 @@ h4,
 h5,
 h6 {
     &.colored {
-        background: var(--linear-gradient-2) fixed;
+        background: var(--linear-gradient-brand) fixed;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
 
@@ -518,13 +566,10 @@ img {
 
 .button-wrapper-border {
     padding: 0.3rem;
-    background: var(--linear-gradient-2) fixed;
+    background: var(--linear-gradient-brand);
+    background-attachment: fixed;
     display: inline-flex;
     border-radius: var(--border-radius);
-
-    @supports (-moz-appearance: none) {
-        background: var(--indigo-4);
-    }
 }
 
 .button {

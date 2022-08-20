@@ -29,28 +29,11 @@
         display: flex;
         gap: var(--size-6);
         max-width: calc(100vw - var(--size-fluid-4) * 2);
-        overflow-x: scroll;
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
         scroll-padding: 0 50%;
         scroll-snap-type: x mandatory;
         padding: var(--size-2) 0 var(--size-6);
-        --scrollbar-foreground: var(--linear-gradient-3);
-        --scrollbar-background: var(--color-text);
-
-        /* Foreground, Background */
-        scrollbar-color: var(--scrollbar-foreground) var(--scrollbar-background);
-
-        &::-webkit-scrollbar {
-            width: 5px; /* Mostly for vertical scrollbars */
-            height: 5px; /* Mostly for horizontal scrollbars */
-        }
-        &::-webkit-scrollbar-thumb {
-            /* Foreground */
-            background: var(--scrollbar-foreground);
-        }
-        &::-webkit-scrollbar-track {
-            /* Background */
-            background: var(--scrollbar-background);
-        }
     }
 
     * {

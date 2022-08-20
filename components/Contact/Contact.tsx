@@ -4,7 +4,7 @@ export default function Contact() {
     return (
         <footer id="contact" className={styles.contact}>
             <h2>Let's Talk</h2>
-            <div className="links">
+            <div className="links gradient-to-right">
                 <span className="button-wrapper-border">
                     <a href="mailto:sarmun.b@gmail.com" className="button ">
                         Get in Touch

@@ -1,5 +1,5 @@
-import { DetailedProject, SimpleProject } from '../../types/projects';
-import { CardImage, CardProject } from '../Card/Card';
+import { DetailedProject, SimpleCard } from '../../types/projects';
+import { Card, CardProject } from '../Card/Card';
 import { OddEvenRows, ScrollContainer } from '../Layout/Containers';
 
 export default function Projects({
@@ -7,7 +7,7 @@ export default function Projects({
     smallerProjects,
 }: {
     projects: DetailedProject[];
-    smallerProjects: SimpleProject[];
+    smallerProjects: SimpleCard[];
 }) {
     return (
         <>
@@ -40,21 +40,15 @@ export default function Projects({
                 )}
             </OddEvenRows>
 
-            <ScrollContainer headline="Other Work">
+            <ScrollContainer headline="Took part in">
                 {smallerProjects.map(
-                    ({
-                        projectTitle,
-                        projectLink,
-                        imgPath,
-                        id,
-                    }: SimpleProject) => {
+                    ({ headline, link, external, id }: SimpleCard) => {
                         return (
-                            <CardImage
-                                projectTitle={projectTitle}
-                                projectLink={projectLink}
-                                imgPath={imgPath}
+                            <Card
+                                headline={headline}
+                                link={link}
+                                external={external}
                                 key={id}
-                                id={id}
                             />
                         );
                     }

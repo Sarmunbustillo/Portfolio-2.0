@@ -16,7 +16,7 @@ const ScrollContainer = ({
             )}
             {text && <p>{text}</p>}
             <div className={styles.scrollContainer}>
-                <div>{children}</div>
+                <div className={`scroll gradient-to-right`}>{children}</div>
             </div>
         </section>
     );
@@ -37,7 +37,11 @@ const CardsGrid = ({
                 <h2 className={text && styles.headline}>{headline}</h2>
             )}
             {text && <p>{text}</p>}
-            <div className={styles.grid}>{children}</div>
+            <div
+                className={`${styles.grid} gradient-to-right gradient-to-right-up-tablet`}
+            >
+                {children}
+            </div>
         </section>
     );
 };
