@@ -55,6 +55,13 @@
             "text": "A little challange, let's write an util If which accepts condition C, a truthy return type T, and a falsy return type F. C is expected to be either true or false while T and F can be any type.",
             "link": "https://dev.to/sarmunbustillo/typescript-series-if-type-util-3lho",
             "external": true
+        },
+        {
+            "id": "ts_9",
+            "headline": "Array Concat Type",
+            "text": "Let's create a type for the JavaScript Array.concat function. A type takes the two arguments. The output should be a new array that includes inputs in ltr order.",
+            "link": "https://dev.to/sarmunbustillo/typescript-series-array-concat-type-4j22",
+            "external": true
         }
     ]
 }
