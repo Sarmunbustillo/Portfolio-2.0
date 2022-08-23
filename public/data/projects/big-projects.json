@@ -1,6 +1,18 @@
 {
     "projects": [
         {
+            "id": "Language_Service_Solutions",
+            "projectTitle": "Language Service Solutions",
+            "projectDescription": "LSS has over 20 years of experience providing translation and interpretation services as well as consulting around language services for organizations and communities.",
+            "projectLink": "https://languageservicesolutions.com/services",
+            "workDone": [
+                "Modernized web stack to improve website performance, have better web vitals, and overall modern look and feel",
+                "implemented a pixel perfect redesign"
+            ],
+            "imgPath": "/images/projects/LSS.png",
+            "technologies": ["SCSS", "React", "Next", "Vercel"]
+        },
+        {
             "id": "NFT_Market",
             "projectTitle": "NFT Market",
             "projectDescription": "NFT market place: Buy, sell and transfer NFTs",
@@ -17,18 +29,6 @@
                 "Typescript",
                 "Tailwind"
             ]
-        },
-        {
-            "id": "Language_Service_Solutions",
-            "projectTitle": "Language Service Solutions",
-            "projectDescription": "LSS has over 20 years of experience providing translation and interpretation services as well as consulting around language services for organizations and communities.",
-            "projectLink": "https://languageservicesolutions.com/services",
-            "workDone": [
-                "Modernized web stack to improve website performance, have better web vitals, and overall modern look and feel",
-                "implemented a pixel perfect redesign"
-            ],
-            "imgPath": "/images/projects/LSS.png",
-            "technologies": ["SCSS", "React", "Next", "Vercel"]
         },
         {
             "id": "Bonita_Cafe",
