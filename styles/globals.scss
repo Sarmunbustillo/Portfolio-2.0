@@ -348,7 +348,6 @@ html {
 
     .scroll {
         --scrollbar-foreground: var(--linear-gradient-3);
-        --scrollbar-background: var(--color-text);
     }
 
     .gradient-to-right {
@@ -389,12 +388,6 @@ body {
         overflow-x: hidden;
     }
 
-    > section {
-        &:nth-of-type(2)#cards {
-            padding-block-start: clamp(var(--size-10), 4vw, var(--size-11));
-        }
-    }
-
     :where(section) {
         > section {
             &:first-of-type {
@@ -404,7 +397,7 @@ body {
         }
 
         &:first-of-type {
-            padding-block-start: clamp(var(--size-10), 4vw, var(--size-11));
+            padding-block-start: clamp(var(--size-9), 4vw, var(--size-11));
             padding-block-end: clamp(var(--size-10), 8vw, var(--size-12));
         }
 
@@ -442,10 +435,6 @@ body {
         /* Background */
         background: var(--scrollbar-background);
     }
-}
-
-section:not(.landing) {
-    z-index: 2;
 }
 
 ::selection {

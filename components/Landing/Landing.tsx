@@ -1,14 +1,11 @@
 import styles from './Landing.module.scss';
-import { useRef } from 'react';
-import { useParallax } from '../../lib/useParallax';
+import Image from 'next/image';
 
 export default function Landing() {
-    const sarRef = useRef() as React.MutableRefObject<HTMLDivElement>;
-    useParallax(sarRef);
     return (
         <section id="landing" className={styles.landing}>
             <div>
-                <div ref={sarRef} className={styles.descripton}>
+                <div className={styles.descripton}>
                     <h1>Sarmun Bustillo</h1>
                     <p>
                         I'm a Frontend Web-Dev based in Hamburg devoted to
@@ -23,8 +20,14 @@ export default function Landing() {
                     </span>
                 </div>
             </div>
-            <div className={styles.image} />
-            <div className={styles.image} />
+            <div className={styles.image}>
+                <Image
+                    src="/images/sarmunLight.png"
+                    alt="A photo of Sarmun Bustillo"
+                    width={1200}
+                    height={900}
+                />
+            </div>
         </section>
     );
 }

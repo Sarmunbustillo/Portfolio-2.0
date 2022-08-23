@@ -41,6 +41,20 @@
             "text": "Let's write a Type to get the length of a tuple",
             "link": "https://dev.to/sarmunbustillo/typescript-series-length-of-a-tuple-4d8m",
             "external": true
+        },
+        {
+            "id": "ts_7",
+            "headline": "Awaited Type",
+            "text": "If we have a type which is wrapped type like Promise. How we can get a type which is inside the wrapped type?",
+            "link": "https://dev.to/sarmunbustillo/typescript-series-awaited-type-29l7",
+            "external": true
+        },
+        {
+            "id": "ts_8",
+            "headline": " If Type Util",
+            "text": "A little challange, let's write an util If which accepts condition C, a truthy return type T, and a falsy return type F. C is expected to be either true or false while T and F can be any type.",
+            "link": "https://dev.to/sarmunbustillo/typescript-series-if-type-util-3lho",
+            "external": true
         }
     ]
 }

@@ -25,8 +25,8 @@ export async function getStaticProps() {
     return {
         props: {
             demos: shuffle(demos),
-            posts,
-            ts_series,
+            posts: shuffle(posts),
+            ts_series: shuffle(ts_series),
         },
     };
 }

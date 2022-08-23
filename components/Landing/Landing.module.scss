@@ -1,56 +1,21 @@
 @import '../../styles/mixins';
 
 :is(.landing) {
-    min-height: 100vh;
     position: relative;
     display: grid;
-    grid-template-rows: repeat(6, 1fr);
-    padding-block-end: 0;
+    grid-template-columns: 1fr auto;
+    row-gap: var(--size-7);
 
     @include decive-down(tablet) {
-        grid-template-rows: unset;
-        min-height: 90vh;
-    }
-
-    @include decive-up(tablet) {
-        padding-block-start: 0;
+        grid-template-columns: 100%;
     }
 
     .image {
-        background-color: var(--brand);
-        background-image: var(--url-img-light);
-        // background-image: var(--url-img-dark);
-        background-size: cover;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-position: bottom;
-        background-repeat: no-repeat;
-        position: absolute;
-        // &:nth-of-type(even) {
-        //     background-image: var(--url-img-light);
-        // }
-
+        position: relative;
         border-radius: 50%;
-        height: clamp(var(--size-14), 60vw, 60rem);
-        width: clamp(var(--size-14), 60vw, 60rem);
-        grid-row: 2 / span 1;
-        background-color: transparent;
-        background-position: 0px 50px;
-
-        &:nth-of-type(odd) {
-            opacity: 0;
-            width: 0px;
-            position: absolute;
-        }
-
-        @include decive-up(tablet) {
-            right: 0;
-        }
-
-        @include decive-down(tablet) {
-            position: relative;
-        }
+        aspect-ratio: 1;
+        display: flex;
+        align-self: center;
 
         &::before {
             content: '';
@@ -64,26 +29,17 @@
             bottom: 0px;
             transform: translate(-50%, 0);
         }
-    }
 
-    > *:first-child {
-        grid-row: 2 / span 1;
-
-        @include decive-down(tablet) {
-            grid-row: 1 / span 1;
+        img {
+            object-fit: cover;
+            object-position: 0px 50px;
+            border-radius: 50%;
         }
     }
 
     .descripton {
         max-width: 92ch;
         z-index: 2;
-
-        @include decive-up(tablet) {
-            --parallax-y: 0;
-            position: fixed;
-            transform: translate(0, var(--parallax-y));
-            -webkit-transform: translate(0, var(--parallax-y));
-        }
 
         @include decive-down(tablet) {
             width: 77vw;
