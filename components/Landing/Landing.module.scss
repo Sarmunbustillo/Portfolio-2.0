@@ -30,6 +30,10 @@
             transform: translate(-50%, 0);
         }
 
+        > span {
+            width: 100%;
+        }
+
         img {
             object-fit: cover;
             object-position: 0px 50px;

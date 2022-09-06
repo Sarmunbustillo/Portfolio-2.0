@@ -24,8 +24,8 @@ export default function Landing() {
                 <Image
                     src="/images/sarmunLight.png"
                     alt="A photo of Sarmun Bustillo"
-                    width={1200}
-                    height={900}
+                    width={300}
+                    height={300}
                 />
             </div>
         </section>
