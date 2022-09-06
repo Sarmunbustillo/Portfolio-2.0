@@ -41,11 +41,12 @@ export async function getStaticProps() {
     const { projects }: { projects: DetailedProject[] } = allProjects;
     const { projects: smallerProjects }: { projects: SimpleCard[] } =
         smallProjects;
-    const posts: ArticlePreview[] = await getPreviewArticles('', 3);
+    const posts: ArticlePreview[] = (await getPreviewArticles('', 3)) || [];
+    const parsedPosts = JSON.parse(JSON.stringify(posts));
 
     return {
         props: {
-            posts,
+            posts: parsedPosts,
             projects,
             smallerProjects: shuffle(smallerProjects),
         },

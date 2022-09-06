@@ -33,3 +33,9 @@ export type Article = {
         width: string;
     };
 };
+
+export type ParamsParsed = {
+    [key: string]: {
+        slug: string;
+    };
+};
