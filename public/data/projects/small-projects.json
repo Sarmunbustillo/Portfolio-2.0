@@ -4,62 +4,62 @@
             "external": true,
             "id": "molkerei-weihenstephan",
             "headline": "Molkerei Weihenstephan",
-            "link": "https://www.molkerei-weihenstephan.de/"
+            "slug": "https://www.molkerei-weihenstephan.de/"
         },
         {
             "external": true,
             "id": "Müller_UK",
             "headline": "Müller UK",
-            "link": "https://www.muller.co.uk/"
+            "slug": "https://www.muller.co.uk/"
         },
 
         {
             "external": true,
             "id": "Dermalog",
             "headline": "Dermalog",
-            "link": "https://www.dermalog.com/"
+            "slug": "https://www.dermalog.com/"
         },
         {
             "external": true,
             "id": "TMA",
             "headline": "TMA",
-            "link": "https://www.tma-milk.com/"
+            "slug": "https://www.tma-milk.com/"
         },
         {
             "external": true,
             "id": "FTA_GmbH",
             "headline": "FTA GmbH",
-            "link": "https://www.fta-gmbh.de/"
+            "slug": "https://www.fta-gmbh.de/"
         },
         {
             "external": true,
             "id": "Aidshilfe_Hamburg",
             "headline": "Aidshilfe Hamburg",
-            "link": "https://www.aidshilfe-hamburg.de/"
+            "slug": "https://www.aidshilfe-hamburg.de/"
         },
         {
             "external": true,
             "id": "Rainbowworld",
             "headline": "Rainbowworld",
-            "link": "https://www.rainbowworld.de/"
+            "slug": "https://www.rainbowworld.de/"
         },
         {
             "external": true,
             "id": "Bnitm",
             "headline": "BNITM",
-            "link": "https://www.bnitm.de/"
+            "slug": "https://www.bnitm.de/"
         },
         {
             "external": true,
             "id": "hamburg-pride",
             "headline": "Hamburg Pride",
-            "link": "https://www.hamburg-pride.de/"
+            "slug": "https://www.hamburg-pride.de/"
         },
         {
             "external": true,
             "id": "sachsenmilch-cheese",
             "headline": "Sachsenmilch Cheese",
-            "link": "https://www.sachsenmilch-cheese.com/"
+            "slug": "https://www.sachsenmilch-cheese.com/"
         }
     ]
 }

@@ -17,7 +17,7 @@ const Blogs = ({
                 <h1>Writings</h1>
                 <p>
                     Here is a copilations of some of my posts, demos and
-                    snippets I've done over the past few years
+                    snippets I&apos;ve done over the past few years
                 </p>
             </section>
 
@@ -28,16 +28,16 @@ const Blogs = ({
                 {posts.map(
                     ({
                         headline,
-                        text,
-                        link,
+                        previewText,
+                        slug,
                         external,
                         id,
                     }: ArticlePreview) => {
                         return (
                             <CardArticlePreview
                                 headline={headline}
-                                text={text}
-                                link={link}
+                                previewText={previewText}
+                                slug={slug}
                                 external={external}
                                 key={id}
                             />
@@ -50,16 +50,16 @@ const Blogs = ({
                 {ts_series.map(
                     ({
                         headline,
-                        text,
-                        link,
+                        previewText,
+                        slug,
                         external,
                         id,
                     }: ArticlePreview) => {
                         return (
                             <CardArticlePreview
                                 headline={headline}
-                                text={text}
-                                link={link}
+                                previewText={previewText}
+                                slug={slug}
                                 external={external}
                                 key={id}
                             />
@@ -71,11 +71,11 @@ const Blogs = ({
                 headline="Demos"
                 text="Little demos I've built to learn from and teach others"
             >
-                {demos.map(({ headline, link, external, id }: SimpleCard) => {
+                {demos.map(({ headline, slug, external, id }: SimpleCard) => {
                     return (
                         <Card
                             headline={headline}
-                            link={link}
+                            slug={slug}
                             external={external}
                             key={id}
                         />

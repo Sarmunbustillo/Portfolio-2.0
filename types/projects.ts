@@ -2,7 +2,7 @@ export type SimpleProject = {
     imgPath: string;
     projectTitle: string;
     projectLink: string;
-    id: string;
+    id: string | number;
 };
 
 export type DetailedProject = SimpleProject & {
@@ -15,11 +15,21 @@ export type DetailedProject = SimpleProject & {
 
 export type SimpleCard = {
     headline?: string;
-    link: string;
+    slug: string;
     external?: boolean;
-    id?: string;
+    id?: string | number;
 };
 
 export type ArticlePreview = SimpleCard & {
+    previewText: string;
+};
+
+export type Article = {
+    headline: string;
     text: string;
+    image: {
+        url: string;
+        height: string;
+        width: string;
+    };
 };

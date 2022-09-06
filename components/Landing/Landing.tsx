@@ -8,8 +8,8 @@ export default function Landing() {
                 <div className={styles.descripton}>
                     <h1>Sarmun Bustillo</h1>
                     <p>
-                        I'm a Frontend Web-Dev based in Hamburg devoted to
-                        crafting exceptional web experiences. Currently, I'm
+                        I&#39;m a Frontend Web-Dev based in Hamburg devoted to
+                        crafting exceptional web experiences. Currently, I am
                         focused on building accessible, stylish and meaningful
                         web products.
                     </p>

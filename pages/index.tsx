@@ -2,11 +2,11 @@ import { CardsGrid } from '../components/Layout/Containers';
 import { Card } from '../components/Card/Card';
 import Landing from '../components/Landing/Landing';
 import Projects from '../components/Projects/Projects';
-import blog from '../public/data/blog/posts.json';
 import { ArticlePreview, DetailedProject, SimpleCard } from '../types/projects';
 import allProjects from '../public/data/projects/big-projects.json';
 import smallProjects from '../public/data/projects/small-projects.json';
 import { shuffle } from '../lib/utils';
+import { getPreviewArticles } from '../lib/api';
 
 const Home = ({
     posts,
@@ -21,11 +21,11 @@ const Home = ({
         <>
             <Landing />
             <CardsGrid headline="Featured Posts">
-                {posts.map(({ headline, link, external, id }) => {
+                {posts.map(({ headline, slug, external, id }) => {
                     return (
                         <Card
                             headline={headline}
-                            link={link}
+                            slug={slug}
                             external={external}
                             key={id}
                         />
@@ -38,14 +38,14 @@ const Home = ({
 };
 
 export async function getStaticProps() {
-    const { posts }: { posts: ArticlePreview[] } = blog;
     const { projects }: { projects: DetailedProject[] } = allProjects;
     const { projects: smallerProjects }: { projects: SimpleCard[] } =
         smallProjects;
+    const posts: ArticlePreview[] = await getPreviewArticles('', 3);
 
     return {
         props: {
-            posts: posts.slice(0, 3),
+            posts,
             projects,
             smallerProjects: shuffle(smallerProjects),
         },

@@ -1,0 +1,104 @@
+@import '../../styles/mixins';
+
+.post {
+    .content {
+        max-width: 100%;
+        > div {
+            display: grid;
+        }
+    }
+
+    .introImage {
+        margin-bottom: clamp(var(--size-7), 10vw, var(--size-7)) !important;
+    }
+
+    h1 {
+        font-size: var(--font-size-fluid-3);
+        margin-bottom: var(--size-5);
+    }
+
+    h2 {
+        font-size: var(--font-size-5);
+        margin-bottom: var(--size-4);
+
+        @include decive-down(tablet) {
+            font-size: var(--font-size-4);
+            margin-bottom: var(--size-2);
+            line-height: var(--line-height);
+        }
+        @include decive-down(mobile) {
+            font-size: var(--font-size-3);
+        }
+    }
+
+    h3 {
+        font-size: var(--font-size-3);
+        margin-bottom: var(--size-4);
+    }
+
+    h4 {
+        margin-bottom: var(--size-4);
+    }
+
+    p {
+        margin-bottom: var(--size-4);
+
+        bold,
+        strong {
+            filter: contrast(1.75);
+        }
+    }
+
+    code {
+        color: var(--color-text);
+        border: 2px solid var(--color-headline);
+        overflow: scroll;
+        border-radius: var(--border-radius);
+        padding: var(--size-3);
+        display: grid;
+    }
+
+    pre {
+        display: grid;
+        border: 2px solid currentColor;
+        border-radius: var(--border-radius);
+        padding: var(--size-4);
+        margin-bottom: var(--size-4);
+        min-inline-size: 100%;
+        overflow: scroll;
+
+        code {
+            border: none;
+            margin-bottom: 0;
+            padding: 0;
+        }
+    }
+
+    ul,
+    ol {
+        display: grid;
+        gap: var(--size-2);
+        margin-bottom: var(--size-4);
+    }
+
+    li {
+        display: grid;
+        gap: var(--size-3);
+        grid-template-columns: 1rem 1fr;
+        align-items: flex-start;
+
+        &::marker {
+            content: none;
+        }
+
+        &::before {
+            content: '';
+            background: var(--color-text);
+            width: 100%;
+            height: 0.5rem;
+            position: relative;
+            top: 1rem;
+            border-radius: 2px;
+        }
+    }
+}

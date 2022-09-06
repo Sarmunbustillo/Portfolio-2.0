@@ -148,9 +148,9 @@
     :where(code, kbd, samp, pre) {
         font-family: var(--font-family);
     }
-    :where(:not(pre) > code, kbd) {
-        white-space: nowrap;
-    }
+    // :where(:not(pre) > code, kbd) {
+    //     // white-space: nowrap;
+    // }
 
     :where(pre) {
         white-space: pre;

@@ -3,7 +3,7 @@ import styles from './Contact.module.scss';
 export default function Contact() {
     return (
         <footer id="contact" className={styles.contact}>
-            <h2>Let's Talk</h2>
+            <h2>Let&#39;s Talk</h2>
             <div className="links gradient-to-right">
                 <span className="button-wrapper-border">
                     <a href="mailto:sarmun.b@gmail.com" className="button ">

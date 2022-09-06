@@ -1,7 +1,6 @@
 import Writings from '../components/Blog';
+import { getPreviewArticles } from '../lib/api';
 import { shuffle } from '../lib/utils';
-import blog from '../public/data/blog/posts.json';
-import typescript_series from '../public/data/blog/typescript-series.json';
 import alldemos from '../public/data/demos/demos.json';
 import { ArticlePreview, SimpleCard } from '../types/projects';
 
@@ -18,15 +17,21 @@ const Blog = ({
 };
 
 export async function getStaticProps() {
-    const { posts }: { posts: ArticlePreview[] } = blog;
     const { demos }: { demos: SimpleCard[] } = alldemos;
-    const { ts_series }: { ts_series: SimpleCard[] } = typescript_series;
+    const typescriptPosts: ArticlePreview[] = await getPreviewArticles(
+        'Typescript',
+        undefined
+    );
+    const webdevPosts: ArticlePreview[] = await getPreviewArticles(
+        'Webdev',
+        undefined
+    );
 
     return {
         props: {
             demos: shuffle(demos),
-            posts: shuffle(posts),
-            ts_series: shuffle(ts_series),
+            posts: webdevPosts || [],
+            ts_series: typescriptPosts || [],
         },
     };
 }

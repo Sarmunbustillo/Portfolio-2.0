@@ -282,7 +282,7 @@
     --shadow-large: 0 30px 60px rgba(0, 0, 0, 0.12);
 
     /* sizes */
-    --container-max-width: 1200px;
+    --container-max-width: 1000px;
     --border-radius: 4px;
 
     // custom
@@ -352,6 +352,12 @@ html {
 
     .gradient-to-right {
         --linear-gradient-brand: var(--linear-gradient-3-right);
+    }
+
+    p {
+        a {
+            color: var(--blue-8);
+        }
     }
 }
 
@@ -525,6 +531,18 @@ a {
     &:hover,
     &:focus-visible {
         text-decoration: none;
+    }
+}
+
+p {
+    a {
+        color: var(--blue-4);
+        text-decoration: underline;
+
+        &:hover,
+        &:focus-visible {
+            text-decoration: underline;
+        }
     }
 }
 

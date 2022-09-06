@@ -3,115 +3,115 @@
         {
             "id": "demo_1",
             "headline": "Hangman",
-            "link": "https://sarmunbustillo.github.io/Hangman/",
+            "slug": "https://sarmunbustillo.github.io/Hangman/",
             "external": true
         },
         {
             "id": "demo_2",
             "headline": "Check list animation",
-            "link": "https://sarmunbustillo.github.io/Check-List-Animation/",
+            "slug": "https://sarmunbustillo.github.io/Check-List-Animation/",
             "external": true
         },
         {
             "id": "demo_3",
             "headline": "CSS only cellphone",
-            "link": "https://sarmunbustillo.github.io/Mobile-3D/",
+            "slug": "https://sarmunbustillo.github.io/Mobile-3D/",
             "external": true
         },
         {
             "id": "demo_4",
             "headline": "CSS only cellphone",
-            "link": "https://sarmunbustillo.github.io/Mobile-3D/",
+            "slug": "https://sarmunbustillo.github.io/Mobile-3D/",
             "external": true
         },
         {
             "id": "demo_5",
             "headline": "Memory game",
-            "link": "https://sarmunbustillo.github.io/Memory-Game/",
+            "slug": "https://sarmunbustillo.github.io/Memory-Game/",
             "external": true
         },
         {
             "id": "demo_6",
             "headline": "Whack a mole",
-            "link": "https://sarmunbustillo.github.io/Whack-a-Mole/",
+            "slug": "https://sarmunbustillo.github.io/Whack-a-Mole/",
             "external": true
         },
         {
             "id": "demo_7",
             "headline": "Connect four",
-            "link": "https://sarmunbustillo.github.io/Connect-Four/",
+            "slug": "https://sarmunbustillo.github.io/Connect-Four/",
             "external": true
         },
         {
             "id": "demo_8",
             "headline": "Snake game",
-            "link": "https://sarmunbustillo.github.io/Snake-Game/",
+            "slug": "https://sarmunbustillo.github.io/Snake-Game/",
             "external": true
         },
         {
             "id": "demo_9",
             "headline": "Exchange rate calculator",
-            "link": "https://sarmunbustillo.github.io/Exchange-Rate-Calculator/",
+            "slug": "https://sarmunbustillo.github.io/Exchange-Rate-Calculator/",
             "external": true
         },
         {
             "id": "demo_10",
             "headline": "Random rich person generator",
-            "link": "https://sarmunbustillo.github.io/Random-rich-person-generator/",
+            "slug": "https://sarmunbustillo.github.io/Random-rich-person-generator/",
             "external": true
         },
         {
             "id": "demo_11",
             "headline": "Neumorphic buttons",
-            "link": "https://sarmunbustillo.github.io/Neumorphic-buttons/",
+            "slug": "https://sarmunbustillo.github.io/Neumorphic-buttons/",
             "external": true
         },
         {
             "id": "demo_12",
             "headline": "Animated counter",
-            "link": "https://sarmunbustillo.github.io/animated-counter/",
+            "slug": "https://sarmunbustillo.github.io/animated-counter/",
             "external": true
         },
         {
             "id": "demo_13",
             "headline": "Flexbox transition",
-            "link": "https://sarmunbustillo.github.io/FlexBox-transition/",
+            "slug": "https://sarmunbustillo.github.io/FlexBox-transition/",
             "external": true
         },
         {
             "id": "demo_14",
             "headline": "CSS Perspective",
-            "link": "https://sarmunbustillo.github.io/CSS-Perspective/",
+            "slug": "https://sarmunbustillo.github.io/CSS-Perspective/",
             "external": true
         },
         {
             "id": "demo_15",
             "headline": "SVG Text Animation",
-            "link": "https://sarmunbustillo.github.io/Svg-text-animation/",
+            "slug": "https://sarmunbustillo.github.io/Svg-text-animation/",
             "external": true
         },
         {
             "id": "demo_16",
             "headline": "Landing page with parallax",
-            "link": "https://sarmunbustillo.github.io/Collage-Layout/",
+            "slug": "https://sarmunbustillo.github.io/Collage-Layout/",
             "external": true
         },
         {
             "id": "demo_17",
             "headline": "Card hover open up effect",
-            "link": "https://sarmunbustillo.github.io/CSS-Card/",
+            "slug": "https://sarmunbustillo.github.io/CSS-Card/",
             "external": true
         },
         {
             "id": "demo_18",
             "headline": "Drumset on keybinding",
-            "link": "https://sarmunbustillo.github.io/Drum-set/",
+            "slug": "https://sarmunbustillo.github.io/Drum-set/",
             "external": true
         },
         {
             "id": "demo_19",
             "headline": "Analog clock",
-            "link": "https://sarmunbustillo.github.io/Clock/",
+            "slug": "https://sarmunbustillo.github.io/Clock/",
             "external": true
         }
     ]

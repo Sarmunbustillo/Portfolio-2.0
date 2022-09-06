@@ -42,11 +42,11 @@ export default function Projects({
 
             <ScrollContainer headline="Took part in">
                 {smallerProjects.map(
-                    ({ headline, link, external, id }: SimpleCard) => {
+                    ({ headline, slug: link, external, id }: SimpleCard) => {
                         return (
                             <Card
                                 headline={headline}
-                                link={link}
+                                slug={link}
                                 external={external}
                                 key={id}
                             />

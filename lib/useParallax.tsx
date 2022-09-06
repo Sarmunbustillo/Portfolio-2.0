@@ -17,7 +17,7 @@ const useParallax = (ref: React.MutableRefObject<HTMLElement>): void => {
         return () => {
             window.removeEventListener('scroll', handler);
         };
-    }, []);
+    }, [ref]);
 };
 
 export { useParallax };

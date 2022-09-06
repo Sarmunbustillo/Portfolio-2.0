@@ -12,7 +12,12 @@ import styles from './Card.module.scss';
 
 const ArrowIcon = () => {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            style={{ maxWidth: 'var(--size-7)' }}
+        >
             <path
                 stroke="currentColor"
                 strokeLinecap="round"
@@ -24,15 +29,16 @@ const ArrowIcon = () => {
     );
 };
 
-const Card = ({ headline, link, external = false }: SimpleCard) => {
+const Card = ({ headline, slug, external = false }: SimpleCard) => {
     if (external) {
         return (
             <a
                 className={styles.card}
                 target="_blank"
-                href={link}
+                href={slug}
                 title={headline}
                 aria-label={headline}
+                rel="noreferrer"
             >
                 <div>
                     <span>
@@ -44,8 +50,8 @@ const Card = ({ headline, link, external = false }: SimpleCard) => {
         );
     }
     return (
-        <Link className={styles.card} href={link}>
-            <a title={headline} aria-label={headline}>
+        <Link href={slug}>
+            <a className={styles.card} title={headline} aria-label={headline}>
                 <div>
                     <span>
                         <h3 className="h4">{headline}</h3>
@@ -59,8 +65,8 @@ const Card = ({ headline, link, external = false }: SimpleCard) => {
 
 const CardArticlePreview = ({
     headline,
-    text,
-    link,
+    previewText,
+    slug,
     external = false,
 }: ArticlePreview) => {
     if (external) {
@@ -68,23 +74,28 @@ const CardArticlePreview = ({
             <a
                 className={styles.articlePreview}
                 target="_blank"
-                href={link}
+                href={slug}
                 title={headline}
                 aria-label={headline}
+                rel="noreferrer"
             >
                 <div>
                     {headline && <h3 className="h4">{headline}</h3>}
-                    {text && <p>{text}</p>}
+                    {previewText && <p>{previewText}</p>}
                 </div>
             </a>
         );
     }
     return (
-        <Link className={styles.card} href={link}>
-            <a title={text} aria-label={text}>
+        <Link href={slug}>
+            <a
+                className={styles.articlePreview}
+                title={headline}
+                aria-label={headline}
+            >
                 <div>
-                    <h3 className="h4">{headline}</h3>
-                    <p>{text}</p>
+                    {headline && <h3 className="h4">{headline}</h3>}
+                    {previewText && <p>{previewText}</p>}
                 </div>
             </a>
         </Link>
