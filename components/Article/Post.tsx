@@ -7,14 +7,16 @@ function PostHeader({ image, headline }: Omit<Article, 'text'>) {
     return (
         <>
             {image && (
-                <Image
-                    className={styles.introImage}
-                    src={image?.url}
-                    height={image?.height}
-                    width={image?.width}
-                    layout="responsive"
-                    alt={headline}
-                />
+                <div className={styles.introImage}>
+                    <Image
+                        className={styles.introImage}
+                        src={image?.url}
+                        height={image?.height}
+                        width={image?.width}
+                        layout="responsive"
+                        alt={headline}
+                    />
+                </div>
             )}
             <h1>{headline}</h1>
         </>
