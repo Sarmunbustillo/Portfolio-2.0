@@ -31,7 +31,7 @@
         }
 
         > span {
-            width: 100%;
+            width: 100% !important;
         }
 
         img {
@@ -60,6 +60,7 @@
             background: var(--linear-gradient-4);
             background-size: 8ch 16ch;
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
             &:last-of-type {
                 margin-bottom: 1rem;

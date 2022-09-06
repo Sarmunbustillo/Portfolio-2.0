@@ -15,6 +15,10 @@
     padding: var(--size-1);
     border-radius: var(--border-radius);
     min-width: var(--size-13);
+    @supports (-webkit-overflow-scrolling: touch) {
+        background-attachment: unset;
+        background: var(--linear-gradient-3);
+    }
 
     > div {
         background: var(--brand);
@@ -174,6 +178,11 @@
                 top: 1rem;
                 border-radius: 2px;
 
+                @supports (-webkit-overflow-scrolling: touch) {
+                    background-attachment: unset;
+                    background: var(--linear-gradient-3);
+                }
+
                 @supports (-moz-appearance: none) {
                     background: var(--highlight);
                 }
@@ -198,6 +207,14 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-transform: capitalize;
+
+            @supports (-webkit-overflow-scrolling: touch) {
+                color: var(--highlight);
+                background: unset;
+                background-clip: unset;
+                -webkit-background-clip: unset;
+                -webkit-text-fill-color: unset;
+            }
 
             @supports (-moz-appearance: none) {
                 color: var(--highlight);

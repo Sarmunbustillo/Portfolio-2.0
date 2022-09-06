@@ -247,6 +247,7 @@
         var(--indigo-4),
         var(--cyan-4)
     );
+
     --linear-gradient-2-right: linear-gradient(
         to right,
         var(--pink-4),
@@ -273,6 +274,50 @@
         var(--gray-2),
         var(--gray-1)
     );
+
+    @supports (-webkit-overflow-scrolling: touch) {
+        /* Gradients */
+        --linear-gradient-1: linear-gradient(
+            to bottom right,
+            var(--cyan-4),
+            var(--pink-4)
+        );
+
+        --linear-gradient-2: linear-gradient(
+            to bottom,
+            var(--pink-4),
+            var(--violet-4),
+            var(--indigo-4),
+            var(--cyan-4)
+        );
+
+        --linear-gradient-2-right: -webkit-linear-gradient(
+            to right,
+            var(--pink-4),
+            var(--violet-4),
+            var(--indigo-4),
+            var(--cyan-4)
+        );
+
+        --linear-gradient-3: linear-gradient(
+            to bottom right,
+            var(--cyan-4),
+            var(--indigo-4)
+        );
+
+        --linear-gradient-3-right: linear-gradient(
+            to right,
+            var(--cyan-4),
+            var(--indigo-4)
+        );
+
+        --linear-gradient-4: linear-gradient(
+            var(--indigo-2),
+            var(--indigo-1),
+            var(--gray-2),
+            var(--gray-1)
+        );
+    }
 
     /* Shadows */
     --shadow-smallest: 0px 4px 8px rgba(0, 0, 0, 0.12);
@@ -306,6 +351,13 @@
     --highlight-lighter: var(--indigo-3);
     --highlight-darker: var(--indigo-5);
     --line-height: var(--font-lineheight-4);
+
+    //IOS
+    @supports (-webkit-overflow-scrolling: touch) {
+        --highlight: var(--blue-4);
+        --highlight-lighter: var(--indigo-4);
+        --highlight-darker: var(--indigo-8);
+    }
 }
 
 html {
@@ -325,9 +377,9 @@ html {
     --brand: var(--brand-light);
     --color-headline: var(--dark-color-headline);
     --color-text: var(--dark-color-text);
-    --highlight: var(--blue-8);
     --linear-gradient-brand: var(--linear-gradient-3);
     --nav-bg-overlay: var(--nav-bg-overlay-light);
+    --highlight: var(--blue-8);
     --highlight-lighter: var(--indigo-4);
     --highlight-darker: var(--indigo-8);
     --url-img: var(--url-img-light);
@@ -574,6 +626,10 @@ img {
     background-attachment: fixed;
     display: inline-flex;
     border-radius: var(--border-radius);
+    @supports (-webkit-overflow-scrolling: touch) {
+        background-attachment: unset;
+        background: var(--linear-gradient-3);
+    }
 }
 
 .button {
