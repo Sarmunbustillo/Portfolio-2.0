@@ -34,10 +34,10 @@
             ]
         },
         {
-            "id": "Corner_Cafe",
-            "projectTitle": "Corner Cafe",
+            "id": "Cafe Rustico",
+            "projectTitle": "Cafe Rustico",
             "projectDescription": "Colombian Coffee shop and restaurant ",
-            "projectLink": "#",
+            "projectLink": "https://www.caferustico.page/",
             "workDone": [
                 "Design layout",
                 "Design implementation",
@@ -45,9 +45,15 @@
                 "Concept and strategies to increase online precense, sells and brand marketing",
                 "CMS integration"
             ],
-            "imgPath": "/images/projects/Corner-cafe.png",
-            "technologies": ["React", "Next", "vercel", "DatoCMS", "SCSS"],
-            "supportHeadline": "Coming soon"
+            "imgPath": "/images/projects/Cafe-rustico.png",
+            "technologies": [
+                "React",
+                "Next",
+                "vercel",
+                "DatoCMS",
+                "Graphql",
+                "SCSS"
+            ]
         }
     ]
 }
