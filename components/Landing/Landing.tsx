@@ -22,7 +22,7 @@ export default function Landing() {
             </div>
             <div className={styles.image}>
                 <Image
-                    src="/images/sarmunLight.png"
+                    src="/images/sarmun_social_noBg.png"
                     alt="A photo of Sarmun Bustillo"
                     width={300}
                     height={300}

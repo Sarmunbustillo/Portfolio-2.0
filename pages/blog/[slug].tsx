@@ -1,4 +1,5 @@
 import Post from '../../components/Article/Post';
+import { MetaContainer } from '../../components/Layout/Containers';
 import { getAllArticlesSlugs, getArticleBySlug } from '../../lib/api';
 import { Article, ParamsParsed } from '../../types/projects';
 
@@ -10,13 +11,18 @@ function Article({ article }: { article: Article }) {
             </section>
         );
     return (
-        <section>
-            <Post
-                headline={article.headline}
-                text={article.text}
-                image={article.image}
-            />
-        </section>
+        <MetaContainer
+            title={article.headline + ' - Sarmun Bustillo'}
+            description={article.previewText}
+        >
+            <section>
+                <Post
+                    headline={article.headline}
+                    text={article.text}
+                    image={article.image}
+                />
+            </section>
+        </MetaContainer>
     );
 }
 

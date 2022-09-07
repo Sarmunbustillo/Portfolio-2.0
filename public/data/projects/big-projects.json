@@ -3,7 +3,7 @@
         {
             "id": "Language_Service_Solutions",
             "projectTitle": "Language Service Solutions",
-            "projectDescription": "LSS has over 20 years of experience providing translation and interpretation services as well as consulting around language services for organizations and communities.",
+            "projectDescription": "LSS provides translation and interpretation services as well as consulting around language services.",
             "projectLink": "https://languageservicesolutions.com/services",
             "workDone": [
                 "Modernized web stack to improve website performance, have better web vitals, and overall modern look and feel",
@@ -18,7 +18,10 @@
             "projectDescription": "NFT market place: Buy, sell and transfer NFTs",
             "projectLink": "https://nft-market-psi.vercel.app/",
             "workDone": [
-                "Fun little project to learn and practice new technologies"
+                "Local blockchain testing environment",
+                "Metamask integration",
+                "Unit tests",
+                "Buy, sell and transfer NFTs logic"
             ],
             "imgPath": "/images/projects/NFT-market.png",
             "technologies": [
@@ -31,16 +34,18 @@
             ]
         },
         {
-            "id": "Bonita_Cafe",
-            "projectTitle": "Bonita Cafe",
-            "projectDescription": "Colombian Coffee shop part of a restaurant and flower shop franchise",
+            "id": "Corner_Cafe",
+            "projectTitle": "Corner Cafe",
+            "projectDescription": "Colombian Coffee shop and restaurant ",
             "projectLink": "#",
             "workDone": [
                 "Design layout",
-                "Concept and strategies to increase online sells and brand marketing",
-                " Full stack website with a CSM "
+                "Design implementation",
+                "Web vitals",
+                "Concept and strategies to increase online precense, sells and brand marketing",
+                "CMS integration"
             ],
-            "imgPath": "/images/projects/Bonita-cafe.png",
+            "imgPath": "/images/projects/Corner-cafe.png",
             "technologies": ["React", "Next", "vercel", "DatoCMS", "SCSS"],
             "supportHeadline": "Coming soon"
         }

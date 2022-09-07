@@ -1,4 +1,4 @@
-import { CardsGrid } from '../components/Layout/Containers';
+import { CardsGrid, MetaContainer } from '../components/Layout/Containers';
 import { Card } from '../components/Card/Card';
 import Landing from '../components/Landing/Landing';
 import Projects from '../components/Projects/Projects';
@@ -18,7 +18,7 @@ const Home = ({
     smallerProjects: SimpleCard[];
 }) => {
     return (
-        <>
+        <MetaContainer>
             <Landing />
             <CardsGrid headline="Featured Posts">
                 {posts.map(({ headline, slug, external, id }) => {
@@ -33,7 +33,7 @@ const Home = ({
                 })}
             </CardsGrid>
             <Projects projects={projects} smallerProjects={smallerProjects} />
-        </>
+        </MetaContainer>
     );
 };
 

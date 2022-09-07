@@ -1,4 +1,5 @@
 import Writings from '../components/Blog';
+import { MetaContainer } from '../components/Layout/Containers';
 import { getPreviewArticles } from '../lib/api';
 import { shuffle } from '../lib/utils';
 import alldemos from '../public/data/demos/demos.json';
@@ -13,7 +14,15 @@ const Blog = ({
     posts: ArticlePreview[];
     ts_series: ArticlePreview[];
 }) => {
-    return <Writings demos={demos} posts={posts} ts_series={ts_series} />;
+    return (
+        <MetaContainer
+            title="Blog - Sarmun Bustillo"
+            description=" Here is a copilations of some of my posts, demos and
+        snippets I've done over the past few years"
+        >
+            <Writings demos={demos} posts={posts} ts_series={ts_series} />
+        </MetaContainer>
+    );
 };
 
 export async function getStaticProps() {

@@ -69,6 +69,7 @@ export async function getArticleBySlug(slug: string | undefined) {
                 article(filter: {slug: {in: "${slug}"}}) {
                     headline
                     text(markdown: true)
+                    previewText
                     image {
                         url
                         width

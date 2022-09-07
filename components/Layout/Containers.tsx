@@ -1,3 +1,6 @@
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+import { MetaContainerType } from '../../types/projects';
 import styles from './Containers.module.scss';
 
 const ScrollContainer = ({
@@ -86,4 +89,49 @@ const Articles = ({
     );
 };
 
-export { ScrollContainer, CardsGrid, OddEvenRows, Articles };
+const MetaContainer = (props: MetaContainerType) => {
+    const { children, ...customMeta } = props;
+    const router = useRouter();
+    const meta = {
+        title: 'Sarmun Bustillo – Developer, creator, writer.',
+        description: `Frontend developer, passionate about Javascript, CSS and the Web .`,
+        image: 'https://www.sarmunbustillo.com/images/sarmun_social_bg.png',
+        type: 'website',
+        ...customMeta,
+    };
+
+    return (
+        <>
+            <Head>
+                <title>{meta.title}</title>
+                <meta name="robots" content="follow, index" />
+                <meta content={meta.description} name="description" />
+                <meta
+                    property="og:url"
+                    content={`https://sarmunbustillo${router.asPath}`}
+                />
+                <link
+                    rel="canonical"
+                    href={`https://sarmunbustillo${router.asPath}`}
+                />
+                <meta property="og:type" content={meta.type} />
+                <meta property="og:site_name" content="Sarmun Bustillo" />
+                <meta property="og:description" content={meta.description} />
+                <meta property="og:title" content={meta.title} />
+                <meta property="og:image" content={meta.image} />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:site" content="@sarmunbustillo" />
+                <meta name="twitter:title" content={meta.title} />
+                <meta name="twitter:description" content={meta.description} />
+                <meta name="twitter:image" content={meta.image} />
+                <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1.0"
+                />
+            </Head>
+            {children}
+        </>
+    );
+};
+
+export { ScrollContainer, CardsGrid, OddEvenRows, Articles, MetaContainer };
