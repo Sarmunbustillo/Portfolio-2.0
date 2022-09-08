@@ -14,7 +14,11 @@ function Article({ article }: { article: Article }) {
         <MetaContainer
             title={article.headline + ' - Sarmun Bustillo'}
             description={article.previewText}
-            image={article.image ?? article.image}
+            image={
+                article.image.url !== undefined
+                    ? article.image.url
+                    : 'https://www.sarmunbustillo.com/images/sarmun_social_bg.png'
+            }
             type="article"
         >
             <section>
