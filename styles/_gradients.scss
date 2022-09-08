@@ -1,0 +1,87 @@
+:root {
+    /* Gradients */
+    --linear-gradient-1: linear-gradient(
+        to bottom right,
+        var(--cyan-4),
+        var(--pink-4)
+    );
+
+    --linear-gradient-2: linear-gradient(
+        to bottom,
+        var(--pink-4),
+        var(--violet-4),
+        var(--indigo-4),
+        var(--cyan-4)
+    );
+
+    --linear-gradient-2-right: linear-gradient(
+        to right,
+        var(--pink-4),
+        var(--violet-4),
+        var(--indigo-4),
+        var(--cyan-4)
+    );
+
+    --linear-gradient-3: linear-gradient(
+        to bottom right,
+        var(--cyan-4),
+        var(--indigo-4)
+    );
+
+    --linear-gradient-3-right: linear-gradient(
+        to right,
+        var(--cyan-4),
+        var(--indigo-4)
+    );
+
+    --linear-gradient-4: linear-gradient(
+        var(--indigo-2),
+        var(--indigo-1),
+        var(--gray-2),
+        var(--gray-1)
+    );
+
+    @supports (-webkit-overflow-scrolling: touch) {
+        /* Gradients */
+        --linear-gradient-1: linear-gradient(
+            to bottom right,
+            var(--cyan-4),
+            var(--pink-4)
+        );
+
+        --linear-gradient-2: linear-gradient(
+            to bottom,
+            var(--pink-4),
+            var(--violet-4),
+            var(--indigo-4),
+            var(--cyan-4)
+        );
+
+        --linear-gradient-2-right: -webkit-linear-gradient(
+            to right,
+            var(--pink-4),
+            var(--violet-4),
+            var(--indigo-4),
+            var(--cyan-4)
+        );
+
+        --linear-gradient-3: linear-gradient(
+            to bottom right,
+            var(--cyan-4),
+            var(--indigo-4)
+        );
+
+        --linear-gradient-3-right: linear-gradient(
+            to right,
+            var(--cyan-4),
+            var(--indigo-4)
+        );
+
+        --linear-gradient-4: linear-gradient(
+            var(--indigo-2),
+            var(--indigo-1),
+            var(--gray-2),
+            var(--gray-1)
+        );
+    }
+}
