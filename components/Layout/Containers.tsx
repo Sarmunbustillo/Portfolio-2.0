@@ -112,7 +112,7 @@ const MetaContainer = (props: MetaContainerType) => {
                 />
                 <link
                     rel="canonical"
-                    href={`https://sarmunbustillo${router.asPath}`}
+                    href={`https://sarmunbustillo.com${router.asPath}`}
                 />
                 <meta property="og:type" content={meta.type} />
                 <meta property="og:site_name" content="Sarmun Bustillo" />
