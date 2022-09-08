@@ -15,6 +15,7 @@ function Article({ article }: { article: Article }) {
             title={article.headline + ' - Sarmun Bustillo'}
             description={article.previewText}
             image={article.image ?? article.image}
+            type="article"
         >
             <section>
                 <Post
