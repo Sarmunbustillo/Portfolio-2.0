@@ -108,7 +108,7 @@ const MetaContainer = (props: MetaContainerType) => {
                 <meta content={meta.description} name="description" />
                 <meta
                     property="og:url"
-                    content={`https://sarmunbustillo${router.asPath}`}
+                    content={`https://sarmunbustillo.com${router.asPath}`}
                 />
                 <link
                     rel="canonical"
