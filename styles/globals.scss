@@ -134,7 +134,7 @@ body {
         }
 
         &:first-of-type {
-            padding-block-start: clamp(var(--size-9), 4vw, var(--size-11));
+            padding-block-start: clamp(var(--size-7), 4vw, var(--size-11));
             padding-block-end: clamp(var(--size-10), 8vw, var(--size-12));
         }
 

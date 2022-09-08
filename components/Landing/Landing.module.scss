@@ -65,6 +65,10 @@
             &:last-of-type {
                 margin-bottom: 1rem;
             }
+
+            @include decive-down(mobile) {
+                font-size: var(--font-size-fluid-3);
+            }
         }
 
         h2 {

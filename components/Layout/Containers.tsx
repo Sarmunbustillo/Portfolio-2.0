@@ -94,7 +94,7 @@ const MetaContainer = (props: MetaContainerType) => {
     const router = useRouter();
     const meta = {
         title: 'Sarmun Bustillo – Developer, creator, writer.',
-        description: `Frontend developer, passionate about Javascript, CSS and the Web .`,
+        description: `Frontend developer, passionate about Javascript, CSS and the Web.`,
         image: 'https://www.sarmunbustillo.com/images/sarmun_social_bg.png',
         type: 'website',
         ...customMeta,
