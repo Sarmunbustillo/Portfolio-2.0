@@ -15,7 +15,8 @@ function Article({ article }: { article: Article }) {
             title={article.headline + ' - Sarmun Bustillo'}
             description={article.previewText}
             image={
-                article.image.url !== undefined
+                article?.image?.url !== null &&
+                article?.image?.url !== undefined
                     ? article.image.url
                     : 'https://www.sarmunbustillo.com/images/sarmun_social_bg.png'
             }
