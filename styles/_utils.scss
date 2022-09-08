@@ -1,0 +1,140 @@
+.scroll {
+    --scrollbar-foreground: var(--highlight);
+    --scrollbar-background: var(--brand);
+
+    /* Foreground, Background */
+    scrollbar-color: var(--scrollbar-foreground) var(--scrollbar-background);
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+        width: 4px; /* Mostly for vertical scrollbars */
+        height: 4px; /* Mostly for horizontal scrollbars */
+    }
+
+    &::-webkit-scrollbar-thumb {
+        /* Foreground */
+        background: var(--scrollbar-foreground);
+    }
+
+    &::-webkit-scrollbar-track {
+        /* Background */
+        background: var(--scrollbar-background);
+    }
+}
+.gradient-to-right {
+    @include decive-up(tablet) {
+        --linear-gradient-brand: var(--linear-gradient-2-right);
+    }
+}
+
+.highlight {
+    color: var(--highlight);
+}
+
+.button-wrapper-border {
+    padding: 0.3rem;
+    background: var(--linear-gradient-brand);
+    background-attachment: fixed;
+    display: inline-flex;
+    border-radius: var(--border-radius);
+    @supports (-webkit-overflow-scrolling: touch) {
+        background-attachment: unset;
+        background: var(--linear-gradient-3);
+    }
+}
+
+.button {
+    --button-bg: var(--brand);
+    --button-color-text: var(--color-headline);
+    box-shadow: var(--shadow-small);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--button-bg);
+    color: var(--button-color-text);
+    padding: 0.5em 1em;
+    border-radius: var(--border-radius);
+    transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out,
+        border 0.15s ease-in-out;
+    font-weight: bold;
+    min-width: 8.05rem;
+    position: relative;
+    @include decive-down(tablet) {
+        display: flex;
+        width: 100%;
+    }
+
+    &:hover,
+    &:focus-visible {
+        --button-bg: transparent;
+        --button-border: var(--highlight-darker);
+        --button-color-text: var(--dark-color-text);
+    }
+
+    &.button-secondary {
+        --button-bg: var(--highlight);
+        --button-border: var(--highlight);
+        --button-color-text: var(--light-color-headline);
+        border: 0.3rem solid var(--button-border);
+
+        &:hover,
+        &:focus-visible {
+            --button-bg: var(--transparent);
+            --button-color-text: var(--light-color-headline);
+        }
+    }
+
+    &.button-third {
+        --button-border: var(--highlight);
+        border: 0.3rem solid var(--button-border);
+
+        &:hover,
+        &:focus-visible {
+            --button-bg: var(--highlight);
+        }
+    }
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    &.colored {
+        background: var(--linear-gradient-brand) fixed;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        @supports (-moz-appearance: none) {
+            background: var(--highlight);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    @include decive-down(tablet) {
+        line-height: var(--font-lineheight-3);
+    }
+}
+
+[data-theme='light'] {
+    .button {
+        --button-color-text: var(--highlight);
+        &:hover,
+        &:focus-visible {
+            --button-color-text: var(--light-color-headline);
+        }
+    }
+
+    .button-wrapper-border {
+        background-attachment: inherit;
+    }
+
+    .scroll {
+        --scrollbar-foreground: var(--linear-gradient-3);
+    }
+
+    .gradient-to-right {
+        --linear-gradient-brand: var(--linear-gradient-3-right);
+    }
+}

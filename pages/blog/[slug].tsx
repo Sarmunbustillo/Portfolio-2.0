@@ -1,4 +1,4 @@
-import Post from '../../components/Article/Post';
+import Post from '../../components/Post/Post';
 import { MetaContainer } from '../../components/Layout/Containers';
 import { getAllArticlesSlugs, getArticleBySlug } from '../../lib/api';
 import { Article, ParamsParsed } from '../../types/projects';
