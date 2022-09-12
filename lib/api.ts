@@ -82,3 +82,37 @@ export async function getArticleBySlug(slug: string | undefined) {
 
     return data?.article;
 }
+
+export async function getAllSmallProjects() {
+    const data = await fetchAPI(
+        `
+        {
+            allSmallProjects {
+                slug
+                id
+                headline
+                external
+              }
+        }
+        `
+    );
+
+    return data?.allSmallProjects;
+}
+
+export async function getAllSmallDemos() {
+    const data = await fetchAPI(
+        `
+        {
+            allDemos {
+                slug
+                id
+                headline
+                external
+              }
+        }
+        `
+    );
+
+    return data?.allDemos;
+}

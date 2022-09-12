@@ -4,18 +4,18 @@ import Landing from '../components/Landing/Landing';
 import Projects from '../components/Projects/Projects';
 import { ArticlePreview, DetailedProject, SimpleCard } from '../types/projects';
 import allProjects from '../public/data/projects/big-projects.json';
-import smallProjects from '../public/data/projects/small-projects.json';
+
 import { shuffle } from '../lib/utils';
-import { getPreviewArticles } from '../lib/api';
+import { getAllSmallProjects, getPreviewArticles } from '../lib/api';
 
 const Home = ({
     posts,
     projects,
-    smallerProjects,
+    smallProjects,
 }: {
     posts: ArticlePreview[];
     projects: DetailedProject[];
-    smallerProjects: SimpleCard[];
+    smallProjects: SimpleCard[];
 }) => {
     return (
         <MetaContainer>
@@ -32,23 +32,21 @@ const Home = ({
                     );
                 })}
             </CardsGrid>
-            <Projects projects={projects} smallerProjects={smallerProjects} />
+            <Projects projects={projects} smallerProjects={smallProjects} />
         </MetaContainer>
     );
 };
 
 export async function getStaticProps() {
     const { projects }: { projects: DetailedProject[] } = allProjects;
-    const { projects: smallerProjects }: { projects: SimpleCard[] } =
-        smallProjects;
+    const smallProjects: SimpleCard[] = (await getAllSmallProjects()) || [];
     const posts: ArticlePreview[] = (await getPreviewArticles('', 3)) || [];
-    const parsedPosts = JSON.parse(JSON.stringify(posts));
 
     return {
         props: {
-            posts: parsedPosts,
+            posts,
             projects,
-            smallerProjects: shuffle(smallerProjects),
+            smallProjects: shuffle(smallProjects),
         },
     };
 }

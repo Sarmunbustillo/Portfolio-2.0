@@ -1,8 +1,7 @@
 import Writings from '../components/Blog';
 import { MetaContainer } from '../components/Layout/Containers';
-import { getPreviewArticles } from '../lib/api';
+import { getAllSmallDemos, getPreviewArticles } from '../lib/api';
 import { shuffle } from '../lib/utils';
-import alldemos from '../public/data/demos/demos.json';
 import { ArticlePreview, SimpleCard } from '../types/projects';
 
 const Blog = ({
@@ -26,7 +25,7 @@ const Blog = ({
 };
 
 export async function getStaticProps() {
-    const { demos }: { demos: SimpleCard[] } = alldemos;
+    const demos: SimpleCard[] = await getAllSmallDemos();
     const typescriptPosts: ArticlePreview[] = await getPreviewArticles(
         'Typescript',
         undefined
