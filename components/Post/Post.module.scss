@@ -55,11 +55,14 @@
     code {
         color: var(--color-text);
         border: 1px solid var(--color-headline);
-        overflow: scroll;
         border-radius: var(--border-radius);
         padding: var(--size-3);
         display: grid;
         filter: contrast(1.75);
+
+        @include decive-down(mobile) {
+            overflow: scroll;
+        }
 
         span {
             &.function {
@@ -75,7 +78,10 @@
         padding: var(--size-4);
         margin-bottom: var(--size-4);
         min-inline-size: 100%;
-        overflow: scroll;
+
+        @include decive-down(mobile) {
+            overflow: scroll;
+        }
 
         code {
             border: none;
