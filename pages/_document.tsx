@@ -8,8 +8,6 @@ export default class myDocument extends Document {
         return (
             <Html lang="en" data-theme="dark">
                 <Head>
-                    {`<!-- Google tag (gtag.js) -->`}
-
                     <Script
                         strategy="lazyOnload"
                         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
