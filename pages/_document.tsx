@@ -1,4 +1,6 @@
+/* eslint-disable @next/next/inline-script-id */
 import Document, { Html, Head, NextScript, Main } from 'next/document';
+import Script from 'next/script';
 import React from 'react';
 
 export default class myDocument extends Document {
@@ -6,6 +8,21 @@ export default class myDocument extends Document {
         return (
             <Html lang="en" data-theme="dark">
                 <Head>
+                    {`<!-- Google tag (gtag.js) -->`}
+
+                    <Script
+                        strategy="lazyOnload"
+                        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+                    ></Script>
+
+                    <Script strategy="lazyOnload">
+                        {`
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){ dataLayer.push(arguments) }
+                        gtag('js', new Date()); gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
+                        `}
+                    </Script>
+
                     <link
                         rel="preload"
                         href="/fonts/Poppins-Regular.woff2"
