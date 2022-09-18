@@ -19,11 +19,12 @@ const createSitemap = (
     </urlset>
 `;
 export async function getServerSideProps({ res }: { res: any }) {
-    const allSlugs: ParamsParsed[] = await getAllArticlesSlugs();
+    const allSlugs: ParamsParsed[] = (await getAllArticlesSlugs()) || [];
     const allPages = [
         ...allSlugs.map(({ slug }) => `${slug}`),
         ...['', 'blog'],
     ];
+    console.log(res);
 
     res.setHeader('Content-Type', 'text/xml');
     res.setHeader(
