@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from 'next/future/image';
 import { useRef } from 'react';
 import {
     ArticlePreview,
@@ -127,7 +127,7 @@ const CardImage = ({ imgPath, projectTitle, projectLink }: SimpleProject) => {
         </div>
     );
 };
-
+const imageCSS = { width: '100%', height: 'auto' };
 const CardProject = ({
     imgPath,
     projectTitle,
@@ -155,6 +155,8 @@ const CardProject = ({
                     alt={projectTitle}
                     height="400"
                     width="700"
+                    sizes="100vw"
+                    style={imageCSS}
                 />
             </div>
             <div className={styles.description}>

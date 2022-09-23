@@ -1,8 +1,8 @@
-import Image from 'next/image';
+import Image from 'next/future/image';
 import styles from './Post.module.scss';
 
 import { Article } from '../../types/projects';
-
+const imageCSS = { width: '100%', height: 'auto' };
 function PostHeader({ image, headline }: Omit<Article, 'text'>) {
     return (
         <>
@@ -13,8 +13,9 @@ function PostHeader({ image, headline }: Omit<Article, 'text'>) {
                         src={image?.url}
                         height={image?.height}
                         width={image?.width}
-                        layout="responsive"
                         alt={headline}
+                        sizes="100vw"
+                        style={imageCSS}
                     />
                 </div>
             )}
