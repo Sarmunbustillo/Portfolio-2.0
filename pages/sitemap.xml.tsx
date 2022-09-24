@@ -22,7 +22,7 @@ export async function getServerSideProps({ res }: { res: any }) {
     const allSlugs: ParamsParsed[] = (await getAllArticlesSlugs()) || [];
     const allPages = [
         ...allSlugs.map(({ slug }) => `${slug}`),
-        ...['', 'blog'],
+        ...['', 'blog', 'snippets'],
     ];
     console.log(res);
 

@@ -1,8 +1,8 @@
-import Writings from '../components/Blog';
-import { MetaContainer } from '../components/Layout/Containers';
-import { getAllSmallDemos, getPreviewArticles } from '../lib/api';
-import { shuffle } from '../lib/utils';
-import { ArticlePreview, SimpleCard } from '../types/projects';
+import Writings from '../../components/Blog';
+import { MetaContainer } from '../../components/Layout/Containers';
+import { getAllSmallDemos, getPreviewArticles } from '../../lib/api';
+import { shuffle } from '../../lib/utils';
+import { ArticlePreview, SimpleCard } from '../../types/projects';
 
 const Blog = ({
     demos,

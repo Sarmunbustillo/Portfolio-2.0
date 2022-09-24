@@ -1,11 +1,141 @@
 @import '../../styles/mixins';
 
 .navigation {
+    --_mobile-nav-height: 94px;
     position: sticky;
     top: 0;
     display: flex;
     justify-content: space-between;
-    padding: var(--size-3) 0;
+    align-items: center;
+    padding: var(--size-6) 0 var(--size-3);
     background-color: var(--nav-bg-overlay);
+    backdrop-filter: blur(5px);
     z-index: 99;
+
+    ul {
+        display: flex;
+        gap: var(--size-fluid-3);
+        align-items: center;
+        z-index: 99;
+        @include decive-down(mobile) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    nav {
+        @include decive-down(mobile) {
+            margin-top: var(--size-3);
+            position: absolute;
+            top: var(--_mobile-nav-height);
+            background-attachment: fixed;
+            background-color: var(--nav-bg-overlay);
+            width: 100%;
+            height: 100vh;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            user-select: none;
+            overflow: hidden;
+            transition: all 0.5s ease-in;
+
+            li {
+                opacity: 0;
+                transition: opacity 0.4s ease-in;
+                display: grid;
+                width: 100%;
+                padding-bottom: var(--size-3);
+
+                border-bottom: 1px solid #adb5bd73;
+            }
+        }
+    }
+
+    .toggle {
+        --icon-fill: hsl(210 10% 30%);
+        --icon-fill-hover: hsl(210 10% 15%);
+        font-size: 0;
+        background-color: none;
+        height: var(--size-5);
+        width: var(--size-6);
+        background: none;
+        position: relative;
+
+        @include decive-up(mobile) {
+            display: none;
+        }
+
+        > span {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: var(--icon-fill);
+            transition: transform 0.2s ease-in, opacity 0.3s ease;
+
+            &:is(:hover, :focus-visible) {
+                background-color: var(--icon-fill-hover);
+            }
+
+            &:first-of-type {
+                top: 0;
+            }
+
+            &:nth-of-type(2) {
+                top: 50%;
+                transform: translateY(-50%);
+                width: 70%;
+            }
+
+            &:last-of-type {
+                bottom: 0;
+            }
+        }
+    }
+
+    &.open {
+        nav {
+            @include decive-down(mobile) {
+                transition: all 0s ease-in;
+                opacity: 1;
+                visibility: visible;
+                pointer-events: all;
+                user-select: auto;
+
+                li {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .toggle {
+            span {
+                &:first-of-type {
+                    top: 0;
+                    top: 50%;
+                    transform: translateY(-50%) rotate(-45deg);
+                }
+
+                &:nth-of-type(2) {
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 70%;
+                    opacity: 0;
+                }
+
+                &:last-of-type {
+                    bottom: unset;
+                    top: 50%;
+                    transform: translateY(-50%) rotate(45deg);
+                }
+            }
+        }
+    }
+}
+
+[data-theme='dark'] {
+    .toggle {
+        --icon-fill: hsl(210 10% 70%);
+        --icon-fill-hover: hsl(210 15% 90%);
+    }
 }

@@ -31,6 +31,12 @@
     color: var(--highlight);
 }
 
+.scroll-freeze {
+    @include decive-down(mobile) {
+        overflow: hidden;
+    }
+}
+
 .button-wrapper-border {
     padding: 0.3rem;
     background: var(--linear-gradient-brand);
