@@ -1,7 +1,7 @@
 @import '../../styles/mixins';
 
 .navigation {
-    --_mobile-nav-height: 94px;
+    --_mobile-nav-height: 92px;
     position: sticky;
     top: 0;
     display: flex;
@@ -25,7 +25,6 @@
 
     nav {
         @include decive-down(mobile) {
-            margin-top: var(--size-3);
             position: absolute;
             top: var(--_mobile-nav-height);
             background-attachment: fixed;
@@ -39,13 +38,16 @@
             overflow: hidden;
             transition: all 0.5s ease-in;
 
+            ul {
+                margin-top: var(--size-3);
+            }
+
             li {
                 opacity: 0;
                 transition: opacity 0.4s ease-in;
                 display: grid;
                 width: 100%;
                 padding-bottom: var(--size-3);
-
                 border-bottom: 1px solid #adb5bd73;
             }
         }
@@ -56,7 +58,7 @@
         --icon-fill-hover: hsl(210 10% 15%);
         font-size: 0;
         background-color: none;
-        height: var(--size-5);
+        height: var(--size-6);
         width: var(--size-6);
         background: none;
         position: relative;
@@ -72,6 +74,7 @@
             height: 2px;
             background-color: var(--icon-fill);
             transition: transform 0.2s ease-in, opacity 0.3s ease;
+            transform-origin: center;
 
             &:is(:hover, :focus-visible) {
                 background-color: var(--icon-fill-hover);

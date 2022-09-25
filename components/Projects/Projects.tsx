@@ -1,6 +1,6 @@
 import { DetailedProject, SimpleCard } from '../../types/projects';
 import { Card, CardProject } from '../Card/Card';
-import { OddEvenRows, ScrollContainer } from '../Layout/Containers';
+import { OddEvenRows, ScrollContainer } from '../Containers/Containers';
 
 export default function Projects({
     projects,

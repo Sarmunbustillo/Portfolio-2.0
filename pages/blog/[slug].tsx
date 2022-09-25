@@ -1,6 +1,6 @@
 import Post from '../../components/Post/Post';
-import { MetaContainer } from '../../components/Layout/Containers';
-import { getAllArticlesSlugs, getArticleBySlug } from '../../lib/api';
+import { MetaContainer } from '../../components/Containers/Containers';
+import { getAllSpecifiedSlugs, getArticleBySlug } from '../../lib/api';
 import { Article, ParamsParsed } from '../../types/projects';
 
 function Article({ article }: { article: Article }) {
@@ -34,7 +34,7 @@ function Article({ article }: { article: Article }) {
 }
 
 export async function getStaticPaths() {
-    const posts: ParamsParsed[] = await getAllArticlesSlugs();
+    const posts: ParamsParsed[] = await getAllSpecifiedSlugs();
     return {
         paths: posts?.map((post) => `${post.slug}`) || [],
         fallback: false,

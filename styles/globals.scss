@@ -250,6 +250,7 @@ img {
     width: auto;
     height: auto;
 }
+
 @media (prefers-reduced-motion: reduce) {
     * {
         animation-duration: 0.01ms !important;

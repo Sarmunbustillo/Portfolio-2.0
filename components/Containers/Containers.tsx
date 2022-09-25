@@ -108,11 +108,11 @@ const MetaContainer = (props: MetaContainerType) => {
                 <meta content={meta.description} name="description" />
                 <meta
                     property="og:url"
-                    content={`https://sarmunbustillo.com${router.asPath}`}
+                    content={`https://www.sarmunbustillo.com${router.asPath}`}
                 />
                 <link
                     rel="canonical"
-                    href={`https://sarmunbustillo.com${router.asPath}`}
+                    href={`https://www.sarmunbustillo.com${router.asPath}`}
                 />
                 <meta property="og:type" content={meta.type} />
                 <meta property="og:site_name" content="Sarmun Bustillo" />

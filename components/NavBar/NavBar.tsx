@@ -1,7 +1,7 @@
 import styles from './NavBar.module.scss';
 import NavbarLinks from '../NavbarLinks';
 import ToggleTheme from '../ToggleTheme';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 const NavBar = () => {
     const [isOpen, setIsOpen] = useState(false);

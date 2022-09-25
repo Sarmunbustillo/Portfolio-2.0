@@ -1,8 +1,8 @@
-import { Articles, ScrollContainer } from '../Layout/Containers';
+import { Articles, ScrollContainer } from '../Containers/Containers';
 import { Card, CardArticlePreview } from '../Card/Card';
 import { ArticlePreview, SimpleCard } from '../../types/projects';
 
-const Blogs = ({
+const BlogLayout = ({
     demos,
     posts,
     ts_series,
@@ -13,14 +13,6 @@ const Blogs = ({
 }) => {
     return (
         <>
-            <section>
-                <h1>Writings</h1>
-                <p>
-                    Here is a copilations of some of my posts, demos and
-                    snippets I&apos;ve done over the past few years
-                </p>
-            </section>
-
             <Articles
                 headline="Posts"
                 text="Sometimes I like to write articles about Demos I've done or deep dives into technical topics."
@@ -86,4 +78,4 @@ const Blogs = ({
     );
 };
 
-export default Blogs;
+export default BlogLayout;

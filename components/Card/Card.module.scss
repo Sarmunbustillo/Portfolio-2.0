@@ -56,25 +56,52 @@
     }
 }
 
-.cardImage {
+.Cardsnippet {
     position: relative;
-    min-width: var(--size-14);
+    background: var(--linear-gradient-brand);
+    background-attachment: fixed;
+    min-width: fit-content;
+    display: grid;
+    padding: var(--size-1);
+    border-radius: var(--border-radius);
+
+    @supports (-webkit-overflow-scrolling: touch) {
+        background-attachment: unset;
+        background: var(--linear-gradient-3);
+    }
 
     > div {
-        margin-bottom: var(--size-2);
-        position: relative;
+        background: var(--brand);
+        display: grid;
+        padding: var(--size-6);
+    }
 
-        a {
-            display: flex;
-            border: none;
+    .icons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: var(--size-3);
+    }
+
+    h3 {
+        font-size: var(--font-size-3);
+        margin-top: 0;
+    }
+
+    &:hover {
+        svg {
+            path {
+                stroke: var(--highlight);
+            }
         }
+    }
 
-        img {
-            object-fit: cover;
-            object-position: center;
-            aspect-ratio: 16/9;
-            max-width: 70rem;
-            width: 100%;
+    svg {
+        width: var(--size-7);
+        justify-self: flex-end;
+
+        path {
+            transition: stroke 0.15s ease-in-out;
         }
     }
 }

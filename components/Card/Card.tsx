@@ -102,32 +102,39 @@ const CardArticlePreview = ({
     );
 };
 
-const CardImage = ({ imgPath, projectTitle, projectLink }: SimpleProject) => {
-    const ref = useRef() as React.MutableRefObject<HTMLDivElement>;
-    useOnVieport(ref);
+const SnippetImageCSS = { width: '30px', height: 'auto' };
+
+const CardSnippet = ({ imgPath, headline, slug, previewText }) => {
     return (
-        <div ref={ref} className={styles.cardImage}>
-            <div>
-                <a
-                    href={projectLink}
-                    target="_blank"
-                    rel="noreferrer"
-                    className=""
-                >
-                    <Image
-                        src={imgPath}
-                        alt={projectTitle}
-                        loading="lazy"
-                        height="180"
-                        width="320"
-                    />
-                </a>
-            </div>
-            <h3 className="not-multicolor">{projectTitle}</h3>
-        </div>
+        <Link href={slug}>
+            <a
+                className={styles.Cardsnippet}
+                title={headline}
+                aria-label={headline}
+            >
+                <div>
+                    {headline && <h3 className="h4">{headline}</h3>}
+                    {previewText && <p>{previewText}</p>}
+                    <div className={styles.icons}>
+                        {imgPath && (
+                            <Image
+                                src={imgPath}
+                                alt={headline}
+                                height="200"
+                                width="30"
+                                style={SnippetImageCSS}
+                            />
+                        )}
+                        <ArrowIcon />
+                    </div>
+                </div>
+            </a>
+        </Link>
     );
 };
-const imageCSS = { width: '100%', height: 'auto' };
+
+const CardImageCSS = { width: '100%', height: 'auto' };
+
 const CardProject = ({
     imgPath,
     projectTitle,
@@ -156,7 +163,7 @@ const CardProject = ({
                     height="400"
                     width="700"
                     sizes="100vw"
-                    style={imageCSS}
+                    style={CardImageCSS}
                 />
             </div>
             <div className={styles.description}>
@@ -191,4 +198,4 @@ const CardProject = ({
     );
 };
 
-export { Card, CardImage, CardProject, CardArticlePreview };
+export { Card, CardSnippet, CardProject, CardArticlePreview };

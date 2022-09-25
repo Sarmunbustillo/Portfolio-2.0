@@ -24,6 +24,8 @@ async function fetchAPI(query: string, { variables }: any = {}) {
     return json.data;
 }
 
+// articles
+
 export async function getPreviewArticles(
     category: string,
     amount: 'string' | number | undefined
@@ -41,20 +43,6 @@ export async function getPreviewArticles(
                 id
             }
           }
-        `
-    );
-
-    return data?.allArticles;
-}
-
-export async function getAllArticlesSlugs() {
-    const data = await fetchAPI(
-        `
-        {
-            allArticles {
-                slug
-            }
-        }
         `
     );
 
@@ -83,6 +71,49 @@ export async function getArticleBySlug(slug: string | undefined) {
     return data?.article;
 }
 
+// Snippets
+
+export async function getAllPreviewSnippets() {
+    const data = await fetchAPI(
+        `
+        {
+            allSnippets {
+                id
+                headline
+                slug
+                previewText
+                image {
+                  url
+                  width
+                  height
+                }
+            }
+        }
+        `
+    );
+
+    return data?.allSnippets;
+}
+
+export async function getSnippetBySlug(slug: string | undefined) {
+    if (!slug) return;
+    const data = await fetchAPI(
+        `
+            {
+                snippet(filter: {slug: {in: "${slug}"}}) {
+                    headline
+                    text(markdown: true)
+                    slug
+                    id
+                }
+            }
+        `
+    );
+
+    return data?.snippet;
+}
+
+// Small Projects
 export async function getAllSmallProjects() {
     const data = await fetchAPI(
         `
@@ -100,6 +131,7 @@ export async function getAllSmallProjects() {
     return data?.allSmallProjects;
 }
 
+// Demos
 export async function getAllSmallDemos() {
     const data = await fetchAPI(
         `
@@ -115,4 +147,19 @@ export async function getAllSmallDemos() {
     );
 
     return data?.allDemos;
+}
+
+// slugs
+export async function getAllSpecifiedSlugs(type = 'allArticles') {
+    const data = await fetchAPI(
+        `
+        {
+            ${type} {
+                slug
+            }
+        }
+        `
+    );
+
+    return data[type];
 }

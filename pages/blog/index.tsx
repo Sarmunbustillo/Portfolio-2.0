@@ -1,5 +1,5 @@
-import Writings from '../../components/Blog';
-import { MetaContainer } from '../../components/Layout/Containers';
+import { MetaContainer } from '../../components/Containers/Containers';
+import BlogLayout from '../../components/Layout/BlogLayout';
 import { getAllSmallDemos, getPreviewArticles } from '../../lib/api';
 import { shuffle } from '../../lib/utils';
 import { ArticlePreview, SimpleCard } from '../../types/projects';
@@ -19,7 +19,14 @@ const Blog = ({
             description=" Here is a copilations of some of my posts, demos and
         snippets I've done over the past few years"
         >
-            <Writings demos={demos} posts={posts} ts_series={ts_series} />
+            <section>
+                <h1>Writings</h1>
+                <p>
+                    Here is a copilations of some of my posts, demos and
+                    snippets I&apos;ve done over the past few years
+                </p>
+            </section>
+            <BlogLayout demos={demos} posts={posts} ts_series={ts_series} />
         </MetaContainer>
     );
 };

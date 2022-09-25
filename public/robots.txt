@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://sarmunbustillo.com/sitemap.xml
+Sitemap: https://www.sarmunbustillo.com/sitemap.xml

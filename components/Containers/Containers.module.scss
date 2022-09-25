@@ -5,13 +5,16 @@
     background: var(--brand);
 
     .grid {
+        --_row-gap: var(--size-6);
+        --_column-gap: var(--size-6);
         display: grid;
         grid-template-columns: repeat(
             auto-fit,
             minmax(min(100%, var(--size-13)), 1fr)
         );
-        column-gap: var(--size-8);
-        row-gap: var(--size-6);
+
+        column-gap: var(--_column-gap);
+        row-gap: var(--_row-gap);
 
         @include decive-down(mobile) {
             grid-template-columns: 100%;
@@ -34,6 +37,10 @@
         scroll-padding: 0 50%;
         scroll-snap-type: x mandatory;
         padding: var(--size-2) 0 var(--size-6);
+
+        > * {
+            scroll-snap-align: start;
+        }
     }
 
     * {

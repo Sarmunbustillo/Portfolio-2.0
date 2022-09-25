@@ -1,4 +1,4 @@
-import { getAllArticlesSlugs } from '../lib/api';
+import { getAllSpecifiedSlugs } from '../lib/api';
 import { ParamsParsed } from '../types/projects';
 
 const createSitemap = (
@@ -9,7 +9,7 @@ const createSitemap = (
             .map((slug) => {
                 return `
                 <url>
-                    <loc>${`https://sarmunbustillo.com${
+                    <loc>${`https://www.sarmunbustillo.com${
                         slug.startsWith('/') ? slug : '/' + slug
                     }`}</loc>
                 </url>
@@ -19,12 +19,11 @@ const createSitemap = (
     </urlset>
 `;
 export async function getServerSideProps({ res }: { res: any }) {
-    const allSlugs: ParamsParsed[] = (await getAllArticlesSlugs()) || [];
+    const allSlugs: ParamsParsed[] = (await getAllSpecifiedSlugs()) || [];
     const allPages = [
         ...allSlugs.map(({ slug }) => `${slug}`),
         ...['', 'blog', 'snippets'],
     ];
-    console.log(res);
 
     res.setHeader('Content-Type', 'text/xml');
     res.setHeader(

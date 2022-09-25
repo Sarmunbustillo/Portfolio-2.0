@@ -21,6 +21,7 @@
         background: var(--scrollbar-background);
     }
 }
+
 .gradient-to-right {
     @include decive-up(tablet) {
         --linear-gradient-brand: var(--linear-gradient-2-right);
