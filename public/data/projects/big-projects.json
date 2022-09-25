@@ -2,28 +2,32 @@
     "projects": [
         {
             "id": "Language_Service_Solutions",
-            "projectTitle": "Language Service Solutions",
-            "projectDescription": "LSS provides translation and interpretation services as well as consulting around language services.",
-            "projectLink": "https://languageservicesolutions.com/services",
+            "headline": "Language Service Solutions",
+            "description": "LSS provides translation and interpretation services as well as consulting around language services.",
+            "slug": "https://languageservicesolutions.com/services",
             "workDone": [
                 "Modernized web stack to improve website performance, have better web vitals, and overall modern look and feel",
                 "implemented a pixel perfect redesign"
             ],
-            "imgPath": "/images/projects/LSS.png",
+            "image": {
+                "url": "/images/projects/LSS.png"
+            },
             "technologies": ["SCSS", "React", "Next", "Vercel"]
         },
         {
             "id": "NFT_Market",
-            "projectTitle": "NFT Market",
-            "projectDescription": "NFT market place: Buy, sell and transfer NFTs",
-            "projectLink": "https://nft-market-psi.vercel.app/",
+            "headline": "NFT Market",
+            "description": "NFT market place: Buy, sell and transfer NFTs",
+            "slug": "https://nft-market-psi.vercel.app/",
             "workDone": [
                 "Local blockchain testing environment",
                 "Metamask integration",
                 "Unit tests",
                 "Buy, sell and transfer NFTs logic"
             ],
-            "imgPath": "/images/projects/NFT-market.png",
+            "image": {
+                "url": "/images/projects/NFT-market.png"
+            },
             "technologies": [
                 "React",
                 "Next",
@@ -35,9 +39,9 @@
         },
         {
             "id": "Cafe Rustico",
-            "projectTitle": "Cafe Rustico",
-            "projectDescription": "Colombian Coffee shop and restaurant ",
-            "projectLink": "https://www.caferustico.page/",
+            "headline": "Cafe Rustico",
+            "description": "Colombian Coffee shop and restaurant ",
+            "slug": "https://www.caferustico.page/",
             "workDone": [
                 "Design layout",
                 "Design implementation",
@@ -45,7 +49,9 @@
                 "Concept and strategies to increase online precense, sells and brand marketing",
                 "CMS integration"
             ],
-            "imgPath": "/images/projects/Cafe-rustico.png",
+            "image": {
+                "url": "/images/projects/Cafe-rustico.png"
+            },
             "technologies": [
                 "React",
                 "Next",

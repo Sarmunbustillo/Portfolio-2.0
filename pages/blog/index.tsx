@@ -2,7 +2,7 @@ import { MetaContainer } from '../../components/Containers/Containers';
 import BlogLayout from '../../components/Layout/BlogLayout';
 import { getAllSmallDemos, getPreviewArticles } from '../../lib/api';
 import { shuffle } from '../../lib/utils';
-import { ArticlePreview, SimpleCard } from '../../types/projects';
+import { PostPreview, SimpleCard } from '../../types/types';
 
 const Blog = ({
     demos,
@@ -10,8 +10,8 @@ const Blog = ({
     ts_series,
 }: {
     demos: SimpleCard[];
-    posts: ArticlePreview[];
-    ts_series: ArticlePreview[];
+    posts: PostPreview[];
+    ts_series: PostPreview[];
 }) => {
     return (
         <MetaContainer
@@ -33,11 +33,11 @@ const Blog = ({
 
 export async function getStaticProps() {
     const demos: SimpleCard[] = await getAllSmallDemos();
-    const typescriptPosts: ArticlePreview[] = await getPreviewArticles(
+    const typescriptPosts: PostPreview[] = await getPreviewArticles(
         'Typescript',
         undefined
     );
-    const webdevPosts: ArticlePreview[] = await getPreviewArticles(
+    const webdevPosts: PostPreview[] = await getPreviewArticles(
         'Webdev',
         undefined
     );

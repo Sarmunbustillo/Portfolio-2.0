@@ -2,7 +2,7 @@ import { CardsGrid, MetaContainer } from '../components/Containers/Containers';
 import { Card } from '../components/Card/Card';
 import Landing from '../components/Landing/Landing';
 import Projects from '../components/Projects/Projects';
-import { ArticlePreview, DetailedProject, SimpleCard } from '../types/projects';
+import { PostPreview, Project, SimpleCard } from '../types/types';
 import allProjects from '../public/data/projects/big-projects.json';
 
 import { shuffle } from '../lib/utils';
@@ -13,8 +13,8 @@ const Home = ({
     projects,
     smallProjects,
 }: {
-    posts: ArticlePreview[];
-    projects: DetailedProject[];
+    posts: PostPreview[];
+    projects: Project[];
     smallProjects: SimpleCard[];
 }) => {
     return (
@@ -38,9 +38,9 @@ const Home = ({
 };
 
 export async function getStaticProps() {
-    const { projects }: { projects: DetailedProject[] } = allProjects;
+    const { projects } = allProjects;
     const smallProjects: SimpleCard[] = (await getAllSmallProjects()) || [];
-    const posts: ArticlePreview[] = (await getPreviewArticles('', 3)) || [];
+    const posts: PostPreview[] = (await getPreviewArticles('', 3)) || [];
 
     return {
         props: {

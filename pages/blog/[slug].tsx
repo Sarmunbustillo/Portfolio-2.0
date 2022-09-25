@@ -1,7 +1,7 @@
 import Post from '../../components/Post/Post';
 import { MetaContainer } from '../../components/Containers/Containers';
 import { getAllSpecifiedSlugs, getArticleBySlug } from '../../lib/api';
-import { Article, ParamsParsed } from '../../types/projects';
+import { Post as Article, ParamsParsed } from '../../types/types';
 
 function Article({ article }: { article: Article }) {
     if (!article)

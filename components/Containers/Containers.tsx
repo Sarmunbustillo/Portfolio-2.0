@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { MetaContainerType } from '../../types/projects';
+import { MetaContainerType } from '../../types/types';
 import styles from './Containers.module.scss';
 
 const ScrollContainer = ({

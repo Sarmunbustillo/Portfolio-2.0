@@ -1,7 +1,8 @@
+import { PostPreview } from '../../types/types';
 import { CardSnippet } from '../Card/Card';
 import { CardsGrid } from '../Containers/Containers';
 
-const SnippetLayout = ({ snippets }) => {
+const SnippetLayout = ({ snippets }: { snippets: PostPreview[] }) => {
     return (
         <>
             <CardsGrid headline="">
@@ -12,7 +13,7 @@ const SnippetLayout = ({ snippets }) => {
                             previewText={previewText}
                             slug={slug}
                             key={id}
-                            imgPath={image.url}
+                            image={image}
                         />
                     );
                 })}

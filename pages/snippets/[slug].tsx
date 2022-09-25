@@ -1,9 +1,9 @@
 import { MetaContainer } from '../../components/Containers/Containers';
 import Post from '../../components/Post';
 import { getAllSpecifiedSlugs, getSnippetBySlug } from '../../lib/api';
-import { ParamsParsed } from '../../types/projects';
+import { ParamsParsed, Post as Snippet } from '../../types/types';
 
-function Snippet({ snippet }) {
+function Snippet({ snippet }: { snippet: Snippet }) {
     return (
         <MetaContainer
             title={snippet.headline + ' - Sarmun Bustillo'}
@@ -37,7 +37,9 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }: ParamsParsed) {
-    const snippet = await getSnippetBySlug(`/snippets/${params?.slug}`);
+    const snippet: Snippet = await getSnippetBySlug(
+        `/snippets/${params?.slug}`
+    );
     return {
         props: {
             snippet,

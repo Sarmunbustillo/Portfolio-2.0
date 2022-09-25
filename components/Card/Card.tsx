@@ -1,13 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/future/image';
 import { useRef } from 'react';
-import {
-    ArticlePreview,
-    DetailedProject,
-    SimpleCard,
-} from '../../types/projects';
+import { PostPreview, Project, SimpleCard } from '../../types/types';
 import { useOnVieport } from '../../lib/useOnVieport';
-import { SimpleProject } from '../../types/projects';
 import styles from './Card.module.scss';
 
 const ArrowIcon = () => {
@@ -50,7 +45,7 @@ const Card = ({ headline, slug, external = false }: SimpleCard) => {
         );
     }
     return (
-        <Link href={slug}>
+        <Link href={slug!}>
             <a className={styles.card} title={headline} aria-label={headline}>
                 <div>
                     <span>
@@ -68,7 +63,7 @@ const CardArticlePreview = ({
     previewText,
     slug,
     external = false,
-}: ArticlePreview) => {
+}: PostPreview) => {
     if (external) {
         return (
             <a
@@ -87,7 +82,7 @@ const CardArticlePreview = ({
         );
     }
     return (
-        <Link href={slug}>
+        <Link href={slug!}>
             <a
                 className={styles.articlePreview}
                 title={headline}
@@ -104,9 +99,9 @@ const CardArticlePreview = ({
 
 const SnippetImageCSS = { width: '30px', height: 'auto' };
 
-const CardSnippet = ({ imgPath, headline, slug, previewText }) => {
+const CardSnippet = ({ image, headline, slug, previewText }: PostPreview) => {
     return (
-        <Link href={slug}>
+        <Link href={slug!}>
             <a
                 className={styles.Cardsnippet}
                 title={headline}
@@ -116,10 +111,10 @@ const CardSnippet = ({ imgPath, headline, slug, previewText }) => {
                     {headline && <h3 className="h4">{headline}</h3>}
                     {previewText && <p>{previewText}</p>}
                     <div className={styles.icons}>
-                        {imgPath && (
+                        {image?.url && (
                             <Image
-                                src={imgPath}
-                                alt={headline}
+                                src={image?.url}
+                                alt={headline!}
                                 height="200"
                                 width="30"
                                 style={SnippetImageCSS}
@@ -136,14 +131,14 @@ const CardSnippet = ({ imgPath, headline, slug, previewText }) => {
 const CardImageCSS = { width: '100%', height: 'auto' };
 
 const CardProject = ({
-    imgPath,
-    projectTitle,
+    image,
+    headline,
     technologies,
-    projectDescription,
+    description,
     workDone,
-    projectLink,
+    slug,
     supportHeadline,
-}: DetailedProject) => {
+}: Project) => {
     const ref = useRef() as React.MutableRefObject<HTMLInputElement>;
     const isOnViewport = useOnVieport(ref);
     return (
@@ -158,8 +153,8 @@ const CardProject = ({
                     <span className={styles.support}>{supportHeadline}</span>
                 )}
                 <Image
-                    src={imgPath}
-                    alt={projectTitle}
+                    src={image?.url ? image?.url : '#'}
+                    alt={headline!}
                     height="400"
                     width="700"
                     sizes="100vw"
@@ -173,9 +168,9 @@ const CardProject = ({
                     ))}
                 </div>
                 <div className="test">
-                    <h3>{projectTitle}</h3>
+                    <h3>{headline}</h3>
                 </div>
-                <p>{projectDescription}</p>
+                <p>{description}</p>
                 <ul>
                     {workDone.map((list, i) => (
                         <li key={`list-${i}`}>{list}</li>
@@ -184,7 +179,7 @@ const CardProject = ({
                 <div className={styles.button}>
                     <span className="button-wrapper-border">
                         <a
-                            href={projectLink}
+                            href={slug}
                             target="_blank"
                             rel="noreferrer"
                             className="button"

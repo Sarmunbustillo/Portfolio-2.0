@@ -1,4 +1,4 @@
-import { DetailedProject, SimpleCard } from '../../types/projects';
+import { Project, SimpleCard } from '../../types/types';
 import { Card, CardProject } from '../Card/Card';
 import { OddEvenRows, ScrollContainer } from '../Containers/Containers';
 
@@ -6,7 +6,7 @@ export default function Projects({
     projects,
     smallerProjects,
 }: {
-    projects: DetailedProject[];
+    projects: Project[];
     smallerProjects: SimpleCard[];
 }) {
     return (
@@ -14,22 +14,22 @@ export default function Projects({
             <OddEvenRows headline="Projects">
                 {projects.map(
                     ({
-                        projectTitle,
-                        projectDescription,
-                        projectLink,
+                        headline,
+                        description,
+                        slug,
                         workDone,
-                        imgPath,
+                        image,
                         technologies,
                         id,
                         supportHeadline,
-                    }: DetailedProject) => {
+                    }) => {
                         return (
                             <CardProject
-                                projectTitle={projectTitle}
-                                projectDescription={projectDescription}
-                                projectLink={projectLink}
+                                headline={headline}
+                                description={description}
+                                slug={slug!}
                                 workDone={workDone}
-                                imgPath={imgPath}
+                                image={image}
                                 technologies={technologies}
                                 key={id}
                                 id={id}
@@ -42,7 +42,7 @@ export default function Projects({
 
             <ScrollContainer headline="Took part in">
                 {smallerProjects.map(
-                    ({ headline, slug: link, external, id }: SimpleCard) => {
+                    ({ headline, slug: link, external, id }) => {
                         return (
                             <Card
                                 headline={headline}

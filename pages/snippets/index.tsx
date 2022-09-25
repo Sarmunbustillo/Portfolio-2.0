@@ -1,8 +1,9 @@
 import { MetaContainer } from '../../components/Containers/Containers';
 import SnippetLayout from '../../components/Layout/SnippetLayout';
 import { getAllPreviewSnippets } from '../../lib/api';
+import { PostPreview } from '../../types/types';
 
-function Snippets({ snippets }) {
+function Snippets({ snippets }: { snippets: PostPreview[] }) {
     return (
         <MetaContainer
             title="Snippets - Sarmun Bustillo"

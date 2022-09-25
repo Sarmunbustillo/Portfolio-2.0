@@ -1,9 +1,9 @@
 import Image from 'next/future/image';
 import styles from './Post.module.scss';
 
-import { Article } from '../../types/projects';
+import { Post } from '../../types/types';
 const imageCSS = { width: '100%', height: 'auto' };
-function PostHeader({ image, headline }: Omit<Article, 'text'>) {
+function PostHeader({ image, headline }: Omit<Post, 'text'>) {
     return (
         <>
             {image && (
@@ -13,7 +13,7 @@ function PostHeader({ image, headline }: Omit<Article, 'text'>) {
                         src={image?.url}
                         height={image?.height}
                         width={image?.width}
-                        alt={headline}
+                        alt={headline!}
                         sizes="100vw"
                         style={imageCSS}
                     />
@@ -23,7 +23,7 @@ function PostHeader({ image, headline }: Omit<Article, 'text'>) {
         </>
     );
 }
-function ArticleBody({ text }: Pick<Article, 'text'>) {
+function ArticleBody({ text }: Pick<Post, 'text'>) {
     return (
         <div className={styles.content}>
             <div dangerouslySetInnerHTML={{ __html: text }} />
@@ -31,7 +31,7 @@ function ArticleBody({ text }: Pick<Article, 'text'>) {
     );
 }
 
-const Post = ({ image, headline, text }: Article) => {
+const Post = ({ image, headline, text }: Post) => {
     return (
         <div className={styles.post}>
             <PostHeader image={image} headline={headline} />

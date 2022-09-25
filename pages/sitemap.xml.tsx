@@ -1,5 +1,5 @@
 import { getAllSpecifiedSlugs } from '../lib/api';
-import { ParamsParsed } from '../types/projects';
+import { ParamsParsed } from '../types/types';
 
 const createSitemap = (
     slugs: string[]
@@ -19,9 +19,12 @@ const createSitemap = (
     </urlset>
 `;
 export async function getServerSideProps({ res }: { res: any }) {
-    const allSlugs: ParamsParsed[] = (await getAllSpecifiedSlugs()) || [];
+    const allBlogSlugs: ParamsParsed[] = (await getAllSpecifiedSlugs()) || [];
+    const allSnippetsSlugs: ParamsParsed[] =
+        (await getAllSpecifiedSlugs('allSnippets')) || [];
     const allPages = [
-        ...allSlugs.map(({ slug }) => `${slug}`),
+        ...allBlogSlugs.map(({ slug }) => `${slug}`),
+        ...allSnippetsSlugs.map(({ slug }) => `${slug}`),
         ...['', 'blog', 'snippets'],
     ];
 

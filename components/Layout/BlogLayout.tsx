@@ -1,6 +1,6 @@
 import { Articles, ScrollContainer } from '../Containers/Containers';
 import { Card, CardArticlePreview } from '../Card/Card';
-import { ArticlePreview, SimpleCard } from '../../types/projects';
+import { PostPreview, SimpleCard } from '../../types/types';
 
 const BlogLayout = ({
     demos,
@@ -8,8 +8,8 @@ const BlogLayout = ({
     ts_series,
 }: {
     demos: SimpleCard[];
-    posts: ArticlePreview[];
-    ts_series: ArticlePreview[];
+    posts: PostPreview[];
+    ts_series: PostPreview[];
 }) => {
     return (
         <>
@@ -17,36 +17,22 @@ const BlogLayout = ({
                 headline="Posts"
                 text="Sometimes I like to write articles about Demos I've done or deep dives into technical topics."
             >
-                {posts.map(
-                    ({
-                        headline,
-                        previewText,
-                        slug,
-                        external,
-                        id,
-                    }: ArticlePreview) => {
-                        return (
-                            <CardArticlePreview
-                                headline={headline}
-                                previewText={previewText}
-                                slug={slug}
-                                external={external}
-                                key={id}
-                            />
-                        );
-                    }
-                )}
+                {posts.map(({ headline, previewText, slug, external, id }) => {
+                    return (
+                        <CardArticlePreview
+                            headline={headline}
+                            previewText={previewText}
+                            slug={slug}
+                            external={external}
+                            key={id}
+                        />
+                    );
+                })}
             </Articles>
 
             <Articles headline="Typescript series" text="">
                 {ts_series.map(
-                    ({
-                        headline,
-                        previewText,
-                        slug,
-                        external,
-                        id,
-                    }: ArticlePreview) => {
+                    ({ headline, previewText, slug, external, id }) => {
                         return (
                             <CardArticlePreview
                                 headline={headline}
@@ -63,7 +49,7 @@ const BlogLayout = ({
                 headline="Demos"
                 text="Little demos I've built to learn from and teach others"
             >
-                {demos.map(({ headline, slug, external, id }: SimpleCard) => {
+                {demos.map(({ headline, slug, external, id }) => {
                     return (
                         <Card
                             headline={headline}
