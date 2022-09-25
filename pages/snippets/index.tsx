@@ -7,14 +7,15 @@ function Snippets({ snippets }: { snippets: PostPreview[] }) {
     return (
         <MetaContainer
             title="Snippets - Sarmun Bustillo"
-            description=" Here is a collection of useful HTML, CSS and JavaScript snippets that I
-            have saved for future me or perhapss for present you"
+            description="Here is a collection of useful HTML, CSS and JavaScript snippets that I
+            have saved for future me or perhaps for present you."
         >
             <section>
                 <h1>Snippets</h1>
                 <p>
-                    Here is a collection of useful HTML, CSS, JS snippets that I
-                    save for future me or maybe present you.
+                    Here is a collection of useful HTML, CSS and JavaScript
+                    snippets that I have saved for future me or perhapssfor
+                    present you.
                 </p>
             </section>
             <SnippetLayout snippets={snippets} />
