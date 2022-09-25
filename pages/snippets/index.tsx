@@ -14,7 +14,7 @@ function Snippets({ snippets }: { snippets: PostPreview[] }) {
                 <h1>Snippets</h1>
                 <p>
                     Here is a collection of useful HTML, CSS and JavaScript
-                    snippets that I have saved for future me or perhapssfor
+                    snippets that I have saved for future me or perhaps for
                     present you.
                 </p>
             </section>
