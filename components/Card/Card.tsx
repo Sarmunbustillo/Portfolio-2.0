@@ -102,7 +102,7 @@ const CardArticlePreview = ({
     );
 };
 
-const SnippetImageCSS = { width: '30px', height: 'auto' };
+const SnippetImageCSS = { width: '30px', height: 'auto', aspectRatio: '1 /1' };
 
 const CardSnippet = ({
     image,
@@ -127,7 +127,7 @@ const CardSnippet = ({
                                       <Image
                                           src={img.url}
                                           alt={headline!}
-                                          height="200"
+                                          height="30"
                                           width="30"
                                           style={SnippetImageCSS}
                                           key={img.url}
