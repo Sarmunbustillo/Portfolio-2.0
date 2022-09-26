@@ -1,7 +1,12 @@
 import Link from 'next/link';
 import Image from 'next/future/image';
 import { useRef } from 'react';
-import { PostPreview, Project, SimpleCard } from '../../types/types';
+import {
+    PostPreview,
+    Project,
+    SimpleCard,
+    SnippetPreview,
+} from '../../types/types';
 import { useOnVieport } from '../../lib/useOnVieport';
 import styles from './Card.module.scss';
 
@@ -99,7 +104,12 @@ const CardArticlePreview = ({
 
 const SnippetImageCSS = { width: '30px', height: 'auto' };
 
-const CardSnippet = ({ image, headline, slug, previewText }: PostPreview) => {
+const CardSnippet = ({
+    image,
+    headline,
+    slug,
+    previewText,
+}: SnippetPreview) => {
     return (
         <Link href={slug!}>
             <a
@@ -111,15 +121,20 @@ const CardSnippet = ({ image, headline, slug, previewText }: PostPreview) => {
                     {headline && <h3 className="h4">{headline}</h3>}
                     {previewText && <p>{previewText}</p>}
                     <div className={styles.icons}>
-                        {image?.url && (
-                            <Image
-                                src={image?.url}
-                                alt={headline!}
-                                height="200"
-                                width="30"
-                                style={SnippetImageCSS}
-                            />
-                        )}
+                        <div className={styles.images}>
+                            {image?.length > 0
+                                ? image?.map((img) => (
+                                      <Image
+                                          src={img.url}
+                                          alt={headline!}
+                                          height="200"
+                                          width="30"
+                                          style={SnippetImageCSS}
+                                          key={img.url}
+                                      />
+                                  ))
+                                : null}
+                        </div>
                         <ArrowIcon />
                     </div>
                 </div>

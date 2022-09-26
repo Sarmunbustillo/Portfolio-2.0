@@ -6,7 +6,7 @@ type Markdown = {
     text: string;
 };
 
-type ImageDetails = {
+export type ImageDetails = {
     image?: {
         url: string;
         height?: string;
@@ -30,6 +30,15 @@ export type Project = SimpleCard &
         supportHeadline?: string;
         workDone: string[];
         technologies: string[];
+    };
+
+export type SnippetPreview = SimpleCard &
+    PreviewText & {
+        image: [
+            img: {
+                url: string;
+            }
+        ];
     };
 
 export type PostPreview = SimpleCard & PreviewText & ImageDetails;

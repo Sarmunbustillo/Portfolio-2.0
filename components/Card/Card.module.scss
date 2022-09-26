@@ -82,6 +82,11 @@
         align-items: center;
         margin-top: var(--size-3);
     }
+    .images {
+        display: flex;
+        align-items: center;
+        gap: var(--size-3);
+    }
 
     h3 {
         font-size: var(--font-size-3);

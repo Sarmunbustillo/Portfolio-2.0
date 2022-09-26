@@ -1,8 +1,8 @@
-import { PostPreview } from '../../types/types';
+import { SnippetPreview } from '../../types/types';
 import { CardSnippet } from '../Card/Card';
 import { CardsGrid } from '../Containers/Containers';
 
-const SnippetLayout = ({ snippets }: { snippets: PostPreview[] }) => {
+const SnippetLayout = ({ snippets }: { snippets: SnippetPreview[] }) => {
     return (
         <>
             <CardsGrid headline="">
