@@ -26,6 +26,7 @@ export default function Landing() {
                     alt="A photo of Sarmun Bustillo"
                     width={300}
                     height={300}
+                    loading="eager"
                 />
             </div>
         </section>
