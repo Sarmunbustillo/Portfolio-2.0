@@ -1,7 +1,6 @@
 @import '../../styles/mixins';
 
 .navigation {
-    --_mobile-nav-height: 92px;
     position: sticky;
     top: 0;
     display: flex;
@@ -11,6 +10,16 @@
     background-color: var(--nav-bg-overlay);
     backdrop-filter: blur(5px);
     z-index: 99;
+
+    @include decive-down(mobile) {
+        display: grid;
+        grid-template-rows: auto 1fr;
+
+        // toggle button
+        > div {
+            grid-column: 2;
+        }
+    }
 
     ul {
         display: flex;
@@ -25,8 +34,9 @@
 
     nav {
         @include decive-down(mobile) {
+            grid-row: 2;
             position: absolute;
-            top: var(--_mobile-nav-height);
+            top: var(--size-3);
             background-attachment: fixed;
             background-color: var(--nav-bg-overlay);
             width: 100%;

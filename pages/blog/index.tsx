@@ -17,13 +17,13 @@ const Blog = ({
         <MetaContainer
             title="Blog - Sarmun Bustillo"
             description=" Here is a copilations of some of my posts, demos and
-        snippets I've done over the past few years"
+        thoughts I've done over the past few years."
         >
             <section>
                 <h1>Writings</h1>
                 <p>
                     Here is a copilations of some of my posts, demos and
-                    snippets I&apos;ve done over the past few years
+                    thoughts I&apos;ve done over the past few years.
                 </p>
             </section>
             <BlogLayout demos={demos} posts={posts} ts_series={ts_series} />
