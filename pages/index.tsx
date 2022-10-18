@@ -1,4 +1,8 @@
-import { CardsGrid, MetaContainer } from '../components/Containers/Containers';
+import {
+    CardsGrid,
+    MetaContainer,
+    ScrollContainer,
+} from '../components/Containers/Containers';
 import { Card } from '../components/Card/Card';
 import Landing from '../components/Landing/Landing';
 import Projects from '../components/Projects/Projects';
@@ -6,16 +10,16 @@ import { PostPreview, Project, SimpleCard } from '../types/types';
 import allProjects from '../public/data/projects/big-projects.json';
 
 import { shuffle } from '../lib/utils';
-import { getAllSmallProjects, getPreviewArticles } from '../lib/api';
+import { getAllSmallDemos, getPreviewArticles } from '../lib/api';
 
 const Home = ({
     posts,
     projects,
-    smallProjects,
+    demos,
 }: {
     posts: PostPreview[];
     projects: Project[];
-    smallProjects: SimpleCard[];
+    demos: SimpleCard[];
 }) => {
     return (
         <MetaContainer>
@@ -32,21 +36,37 @@ const Home = ({
                     );
                 })}
             </CardsGrid>
-            <Projects projects={projects} smallerProjects={smallProjects} />
+            <Projects projects={projects} />
+            <ScrollContainer
+                headline="Demos"
+                text="Little demos I've built to learn from and teach others"
+            >
+                {demos.map(({ headline, slug, external, id }) => {
+                    return (
+                        <Card
+                            headline={headline}
+                            slug={slug}
+                            external={external}
+                            key={id}
+                        />
+                    );
+                })}
+            </ScrollContainer>
         </MetaContainer>
     );
 };
 
 export async function getStaticProps() {
     const { projects } = allProjects;
-    const smallProjects: SimpleCard[] = (await getAllSmallProjects()) || [];
+    const demos: SimpleCard[] = await getAllSmallDemos();
+
     const posts: PostPreview[] = (await getPreviewArticles('', 3)) || [];
 
     return {
         props: {
             posts,
             projects,
-            smallProjects: shuffle(smallProjects),
+            demos: shuffle(demos),
         },
     };
 }

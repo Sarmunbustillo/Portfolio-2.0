@@ -1,14 +1,8 @@
-import { Project, SimpleCard } from '../../types/types';
-import { Card, CardProject } from '../Card/Card';
-import { OddEvenRows, ScrollContainer } from '../Containers/Containers';
+import { Project } from '../../types/types';
+import { CardProject } from '../Card/Card';
+import { OddEvenRows } from '../Containers/Containers';
 
-export default function Projects({
-    projects,
-    smallerProjects,
-}: {
-    projects: Project[];
-    smallerProjects: SimpleCard[];
-}) {
+export default function Projects({ projects }: { projects: Project[] }) {
     return (
         <>
             <OddEvenRows headline="Projects">
@@ -39,21 +33,6 @@ export default function Projects({
                     }
                 )}
             </OddEvenRows>
-
-            <ScrollContainer headline="Took part in">
-                {smallerProjects.map(
-                    ({ headline, slug: link, external, id }) => {
-                        return (
-                            <Card
-                                headline={headline}
-                                slug={link}
-                                external={external}
-                                key={id}
-                            />
-                        );
-                    }
-                )}
-            </ScrollContainer>
         </>
     );
 }
