@@ -230,6 +230,7 @@ p {
 }
 
 p,
+small,
 button,
 ul,
 ol {
@@ -238,6 +239,10 @@ ol {
 
 p {
     margin-bottom: 1rem;
+
+    &:last-child {
+        margin: 0;
+    }
 }
 
 button {

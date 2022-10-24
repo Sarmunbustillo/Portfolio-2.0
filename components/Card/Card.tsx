@@ -10,7 +10,7 @@ import {
 import { useOnVieport } from '../../lib/useOnVieport';
 import styles from './Card.module.scss';
 
-const ArrowIcon = () => {
+const ArrowIcon: React.FC = () => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +29,7 @@ const ArrowIcon = () => {
     );
 };
 
-const Card = ({ headline, slug, external = false }: SimpleCard) => {
+const Card: React.FC<SimpleCard> = ({ headline, slug, external = false }) => {
     if (external) {
         return (
             <a
@@ -63,12 +63,12 @@ const Card = ({ headline, slug, external = false }: SimpleCard) => {
     );
 };
 
-const CardArticlePreview = ({
+const CardArticlePreview: React.FC<PostPreview> = ({
     headline,
     previewText,
     slug,
     external = false,
-}: PostPreview) => {
+}) => {
     if (external) {
         return (
             <a
@@ -103,8 +103,7 @@ const CardArticlePreview = ({
 };
 
 const SnippetImageCSS = { width: '30px', height: 'auto', aspectRatio: '1 /1' };
-
-const CardSnippet = ({
+const CardSnippet: React.FC<SnippetPreview> = ({
     image,
     headline,
     slug,
@@ -144,8 +143,7 @@ const CardSnippet = ({
 };
 
 const CardImageCSS = { width: '100%', height: 'auto' };
-
-const CardProject = ({
+const CardProject: React.FC<Project> = ({
     image,
     headline,
     technologies,
@@ -153,14 +151,15 @@ const CardProject = ({
     workDone,
     slug,
     supportHeadline,
-}: Project) => {
-    const ref = useRef() as React.MutableRefObject<HTMLInputElement>;
+}) => {
+    const ref = useRef() as React.MutableRefObject<HTMLDivElement>;
     const isOnViewport = useOnVieport(ref);
+
     return (
         <div
             ref={ref}
-            className={`${styles.cardProject} ${
-                isOnViewport === true ? styles.animate : ''
+            className={`${styles.cardProject} faded-out ${
+                isOnViewport ? 'fade-in' : ''
             } `}
         >
             <div className={styles.pictures}>
@@ -186,7 +185,7 @@ const CardProject = ({
                     <h3>{headline}</h3>
                 </div>
                 <p>{description}</p>
-                <ul>
+                <ul className="description-list">
                     {workDone.map((list, i) => (
                         <li key={`list-${i}`}>{list}</li>
                     ))}

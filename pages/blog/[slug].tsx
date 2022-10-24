@@ -3,7 +3,7 @@ import { MetaContainer } from '../../components/Containers/Containers';
 import { getAllSpecifiedSlugs, getArticleBySlug } from '../../lib/api';
 import { Post as Article, ParamsParsed } from '../../types/types';
 
-function Article({ article }: { article: Article }) {
+const Article: React.FC<{ article: Article }> = ({ article }) => {
     if (!article)
         return (
             <section>
@@ -31,7 +31,7 @@ function Article({ article }: { article: Article }) {
             </section>
         </MetaContainer>
     );
-}
+};
 
 export async function getStaticPaths() {
     const posts: ParamsParsed[] = await getAllSpecifiedSlugs();
@@ -42,7 +42,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }: ParamsParsed) {
-    const article: Article = await getArticleBySlug(`/blog/${params?.slug}`);
+    const article = await getArticleBySlug(`/blog/${params?.slug}`);
     return {
         props: {
             article,

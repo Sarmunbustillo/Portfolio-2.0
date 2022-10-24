@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import styles from './ToggleTheme.module.scss';
 
-const ToggleTheme = () => {
+const ToggleTheme: React.FC = () => {
     const [toggle, setToggle] = useState('dark');
 
     const triggerToggle = (): void => {

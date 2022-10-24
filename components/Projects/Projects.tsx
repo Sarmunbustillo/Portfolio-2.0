@@ -2,10 +2,10 @@ import { Project } from '../../types/types';
 import { CardProject } from '../Card/Card';
 import { OddEvenRows } from '../Containers/Containers';
 
-export default function Projects({ projects }: { projects: Project[] }) {
+const Projects: React.FC<{ projects: Project[] }> = ({ projects }) => {
     return (
         <>
-            <OddEvenRows headline="Projects">
+            <OddEvenRows headline="Some Things I’ve Built">
                 {projects.map(
                     ({
                         headline,
@@ -35,4 +35,6 @@ export default function Projects({ projects }: { projects: Project[] }) {
             </OddEvenRows>
         </>
     );
-}
+};
+
+export default Projects;

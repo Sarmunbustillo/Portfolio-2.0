@@ -2,15 +2,13 @@ import { Articles, ScrollContainer } from '../Containers/Containers';
 import { Card, CardArticlePreview } from '../Card/Card';
 import { PostPreview, SimpleCard } from '../../types/types';
 
-const BlogLayout = ({
-    demos,
-    posts,
-    ts_series,
-}: {
+type BlogLayoutProps = {
     demos: SimpleCard[];
     posts: PostPreview[];
     ts_series: PostPreview[];
-}) => {
+};
+
+const BlogLayout: React.FC<BlogLayoutProps> = ({ demos, posts, ts_series }) => {
     return (
         <>
             <Articles

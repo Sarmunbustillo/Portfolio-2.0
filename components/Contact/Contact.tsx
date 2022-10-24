@@ -1,6 +1,6 @@
 import styles from './Contact.module.scss';
 
-export default function Contact() {
+const Contact: React.FC = () => {
     return (
         <footer id="contact" className={styles.contact}>
             <h2>Let&#39;s Talk</h2>
@@ -33,4 +33,6 @@ export default function Contact() {
             </div>
         </footer>
     );
-}
+};
+
+export default Contact;

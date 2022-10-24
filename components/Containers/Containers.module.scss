@@ -1,5 +1,10 @@
 @import '../../styles/mixins';
 
+.text {
+    display: grid;
+    gap: clamp(var(--size-4), 5vw, var(--size-5));
+}
+
 .cards {
     position: relative;
     background: var(--brand);

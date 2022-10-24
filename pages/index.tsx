@@ -11,6 +11,7 @@ import allProjects from '../public/data/projects/big-projects.json';
 
 import { shuffle } from '../lib/utils';
 import { getAllSmallDemos, getPreviewArticles } from '../lib/api';
+import Experience from '../components/Experience/Experience';
 
 const Home = ({
     posts,
@@ -36,6 +37,7 @@ const Home = ({
                     );
                 })}
             </CardsGrid>
+            <Experience />
             <Projects projects={projects} />
             <ScrollContainer
                 headline="Demos"
@@ -58,8 +60,8 @@ const Home = ({
 
 export async function getStaticProps() {
     const { projects } = allProjects;
-    const demos: SimpleCard[] = await getAllSmallDemos();
 
+    const demos: SimpleCard[] = (await getAllSmallDemos()) || [];
     const posts: PostPreview[] = (await getPreviewArticles('', 3)) || [];
 
     return {
