@@ -3,14 +3,32 @@ import { useRouter } from 'next/router';
 import { MetaContainerType } from '../../types/types';
 import styles from './Containers.module.scss';
 
-const ScrollContainer = ({
-    headline,
-    text,
-    children,
-}: {
+type ContainerType = {
     headline?: string;
     text?: string;
     children: React.ReactNode;
+};
+
+const TextContainer: React.FC<ContainerType> = ({
+    headline,
+    text,
+    children,
+}) => {
+    return (
+        <section>
+            {headline && (
+                <h2 className={text && styles.headline}>{headline}</h2>
+            )}
+            {text && <p>{text}</p>}
+            <div className={styles.text}>{children}</div>
+        </section>
+    );
+};
+
+const ScrollContainer: React.FC<ContainerType> = ({
+    headline,
+    text,
+    children,
 }) => {
     return (
         <section id="scrollContainer">
@@ -25,15 +43,7 @@ const ScrollContainer = ({
     );
 };
 
-const CardsGrid = ({
-    headline,
-    text,
-    children,
-}: {
-    headline?: string;
-    text?: string;
-    children: React.ReactNode;
-}) => {
+const CardsGrid: React.FC<ContainerType> = ({ headline, text, children }) => {
     return (
         <section id="cards" className={styles.cards}>
             {headline && (
@@ -49,15 +59,7 @@ const CardsGrid = ({
     );
 };
 
-const OddEvenRows = ({
-    headline,
-    text,
-    children,
-}: {
-    headline?: string;
-    text?: string;
-    children: React.ReactNode;
-}) => {
+const OddEvenRows: React.FC<ContainerType> = ({ headline, text, children }) => {
     return (
         <section id="oddEven" className={styles.oddEven}>
             {headline && (
@@ -69,15 +71,7 @@ const OddEvenRows = ({
     );
 };
 
-const Articles = ({
-    headline,
-    text,
-    children,
-}: {
-    headline?: string;
-    text?: string;
-    children: React.ReactNode;
-}) => {
+const Articles: React.FC<ContainerType> = ({ headline, text, children }) => {
     return (
         <section id="articles">
             {headline && (
@@ -134,4 +128,11 @@ const MetaContainer = (props: MetaContainerType) => {
     );
 };
 
-export { ScrollContainer, CardsGrid, OddEvenRows, Articles, MetaContainer };
+export {
+    TextContainer,
+    ScrollContainer,
+    CardsGrid,
+    OddEvenRows,
+    Articles,
+    MetaContainer,
+};

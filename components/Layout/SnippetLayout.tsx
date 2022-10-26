@@ -2,7 +2,9 @@ import { SnippetPreview } from '../../types/types';
 import { CardSnippet } from '../Card/Card';
 import { CardsGrid } from '../Containers/Containers';
 
-const SnippetLayout = ({ snippets }: { snippets: SnippetPreview[] }) => {
+const SnippetLayout: React.FC<{ snippets: SnippetPreview[] }> = ({
+    snippets,
+}) => {
     return (
         <>
             <CardsGrid headline="">

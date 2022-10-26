@@ -6,7 +6,7 @@ interface LayoutProps {
     children: React.ReactNode;
 }
 
-const DefaultLayout = ({ children }: LayoutProps) => {
+const DefaultLayout: React.FC<LayoutProps> = ({ children }) => {
     return (
         <>
             <NavBar />

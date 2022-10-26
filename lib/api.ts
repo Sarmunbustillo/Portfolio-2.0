@@ -1,7 +1,12 @@
+import { ParamsParsed, Post, SimpleCard, SnippetPreview } from '../types/types';
+
 const API_URL = 'https://graphql.datocms.com';
 const API_TOKEN = process.env.NEXT_DATOCMS_API_TOKEN;
 
-async function fetchAPI(query: string, { variables }: any = {}) {
+async function fetchAPI(
+    query: string,
+    { variables }: { variables?: any } = {}
+) {
     const res = await fetch(API_URL, {
         method: 'POST',
         headers: {
@@ -29,7 +34,7 @@ async function fetchAPI(query: string, { variables }: any = {}) {
 export async function getPreviewArticles(
     category: string,
     amount: 'string' | number | undefined
-) {
+): Promise<Post[]> {
     const data = await fetchAPI(
         `
         {
@@ -49,7 +54,9 @@ export async function getPreviewArticles(
     return data?.allArticles;
 }
 
-export async function getArticleBySlug(slug: string | undefined) {
+export async function getArticleBySlug(
+    slug: string | undefined
+): Promise<Post | undefined> {
     if (!slug) return;
     const data = await fetchAPI(
         `
@@ -73,7 +80,7 @@ export async function getArticleBySlug(slug: string | undefined) {
 
 // Snippets
 
-export async function getAllPreviewSnippets() {
+export async function getAllPreviewSnippets(): Promise<SnippetPreview[]> {
     const data = await fetchAPI(
         `
         {
@@ -95,7 +102,9 @@ export async function getAllPreviewSnippets() {
     return data?.allSnippets;
 }
 
-export async function getSnippetBySlug(slug: string | undefined) {
+export async function getSnippetBySlug(
+    slug: string | undefined
+): Promise<Post | undefined> {
     if (!slug) return;
     const data = await fetchAPI(
         `
@@ -114,7 +123,7 @@ export async function getSnippetBySlug(slug: string | undefined) {
 }
 
 // Small Projects
-export async function getAllSmallProjects() {
+export async function getAllSmallProjects(): Promise<SimpleCard[]> {
     const data = await fetchAPI(
         `
         {
@@ -132,7 +141,7 @@ export async function getAllSmallProjects() {
 }
 
 // Demos
-export async function getAllSmallDemos() {
+export async function getAllSmallDemos(): Promise<SimpleCard[]> {
     const data = await fetchAPI(
         `
         {
@@ -150,7 +159,9 @@ export async function getAllSmallDemos() {
 }
 
 // slugs
-export async function getAllSpecifiedSlugs(type = 'allArticles') {
+export async function getAllSpecifiedSlugs(
+    type = 'allArticles'
+): Promise<ParamsParsed[]> {
     const data = await fetchAPI(
         `
         {

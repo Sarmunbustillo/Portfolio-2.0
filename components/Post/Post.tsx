@@ -1,9 +1,10 @@
 import Image from 'next/future/image';
 import styles from './Post.module.scss';
-
 import { Post } from '../../types/types';
+
 const imageCSS = { width: '100%', height: 'auto' };
-function PostHeader({ image, headline }: Omit<Post, 'text'>) {
+
+const PostHeader = ({ image, headline }: Omit<Post, 'text'>) => {
     return (
         <>
             {image && (
@@ -22,14 +23,15 @@ function PostHeader({ image, headline }: Omit<Post, 'text'>) {
             <h1>{headline}</h1>
         </>
     );
-}
-function ArticleBody({ text }: Pick<Post, 'text'>) {
+};
+
+const ArticleBody = ({ text }: Pick<Post, 'text'>) => {
     return (
         <div className={styles.content}>
             <div dangerouslySetInnerHTML={{ __html: text }} />
         </div>
     );
-}
+};
 
 const Post = ({ image, headline, text }: Post) => {
     return (

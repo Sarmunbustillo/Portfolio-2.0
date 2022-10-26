@@ -14,29 +14,7 @@
             },
             "technologies": ["SCSS", "React", "Next", "Vercel"]
         },
-        {
-            "id": "NFT_Market",
-            "headline": "NFT Market",
-            "description": "NFT market place: Buy, sell and transfer NFTs",
-            "slug": "https://nft-market-psi.vercel.app/",
-            "workDone": [
-                "Local blockchain testing environment",
-                "Metamask integration",
-                "Unit tests",
-                "Buy, sell and transfer NFTs logic"
-            ],
-            "image": {
-                "url": "/images/projects/NFT-market.png"
-            },
-            "technologies": [
-                "React",
-                "Next",
-                "vercel",
-                "Solidity",
-                "Typescript",
-                "Tailwind"
-            ]
-        },
+
         {
             "id": "Cafe Rustico",
             "headline": "Cafe Rustico",
@@ -59,6 +37,29 @@
                 "DatoCMS",
                 "Graphql",
                 "SCSS"
+            ]
+        },
+        {
+            "id": "NFT_Market",
+            "headline": "NFT Market",
+            "description": "NFT market place: Buy, sell and transfer NFTs",
+            "slug": "https://nft-market-psi.vercel.app/",
+            "workDone": [
+                "Local blockchain testing environment",
+                "Metamask integration",
+                "Unit tests",
+                "Buy, sell and transfer NFTs logic"
+            ],
+            "image": {
+                "url": "/images/projects/NFT-market.png"
+            },
+            "technologies": [
+                "React",
+                "Next",
+                "vercel",
+                "Solidity",
+                "Typescript",
+                "Tailwind"
             ]
         }
     ]

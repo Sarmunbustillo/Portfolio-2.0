@@ -2,7 +2,10 @@ import Link from 'next/link';
 
 import styles from './NavbarLinks.module.scss';
 
-function NavbarLinks({ toggle }: { toggle: () => void }) {
+type NavbarLinksProps = {
+    toggle: () => void;
+};
+const NavbarLinks: React.FC<NavbarLinksProps> = ({ toggle }) => {
     return (
         <nav aria-label="Main" className={styles.NavbarLinks}>
             <ul>
@@ -45,6 +48,6 @@ function NavbarLinks({ toggle }: { toggle: () => void }) {
             </ul>
         </nav>
     );
-}
+};
 
 export default NavbarLinks;

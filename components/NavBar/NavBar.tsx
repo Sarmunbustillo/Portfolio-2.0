@@ -3,7 +3,7 @@ import NavbarLinks from '../NavbarLinks';
 import ToggleTheme from '../ToggleTheme';
 import { useState } from 'react';
 
-const NavBar = () => {
+const NavBar: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const handleClick = () => {

@@ -28,8 +28,7 @@ function Snippet({ snippet }: { snippet: Snippet }) {
 }
 
 export async function getStaticPaths() {
-    const snippets: ParamsParsed[] =
-        (await getAllSpecifiedSlugs('allSnippets')) || [];
+    const snippets = (await getAllSpecifiedSlugs('allSnippets')) || [];
     return {
         paths: snippets?.map((snippet) => `${snippet.slug}`) || [],
         fallback: false,
@@ -37,9 +36,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }: ParamsParsed) {
-    const snippet: Snippet = await getSnippetBySlug(
-        `/snippets/${params?.slug}`
-    );
+    const snippet = await getSnippetBySlug(`/snippets/${params?.slug}`);
     return {
         props: {
             snippet,

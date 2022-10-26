@@ -1,7 +1,7 @@
 import styles from './Landing.module.scss';
 import Image from 'next/future/image';
 
-export default function Landing() {
+const Landing: React.FC = () => {
     return (
         <section id="landing" className={styles.landing}>
             <div>
@@ -31,4 +31,6 @@ export default function Landing() {
             </div>
         </section>
     );
-}
+};
+
+export default Landing;
