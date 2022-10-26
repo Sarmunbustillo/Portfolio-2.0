@@ -42,15 +42,19 @@ const Experience: React.FC = () => {
                         </li>
                         <li>CMS integration and templating</li>
                         <li>
-                            maintaining and further development of our custom
+                            Maintaining and further development of our custom
                             libraries
                         </li>
+
                         <li>
                             Taking part in the task force group in charge of
                             migrating and upgrading the company&apos;s
-                            technologies to Headless CMS and SPA
+                            technologies and projects to Headless CMS and SPA
                         </li>
-                        <li>Working closely with designers</li>
+                        <li>
+                            Collaborating closely with designers to achieve
+                            pixel perfect designs
+                        </li>
                         <li>
                             Landing pages and product launches with a focus on
                             interactions and animations{' '}
@@ -82,18 +86,23 @@ const Experience: React.FC = () => {
                         <li>
                             Developing and managing client websites and web-apps{' '}
                         </li>
-                        <li>Headless CMS integrations</li>
                         <li>
-                            Modernizing web stack to improve website
-                            performance, have better web vitals, and have an
-                            overall modern look and feel.
+                            Developed, maintained and integrated CMS
+                            integrations and templates for clients
                         </li>
-                        <li>Implementing a pixel perfect redesign</li>
-                        <li>Designing layouts</li>
-                        <li>Enhancing and sustaining client SEO</li>
                         <li>
-                            Concepts and tactics to boost online visibility,
-                            sales, and brand promotion
+                            Modernized web stacks across multiple projects to
+                            improve website performance, have better web vitals,
+                            and have an overall modern look and feel
+                        </li>
+                        <li>
+                            Designed layouts to match the brand look and
+                            implemented them
+                        </li>
+                        <li>Enhanced clients SEO rankings</li>
+                        <li>
+                            Applied concepts and tactics to boost online
+                            visibility, sales, and brand promotion
                         </li>
                     </ul>
                     <p>
@@ -127,6 +136,7 @@ const Experience: React.FC = () => {
                         <li>Fluid Template Engine</li>
                         <li>Typo3 CMS</li>
                         <li>Dato CMS</li>
+                        <li>Git</li>
                     </ul>
                 </div>
             </TextContainer>
