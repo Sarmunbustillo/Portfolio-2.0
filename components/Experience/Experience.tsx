@@ -1,3 +1,4 @@
+'use client';
 import { useRef } from 'react';
 import { useOnVieport } from '../../lib/useOnVieport';
 import { TextContainer } from '../Containers/Containers';
@@ -61,17 +62,16 @@ const Experience: React.FC = () => {
                         </li>
                     </ul>
                     <p>
-                        Have a look{' '}
+                        Have a look at some of the{' '}
                         <b>
                             <a
                                 href="https://www.f7.de/en/projects"
                                 target="_blank"
                                 rel="noreferrer"
                             >
-                                Here
-                            </a>{' '}
+                                projects and clients.
+                            </a>
                         </b>
-                        at some of the projects and clients.
                     </p>
                 </article>
                 <article
@@ -84,7 +84,7 @@ const Experience: React.FC = () => {
 
                     <ul className="description-list">
                         <li>
-                            Developing and managing client websites and web-apps{' '}
+                            Developed and managed client websites and web-apps{' '}
                         </li>
                         <li>
                             Developed, maintained and integrated CMS

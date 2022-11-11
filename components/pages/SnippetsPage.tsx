@@ -1,12 +1,25 @@
-import { SnippetPreview } from '../../types/types';
+'use client';
 import { CardSnippet } from '../Card/Card';
 import { CardsGrid } from '../Containers/Containers';
+import { SnippetPreview } from '../../types/types';
+import Landing from '../Landing';
+import ForceStyles from '../ForceStyles/ForceStyles';
 
-const SnippetLayout: React.FC<{ snippets: SnippetPreview[] }> = ({
+const SnippetsPage: React.FC<{ snippets: SnippetPreview[] }> = ({
     snippets,
 }) => {
     return (
         <>
+            <section>
+                <h1>Snippets</h1>
+                <p>
+                    Here is a collection of useful HTML, CSS and JavaScript
+                    snippets that I have saved for future me or perhaps for
+                    present you.
+                </p>
+            </section>
+            <ForceStyles />
+
             <CardsGrid headline="">
                 {snippets.map(({ image, headline, previewText, slug, id }) => {
                     return (
@@ -24,4 +37,4 @@ const SnippetLayout: React.FC<{ snippets: SnippetPreview[] }> = ({
     );
 };
 
-export default SnippetLayout;
+export default SnippetsPage;

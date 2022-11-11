@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/future/image';
+import Image from 'next/image';
 import { useRef } from 'react';
 import {
     PostPreview,
@@ -50,15 +50,18 @@ const Card: React.FC<SimpleCard> = ({ headline, slug, external = false }) => {
         );
     }
     return (
-        <Link href={slug!}>
-            <a className={styles.card} title={headline} aria-label={headline}>
-                <div>
-                    <span>
-                        <h3 className="h4">{headline}</h3>
-                        <ArrowIcon />
-                    </span>
-                </div>
-            </a>
+        <Link
+            href={slug!}
+            className={styles.card}
+            title={headline}
+            aria-label={headline}
+        >
+            <div>
+                <span>
+                    <h3 className="h4">{headline}</h3>
+                    <ArrowIcon />
+                </span>
+            </div>
         </Link>
     );
 };
@@ -87,22 +90,22 @@ const CardArticlePreview: React.FC<PostPreview> = ({
         );
     }
     return (
-        <Link href={slug!}>
-            <a
-                className={styles.articlePreview}
-                title={headline}
-                aria-label={headline}
-            >
-                <div>
-                    {headline && <h3 className="h4">{headline}</h3>}
-                    {previewText && <p>{previewText}</p>}
-                </div>
-            </a>
+        <Link
+            href={slug!}
+            className={styles.articlePreview}
+            title={headline}
+            aria-label={headline}
+        >
+            <div>
+                {headline && <h3 className="h4">{headline}</h3>}
+                {previewText && <p>{previewText}</p>}
+            </div>
         </Link>
     );
 };
 
 const SnippetImageCSS = { width: '30px', height: 'auto', aspectRatio: '1 /1' };
+
 const CardSnippet: React.FC<SnippetPreview> = ({
     image,
     headline,
@@ -110,34 +113,33 @@ const CardSnippet: React.FC<SnippetPreview> = ({
     previewText,
 }: SnippetPreview) => {
     return (
-        <Link href={slug!}>
-            <a
-                className={styles.Cardsnippet}
-                title={headline}
-                aria-label={headline}
-            >
-                <div>
-                    {headline && <h3 className="h4">{headline}</h3>}
-                    {previewText && <p>{previewText}</p>}
-                    <div className={styles.icons}>
-                        <div className={styles.images}>
-                            {image?.length > 0
-                                ? image?.map((img) => (
-                                      <Image
-                                          src={img.url}
-                                          alt={headline!}
-                                          height="30"
-                                          width="30"
-                                          style={SnippetImageCSS}
-                                          key={img.url}
-                                      />
-                                  ))
-                                : null}
-                        </div>
-                        <ArrowIcon />
+        <Link
+            href={slug!}
+            className={styles.Cardsnippet}
+            title={headline}
+            aria-label={headline}
+        >
+            <div>
+                {headline && <h3 className="h4">{headline}</h3>}
+                {previewText && <p>{previewText}</p>}
+                <div className={styles.icons}>
+                    <div className={styles.images}>
+                        {image?.length > 0
+                            ? image?.map((img) => (
+                                  <Image
+                                      src={img.url}
+                                      alt={headline!}
+                                      height="30"
+                                      width="30"
+                                      style={SnippetImageCSS}
+                                      key={img.url}
+                                  />
+                              ))
+                            : null}
                     </div>
+                    <ArrowIcon />
                 </div>
-            </a>
+            </div>
         </Link>
     );
 };

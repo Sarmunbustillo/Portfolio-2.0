@@ -1,5 +1,5 @@
 import styles from './Landing.module.scss';
-import Image from 'next/future/image';
+import Image from 'next/image';
 
 const Landing: React.FC = () => {
     return (

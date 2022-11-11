@@ -1,16 +1,26 @@
+'use client';
 import { Articles, ScrollContainer } from '../Containers/Containers';
 import { Card, CardArticlePreview } from '../Card/Card';
 import { PostPreview, SimpleCard } from '../../types/types';
+import ForceStyles from '../ForceStyles/ForceStyles';
 
-type BlogLayoutProps = {
+type Props = {
     demos: SimpleCard[];
     posts: PostPreview[];
     ts_series: PostPreview[];
 };
 
-const BlogLayout: React.FC<BlogLayoutProps> = ({ demos, posts, ts_series }) => {
+const BlogPage: React.FC<Props> = ({ demos, posts, ts_series }) => {
     return (
         <>
+            <section>
+                <h1>Writings</h1>
+                <p>
+                    Here is a copilations of some of my posts, demos and
+                    thoughts I&apos;ve done over the past few years.
+                </p>
+            </section>
+            <ForceStyles />
             <Articles
                 headline="Posts"
                 text="Sometimes I like to write articles about Demos I've done or deep dives into technical topics."
@@ -62,4 +72,4 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ demos, posts, ts_series }) => {
     );
 };
 
-export default BlogLayout;
+export default BlogPage;
