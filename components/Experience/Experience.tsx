@@ -84,7 +84,7 @@ const Experience: React.FC = () => {
 
                     <ul className="description-list">
                         <li>
-                            Developing and managing client websites and web-apps{' '}
+                            Developed and managed client websites and web-apps{' '}
                         </li>
                         <li>
                             Developed, maintained and integrated CMS
