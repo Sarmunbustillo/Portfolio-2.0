@@ -61,17 +61,17 @@ const Experience: React.FC = () => {
                         </li>
                     </ul>
                     <p>
-                        Have a look{' '}
+                        Have a look at some of the{' '}
                         <b>
                             <a
                                 href="https://www.f7.de/en/projects"
                                 target="_blank"
                                 rel="noreferrer"
                             >
-                                Here
+                                projects
                             </a>{' '}
                         </b>
-                        at some of the projects and clients.
+                        and clients.
                     </p>
                 </article>
                 <article
