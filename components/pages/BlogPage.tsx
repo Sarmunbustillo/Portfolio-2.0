@@ -2,7 +2,6 @@
 import { Articles, ScrollContainer } from '../Containers/Containers';
 import { Card, CardArticlePreview } from '../Card/Card';
 import { PostPreview, SimpleCard } from '../../types/types';
-import ForceStyles from '../ForceStyles/ForceStyles';
 
 type Props = {
     demos: SimpleCard[];

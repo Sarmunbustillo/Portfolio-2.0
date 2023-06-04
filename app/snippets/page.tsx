@@ -1,6 +1,12 @@
+import { Metadata } from 'next';
 import SnippetsPage from '../../components/pages/SnippetsPage';
 import { getAllPreviewSnippets } from '../../lib/api';
 import { SnippetPreview } from '../../types/types';
+export const metadata: Metadata = {
+    title: 'Snippets',
+    description:
+        'Here is a collection of useful HTML, CSS and JavaScript snippets that I have saved for future me or perhaps for present you.',
+};
 
 export default async function Snippets() {
     const { snippets } = await fetchSnippetsData();

@@ -1,7 +1,14 @@
+import { Metadata } from 'next';
 import BlogPage from '../../components/pages/BlogPage';
 import { getAllSmallDemos, getPreviewArticles } from '../../lib/api';
 import { shuffle } from '../../lib/utils';
 import { PostPreview, SimpleCard } from '../../types/types';
+
+export const metadata: Metadata = {
+    title: 'Blog',
+    description:
+        "Here is a copilations of some of my posts, demos and, thoughts I've done over the past few years.",
+};
 
 export default async function Blog() {
     const { posts, ts_series, demos } = await fetchBlogData();
@@ -25,6 +32,6 @@ async function fetchBlogData() {
     return {
         demos: shuffle(demos),
         posts: webdevPosts || [],
-        ts_series: typescriptPosts || []
+        ts_series: typescriptPosts || [],
     };
 }

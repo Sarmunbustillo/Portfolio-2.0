@@ -9,6 +9,7 @@
 
 :root {
     --border-radius: 4px;
+    --nav-height: 8.3rem;
 
     --brand-light: var(--gray-0);
     --brand-dark: var(--black);
@@ -79,8 +80,6 @@ html {
 body {
     color: var(--color-headline);
     background-color: var(--brand);
-    line-height: var(--line-height);
-
     background-size: cover;
     background-repeat: no-repeat;
     padding: 0;
@@ -94,6 +93,7 @@ body {
         margin: 0 auto;
         min-height: 100vh;
         align-content: space-between;
+        margin-top: var(--nav-height);
 
         > *:is(header, main, footer, div) {
             grid-column: 2;

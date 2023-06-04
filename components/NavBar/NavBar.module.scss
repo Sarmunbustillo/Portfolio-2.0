@@ -1,8 +1,16 @@
 @import '../../styles/mixins';
 
 .navigation {
-    position: sticky;
+    position: fixed;
     top: 0;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: min(
+        calc(100% - var(--size-fluid-4) * 2),
+        calc(var(--container-max-width) - var(--size-fluid-4) * 2)
+    );
+    max-height: var(--nav-height);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,7 +44,7 @@
         @include decive-down(mobile) {
             grid-row: 2;
             position: absolute;
-            top: var(--size-3);
+            top: var(--size-1);
             background-attachment: fixed;
             background-color: var(--nav-bg-overlay);
             width: 100%;
@@ -187,8 +195,13 @@
 
         &:focus-visible,
         &[aria-current='page'] {
-            &::after {
-                opacity: 1;
+            @include decive-up(mobile) {
+                &::after {
+                    opacity: 1;
+                }
+            }
+            @include decive-down(mobile) {
+                color: var(--highlight);
             }
         }
     }

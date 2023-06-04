@@ -2,7 +2,6 @@
 import { CardSnippet } from '../Card/Card';
 import { CardsGrid } from '../Containers/Containers';
 import { SnippetPreview } from '../../types/types';
-import ForceStyles from '../ForceStyles/ForceStyles';
 
 const SnippetsPage: React.FC<{ snippets: SnippetPreview[] }> = ({
     snippets,
