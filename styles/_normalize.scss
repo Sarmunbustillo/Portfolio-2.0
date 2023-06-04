@@ -18,17 +18,21 @@
 :where(html) {
     block-size: 100%;
     font-family: var(--font-family);
-    line-height: var(--font-lineheight-3);
+    line-height: var(--font-lineheight-4);
     -webkit-text-size-adjust: none;
+    font-family: var(--font-poppins);
+    font-size: var(--font-size);
 
     :where(body) {
         min-block-size: 100%;
         scrollbar-gutter: stable both-edges;
+        font-size: var(--font-size-1);
     }
 
     :where(h1, h2, h3, h4, h5, h6) {
         line-height: var(--font-lineheight-1);
         font-weight: var(--font-weight-9);
+        font-family: var(--font-poppins-bold);
     }
 
     :where(h1) {

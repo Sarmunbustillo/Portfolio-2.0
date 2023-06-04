@@ -1,5 +1,6 @@
-import Head from 'next/head';
-import { useRouter } from 'next/router';
+/* eslint-disable @next/next/no-head-element */
+'use client';
+import { usePathname } from 'next/navigation';
 import { MetaContainerType } from '../../types/types';
 import styles from './Containers.module.scss';
 
@@ -59,9 +60,9 @@ const CardsGrid: React.FC<ContainerType> = ({ headline, text, children }) => {
     );
 };
 
-const OddEvenRows: React.FC<ContainerType> = ({ headline, text, children }) => {
+const ProjectGrid: React.FC<ContainerType> = ({ headline, text, children }) => {
     return (
-        <section id="oddEven" className={styles.oddEven}>
+        <section id="grid" className={styles.grid}>
             {headline && (
                 <h2 className={text && styles.headline}>{headline}</h2>
             )}
@@ -84,8 +85,8 @@ const Articles: React.FC<ContainerType> = ({ headline, text, children }) => {
 };
 
 const MetaContainer = (props: MetaContainerType) => {
-    const { children, ...customMeta } = props;
-    const router = useRouter();
+    const { ...customMeta } = props;
+    const pathname = usePathname();
     const meta = {
         title: 'Sarmun Bustillo – Developer, Creator, Writer.',
         description: `Frontend developer, passionate about Javascript, CSS and the Web.`,
@@ -96,34 +97,31 @@ const MetaContainer = (props: MetaContainerType) => {
 
     return (
         <>
-            <Head>
-                <title>{meta.title}</title>
-                <meta name="robots" content="follow, index" />
-                <meta content={meta.description} name="description" />
-                <meta
-                    property="og:url"
-                    content={`https://www.sarmunbustillo.com${router.asPath}`}
-                />
-                <link
-                    rel="canonical"
-                    href={`https://www.sarmunbustillo.com${router.asPath}`}
-                />
-                <meta property="og:type" content={meta.type} />
-                <meta property="og:site_name" content="Sarmun Bustillo" />
-                <meta property="og:description" content={meta.description} />
-                <meta property="og:title" content={meta.title} />
-                <meta property="og:image" content={meta.image} />
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:site" content="@sarmunbustillo" />
-                <meta name="twitter:title" content={meta.title} />
-                <meta name="twitter:description" content={meta.description} />
-                <meta name="twitter:image" content={meta.image} />
-                <meta
-                    name="viewport"
-                    content="width=device-width, initial-scale=1.0"
-                />
-            </Head>
-            {children}
+            <title>{meta.title}</title>
+            <meta name="robots" content="follow, index" />
+            <meta content={meta.description} name="description" />
+            <meta
+                property="og:url"
+                content={`https://www.sarmunbustillo.com${pathname}`}
+            />
+            <link
+                rel="canonical"
+                href={`https://www.sarmunbustillo.com${pathname}`}
+            />
+            <meta property="og:type" content={meta.type} />
+            <meta property="og:site_name" content="Sarmun Bustillo" />
+            <meta property="og:description" content={meta.description} />
+            <meta property="og:title" content={meta.title} />
+            <meta property="og:image" content={meta.image} />
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:site" content="@sarmunbustillo" />
+            <meta name="twitter:title" content={meta.title} />
+            <meta name="twitter:description" content={meta.description} />
+            <meta name="twitter:image" content={meta.image} />
+            <meta
+                name="viewport"
+                content="width=device-width, initial-scale=1.0"
+            />
         </>
     );
 };
@@ -132,7 +130,7 @@ export {
     TextContainer,
     ScrollContainer,
     CardsGrid,
-    OddEvenRows,
+    ProjectGrid,
     Articles,
     MetaContainer,
 };

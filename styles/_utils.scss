@@ -53,6 +53,7 @@
 .button {
     --button-bg: var(--brand);
     --button-color-text: var(--color-headline);
+    font-family: var(--font-poppins-bold);
     box-shadow: var(--shadow-small);
     display: inline-flex;
     justify-content: center;

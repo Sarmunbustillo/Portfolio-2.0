@@ -1,29 +1,19 @@
-import {
-    CardsGrid,
-    MetaContainer,
-    ScrollContainer,
-} from '../components/Containers/Containers';
-import { Card } from '../components/Card/Card';
-import Landing from '../components/Landing/Landing';
-import Projects from '../components/Projects/Projects';
-import { PostPreview, Project, SimpleCard } from '../types/types';
-import allProjects from '../public/data/projects/big-projects.json';
+'use client';
+import { Card } from '../Card/Card';
+import { CardsGrid, ScrollContainer } from '../Containers/Containers';
+import Experience from '../Experience';
+import Landing from '../Landing';
+import Projects from '../Projects';
+import { PostPreview, Project, SimpleCard } from '../../types/types';
 
-import { shuffle } from '../lib/utils';
-import { getAllSmallDemos, getPreviewArticles } from '../lib/api';
-import Experience from '../components/Experience/Experience';
-
-const Home = ({
-    posts,
-    projects,
-    demos,
-}: {
+type Props = {
     posts: PostPreview[];
-    projects: Project[];
     demos: SimpleCard[];
-}) => {
+    projects: Project[];
+};
+const LandingPage: React.FC<Props> = ({ posts, projects, demos }) => {
     return (
-        <MetaContainer>
+        <>
             <Landing />
             <CardsGrid headline="Featured Posts">
                 {posts.map(({ headline, slug, external, id }) => {
@@ -54,23 +44,8 @@ const Home = ({
                     );
                 })}
             </ScrollContainer>
-        </MetaContainer>
+        </>
     );
 };
 
-export async function getStaticProps() {
-    const { projects } = allProjects;
-
-    const demos: SimpleCard[] = (await getAllSmallDemos()) || [];
-    const posts: PostPreview[] = (await getPreviewArticles('', 3)) || [];
-
-    return {
-        props: {
-            posts,
-            projects,
-            demos: shuffle(demos),
-        },
-    };
-}
-
-export default Home;
+export default LandingPage;

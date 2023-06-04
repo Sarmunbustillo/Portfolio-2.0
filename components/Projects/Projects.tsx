@@ -1,11 +1,11 @@
 import { Project } from '../../types/types';
 import { CardProject } from '../Card/Card';
-import { OddEvenRows } from '../Containers/Containers';
+import { ProjectGrid } from '../Containers/Containers';
 
 const Projects: React.FC<{ projects: Project[] }> = ({ projects }) => {
     return (
         <>
-            <OddEvenRows headline="Some Things I’ve Built">
+            <ProjectGrid headline="Some Things I’ve Built">
                 {projects.map(
                     ({
                         headline,
@@ -32,7 +32,7 @@ const Projects: React.FC<{ projects: Project[] }> = ({ projects }) => {
                         );
                     }
                 )}
-            </OddEvenRows>
+            </ProjectGrid>
         </>
     );
 };

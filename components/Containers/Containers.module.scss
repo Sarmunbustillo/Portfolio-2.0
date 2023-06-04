@@ -39,7 +39,7 @@
         max-width: calc(100vw - var(--size-fluid-4) * 2);
         overflow-x: auto;
         overscroll-behavior-inline: contain;
-        scroll-padding: 0 50%;
+        // scroll-padding: 0 50%;
         scroll-snap-type: x mandatory;
         padding: var(--size-2) 0 var(--size-6);
 
@@ -53,7 +53,7 @@
     }
 }
 
-.oddEven {
+.grid {
     position: relative;
     background: var(--brand);
 
@@ -65,6 +65,7 @@
         gap: clamp(var(--size-8), 10vw, var(--size-10));
     }
 }
+
 .articlePreview {
     display: grid;
     gap: var(--size-4);

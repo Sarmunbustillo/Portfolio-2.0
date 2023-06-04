@@ -1,4 +1,4 @@
-import Image from 'next/future/image';
+import Image from 'next/image';
 import styles from './Post.module.scss';
 import { Post } from '../../types/types';
 
@@ -12,8 +12,8 @@ const PostHeader = ({ image, headline }: Omit<Post, 'text'>) => {
                     <Image
                         className={styles.introImage}
                         src={image?.url}
-                        height={image?.height}
-                        width={image?.width}
+                        height={image?.height as number | `${number}`}
+                        width={image?.width as number | `${number}`}
                         alt={headline!}
                         sizes="100vw"
                         style={imageCSS}

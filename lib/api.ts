@@ -111,6 +111,7 @@ export async function getSnippetBySlug(
             {
                 snippet(filter: {slug: {in: "${slug}"}}) {
                     headline
+                    previewText
                     text(markdown: true)
                     slug
                     id

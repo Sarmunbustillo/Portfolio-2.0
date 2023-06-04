@@ -52,6 +52,5 @@ export type ParamsParsed = {
 };
 
 export type MetaContainerType = {
-    children?: JSX.Element | JSX.Element[];
-    [key: string]: any;
+    [key: string]: string;
 };

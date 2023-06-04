@@ -1,9 +1,7 @@
 @import '../../styles/mixins';
 
-[data-theme='light'] {
-    .card {
-        background: var(--linear-gradient-3);
-    }
+.force {
+    display: block;
 }
 
 .card {
@@ -212,5 +210,10 @@
         @include decive-down(mobile) {
             flex-direction: column;
         }
+    }
+}
+[data-theme='light'] {
+    .card {
+        background: var(--linear-gradient-3);
     }
 }

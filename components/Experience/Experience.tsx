@@ -40,6 +40,9 @@ const Experience: React.FC = () => {
                             performance in order to have better web vitals as
                             well as SEO
                         </li>
+                        <li>
+                            Improving accessibility and usability of websites
+                        </li>
                         <li>CMS integration and templating</li>
                         <li>
                             Maintaining and further development of our custom
