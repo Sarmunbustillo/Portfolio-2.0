@@ -7,28 +7,6 @@
 @import 'shadows';
 @import 'utils';
 
-@font-face {
-    font-family: 'Poppins';
-    src: url('/fonts/Poppins-Regular.woff2') format('woff2');
-    font-style: normal;
-    font-weight: 400;
-    font-display: optional;
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-        U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,
-        U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-    font-family: 'Poppins';
-    src: url('/fonts/Poppins-Bold.woff2') format('woff2');
-    font-style: normal;
-    font-weight: 700;
-    font-display: optional;
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-        U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,
-        U+2215, U+FEFF, U+FFFD;
-}
-
 :root {
     --border-radius: 4px;
 
@@ -49,7 +27,6 @@
     --highlight: var(--indigo-4);
     --highlight-lighter: var(--indigo-3);
     --highlight-darker: var(--indigo-5);
-    --line-height: var(--font-lineheight-4);
 
     @include decive-down(mobile) {
         --nav-bg-overlay: var(--brand);
@@ -65,7 +42,6 @@
 
 html {
     box-sizing: border-box;
-    font-size: var(--font-size);
 }
 
 *,
@@ -103,11 +79,8 @@ html {
 body {
     color: var(--color-headline);
     background-color: var(--brand);
-    font-family: var(--font-family);
     line-height: var(--line-height);
-    font-size: var(--font-size-1);
-    font-weight: 400;
-    /* background-image: url('/images/glasses.jpg'); */
+
     background-size: cover;
     background-repeat: no-repeat;
     padding: 0;
@@ -190,7 +163,6 @@ h3,
     @include decive-down(tablet) {
         font-size: var(--font-size-4);
         margin-bottom: var(--size-2);
-        line-height: var(--line-height);
     }
     @include decive-down(mobile) {
         font-size: var(--font-size-3);
@@ -243,11 +215,6 @@ p {
     &:last-child {
         margin: 0;
     }
-}
-
-button {
-    font-family: var(--font-family);
-    line-height: var(--line-height);
 }
 
 img {

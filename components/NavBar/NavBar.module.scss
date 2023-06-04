@@ -185,7 +185,8 @@
             }
         }
 
-        &:focus-visible {
+        &:focus-visible,
+        &[aria-current='page'] {
             &::after {
                 opacity: 1;
             }

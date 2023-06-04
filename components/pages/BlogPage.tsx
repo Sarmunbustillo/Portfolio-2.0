@@ -20,7 +20,7 @@ const BlogPage: React.FC<Props> = ({ demos, posts, ts_series }) => {
                     thoughts I&apos;ve done over the past few years.
                 </p>
             </section>
-            <ForceStyles />
+
             <Articles
                 headline="Posts"
                 text="Sometimes I like to write articles about Demos I've done or deep dives into technical topics."

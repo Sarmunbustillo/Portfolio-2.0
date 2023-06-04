@@ -2,7 +2,7 @@
     /* Font */
     --font-mono: Dank Mono, Operator Mono, Inconsolata, Fira Mono, ui-monospace,
         SF Mono, Monaco, Droid Sans Mono, Source Code Pro, monospace;
-    --font-family: 'Poppins', sans-serif;
+    --font-family: var(--font-poppins);
     --font-size: 62.5%; /*16px*/
     --font-weight-1: 100;
     --font-weight-2: 200;

@@ -3,6 +3,7 @@ import ToggleTheme from '../ToggleTheme';
 import { useState } from 'react';
 import Link from 'next/link';
 import styles from './NavBar.module.scss';
+import { usePathname } from 'next/navigation';
 
 const NavBar: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -42,40 +43,36 @@ type NavbarLinksProps = {
     toggle: () => void;
 };
 
+const links = [
+    { href: '/', label: 'Home' },
+    { href: '/blog', label: 'Blog' },
+    { href: '/snippets', label: 'Snippets' },
+];
+
 const NavbarLinks: React.FC<NavbarLinksProps> = ({ toggle }) => {
+    const pathname = usePathname();
+
     return (
         <nav aria-label="Main" className={styles.NavbarLinks}>
             <ul>
-                <li>
-                    <Link
-                        href="/"
-                        title="home"
-                        aria-label="home"
-                        onClick={toggle}
-                    >
-                        Home
-                    </Link>
-                </li>
-                <li>
-                    <Link
-                        href="/blog"
-                        title="blog"
-                        aria-label="blog"
-                        onClick={toggle}
-                    >
-                        Blog
-                    </Link>
-                </li>
-                <li>
-                    <Link
-                        href="/snippets"
-                        title="snippets"
-                        aria-label="snippets"
-                        onClick={toggle}
-                    >
-                        snippets
-                    </Link>
-                </li>
+                {links.map((link) => {
+                    const isActive = pathname === link.href;
+
+                    return (
+                        <li key={link.href}>
+                            <Link
+                                href={link.href}
+                                title={link.label}
+                                aria-label={link.label}
+                                onClick={toggle}
+                                aria-current={isActive ? 'page' : undefined}
+                            >
+                                {link.label}
+                            </Link>
+                        </li>
+                    );
+                })}
+
                 <li>
                     <a
                         href="https://github.com/Sarmunbustillo/Portfolio-2.0"

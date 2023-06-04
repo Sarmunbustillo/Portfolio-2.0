@@ -4,6 +4,21 @@ import '../styles/globals.scss';
 import Contact from '../components/Contact';
 import NavBar from '../components/NavBar';
 import Script from 'next/script';
+import localFont from 'next/font/local';
+
+const poppins = localFont({
+    src: './Poppins-Regular.woff2',
+    weight: '400',
+    variable: '--font-poppins',
+    display: 'swap',
+});
+
+const poppinsBold = localFont({
+    src: './Poppins-Bold.woff2',
+    weight: '700',
+    variable: '--font-poppins-bold',
+    display: 'swap',
+});
 
 export default function RootLayout({
     // Layouts must accept a children prop.
@@ -13,7 +28,10 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html lang="en">
+        <html
+            lang="en"
+            className={` ${poppins.className} ${poppins.variable} ${poppinsBold.variable}`}
+        >
             <head>
                 <Script
                     strategy="lazyOnload"
@@ -28,7 +46,7 @@ export default function RootLayout({
                         `}
                 </Script>
 
-                <link
+                {/* <link
                     rel="preload"
                     href="/fonts/Poppins-Regular.woff2"
                     as="font"
@@ -41,7 +59,7 @@ export default function RootLayout({
                     as="font"
                     type="font/woff2"
                     crossOrigin="anonymous"
-                />
+                /> */}
                 <link
                     rel="apple-touch-icon"
                     sizes="180x180"

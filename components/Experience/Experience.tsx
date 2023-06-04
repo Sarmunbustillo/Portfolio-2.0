@@ -1,4 +1,3 @@
-'use client';
 import { useRef } from 'react';
 import { useOnVieport } from '../../lib/useOnVieport';
 import { TextContainer } from '../Containers/Containers';
@@ -69,9 +68,10 @@ const Experience: React.FC = () => {
                                 target="_blank"
                                 rel="noreferrer"
                             >
-                                projects and clients.
-                            </a>
+                                projects
+                            </a>{' '}
                         </b>
+                        and clients.
                     </p>
                 </article>
                 <article

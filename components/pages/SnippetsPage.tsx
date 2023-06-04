@@ -2,7 +2,6 @@
 import { CardSnippet } from '../Card/Card';
 import { CardsGrid } from '../Containers/Containers';
 import { SnippetPreview } from '../../types/types';
-import Landing from '../Landing';
 import ForceStyles from '../ForceStyles/ForceStyles';
 
 const SnippetsPage: React.FC<{ snippets: SnippetPreview[] }> = ({
@@ -18,7 +17,6 @@ const SnippetsPage: React.FC<{ snippets: SnippetPreview[] }> = ({
                     present you.
                 </p>
             </section>
-            <ForceStyles />
 
             <CardsGrid headline="">
                 {snippets.map(({ image, headline, previewText, slug, id }) => {
