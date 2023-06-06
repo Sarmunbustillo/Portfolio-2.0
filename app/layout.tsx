@@ -6,6 +6,7 @@ import NavBar from '../components/NavBar';
 import Script from 'next/script';
 import localFont from 'next/font/local';
 import { Metadata } from 'next';
+import { Analytics } from '@vercel/analytics/react';
 
 const poppins = localFont({
     src: './Poppins-Regular.woff2',
@@ -74,7 +75,6 @@ export const metadata: Metadata = {
     viewport: {
         width: 'device-width',
         initialScale: 1,
-        maximumScale: 1,
     },
 };
 
@@ -135,6 +135,7 @@ export default function RootLayout({
                     <main>{children}</main>
                     <Contact />
                 </div>
+                <Analytics />
             </body>
         </html>
     );
