@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import Post from '../../../components/Post';
+import Post from '../../../components/Post/Post';
 import { getAllSpecifiedSlugs, getSnippetBySlug } from '../../../lib/api';
 import { ParamsParsed, Post as Snippet } from '../../../types/types';
 
@@ -17,8 +17,6 @@ export async function generateMetadata({
     params: ParamsParsed;
 }): Promise<Metadata | undefined> {
     const snippet = await getSnippetBySlug(`/snippets/${params?.slug}`);
-
-    console.log(snippet);
 
     if (!snippet) {
         return;

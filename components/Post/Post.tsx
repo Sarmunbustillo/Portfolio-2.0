@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styles from './Post.module.scss';
-import { Post } from '../../types/types';
+import type { Post } from '../../types/types';
 
 const imageCSS = { width: '100%', height: 'auto' };
 
