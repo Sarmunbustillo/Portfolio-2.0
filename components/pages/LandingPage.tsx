@@ -15,6 +15,8 @@ const LandingPage: React.FC<Props> = ({ posts, projects, demos }) => {
     return (
         <>
             <Landing />
+            <Experience />
+            <Projects projects={projects} />
             <CardsGrid headline="Featured Posts">
                 {posts.map(({ headline, slug, external, id }) => {
                     return (
@@ -27,8 +29,6 @@ const LandingPage: React.FC<Props> = ({ posts, projects, demos }) => {
                     );
                 })}
             </CardsGrid>
-            <Experience />
-            <Projects projects={projects} />
             <ScrollContainer
                 headline="Demos"
                 text="Little demos I've built to learn from and teach others"

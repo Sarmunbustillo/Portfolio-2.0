@@ -36,31 +36,26 @@ const Experience: React.FC = () => {
                             modern technologies
                         </li>
                         <li>
-                            Constantly improving websites and web-apps
-                            performance in order to have better web vitals as
-                            well as SEO
+                            Optimizing Web Core Vitals, SEO, and accessibility
                         </li>
-                        <li>
-                            Improving accessibility and usability of websites
-                        </li>
+                        <li>Enhancing UX</li>
                         <li>CMS integration and templating</li>
+                        <li>
+                            Landing pages and product launches with a focus on
+                            interactions and animations{' '}
+                        </li>
                         <li>
                             Maintaining and further development of our custom
                             libraries
-                        </li>
-
-                        <li>
-                            Taking part in the task force group in charge of
-                            migrating and upgrading the company&apos;s
-                            technologies and projects to Headless CMS and SPA
                         </li>
                         <li>
                             Collaborating closely with designers to achieve
                             pixel perfect designs
                         </li>
                         <li>
-                            Landing pages and product launches with a focus on
-                            interactions and animations{' '}
+                            Taking part in the task force group in charge of
+                            migrating and upgrading the company&apos;s
+                            technologies and projects to Headless CMS and SPA
                         </li>
                     </ul>
                     <p>
@@ -102,10 +97,8 @@ const Experience: React.FC = () => {
                             Designed layouts to match the brand look and
                             implemented them
                         </li>
-                        <li>Enhanced clients SEO rankings</li>
                         <li>
-                            Applied concepts and tactics to boost online
-                            visibility, sales, and brand promotion
+                            Enhanced clients SEO rankings and user experience
                         </li>
                     </ul>
                     <p>
@@ -139,6 +132,8 @@ const Experience: React.FC = () => {
                         <li>Fluid Template Engine</li>
                         <li>Typo3 CMS</li>
                         <li>Dato CMS</li>
+                        <li>Accessibility</li>
+                        <li>SEO</li>
                         <li>Git</li>
                     </ul>
                 </div>

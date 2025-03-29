@@ -8,10 +8,11 @@ const Landing: React.FC = () => {
                 <div className={styles.descripton}>
                     <h1>Sarmun Bustillo</h1>
                     <p>
-                        I&#39;m a Frontend Web-Dev based in Hamburg devoted to
-                        crafting exceptional web experiences. Currently, I am
-                        focused on building accessible, stylish and meaningful
-                        web products.
+                        I&#39;m a senior web developer devoted to crafting
+                        exceptional web experiences. Currently, I am focused on
+                        building accessible, stylish and meaningful web
+                        products. As a Web Developer, I strive to create
+                        memorable web experiences.
                     </p>
                     <span className="button-wrapper-border">
                         <a href="mailto:sarmun.b@gmail.com" className="button ">

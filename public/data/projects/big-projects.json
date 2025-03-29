@@ -1,13 +1,35 @@
 {
     "projects": [
         {
+            "id": "Registration System (internal only)",
+            "headline": "Registration System",
+            "description": "Collaborated on building a global registration system for an interfaith organization",
+            "slug": "",
+            "workDone": [
+                "Developed and optimized dynamic registration forms for user-friendly experience",
+                "Implemented responsive UI/UX design ensuring seamless functionality across devices",
+                "Automated data reports",
+                "Ensured accessibility compliance and best practices for inclusive design"
+            ],
+            "image": {
+                "url": "/images/projects/registration-system.jpeg"
+            },
+            "technologies": [
+                "Svelte",
+                "Sveltekit",
+                "Typescript",
+                "Tailwind",
+                "MongoDB"
+            ]
+        },
+        {
             "id": "Language_Service_Solutions",
             "headline": "Language Service Solutions",
-            "description": "LSS provides translation and interpretation services as well as consulting around language services.",
+            "description": "Implemented and maintained a pixel-perfect front-end design for the LSS website, ensuring responsiveness and design consistency based on provided assets.",
             "slug": "https://languageservicesolutions.com/services",
             "workDone": [
                 "Modernized web stack to improve website performance, have better web vitals, and overall modern look and feel",
-                "implemented a pixel perfect redesign"
+                "implemented a pixel perfect re-design"
             ],
             "image": {
                 "url": "/images/projects/LSS.png"
@@ -16,16 +38,14 @@
         },
 
         {
-            "id": "Cafe Rustico",
+            "id": "Cafe Rustico (currently closed)",
             "headline": "Cafe Rustico",
-            "description": "Colombian Coffee shop and restaurant ",
-            "slug": "https://www.caferustico.page/",
+            "description": "Designed, developed, and integrated a user-friendly CMS to streamline content management, enabling the cafe to easily update and maintain their website.",
+            "slug": "https://cafe-rustico.vercel.app/",
             "workDone": [
-                "Design layout",
+                "Led UI/UX design for an engaging, user-friendly website ",
                 "Design implementation",
-                "Web vitals",
-                "Concept and strategies to increase online precense, sells and brand marketing",
-                "CMS integration"
+                "Integrated a Content Management System (CMS) for easy website updates and content management"
             ],
             "image": {
                 "url": "/images/projects/Cafe-rustico.png"
@@ -37,29 +57,6 @@
                 "DatoCMS",
                 "Graphql",
                 "SCSS"
-            ]
-        },
-        {
-            "id": "NFT_Market",
-            "headline": "NFT Market",
-            "description": "NFT market place: Buy, sell and transfer NFTs",
-            "slug": "https://nft-market-psi.vercel.app/",
-            "workDone": [
-                "Local blockchain testing environment",
-                "Metamask integration",
-                "Unit tests",
-                "Buy, sell and transfer NFTs logic"
-            ],
-            "image": {
-                "url": "/images/projects/NFT-market.png"
-            },
-            "technologies": [
-                "React",
-                "Next",
-                "vercel",
-                "Solidity",
-                "Typescript",
-                "Tailwind"
             ]
         }
     ]
