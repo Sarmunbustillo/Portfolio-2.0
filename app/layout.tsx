@@ -68,14 +68,15 @@ export const metadata: Metadata = {
         },
     },
     icons: {
-        shortcut: 'favicon/favicon.ico',
+        shortcut: '/favicon/favicon.ico',
     },
-    themeColor: 'dark',
     manifest: '/manifest.json',
-    viewport: {
-        width: 'device-width',
-        initialScale: 1,
-    },
+};
+
+export const viewport = {
+    width: 'device-width',
+    initialScale: 1,
+    themeColor: 'dark',
 };
 
 export default function RootLayout({
@@ -107,27 +108,27 @@ export default function RootLayout({
                 <link
                     rel="apple-touch-icon"
                     sizes="180x180"
-                    href="favicon/apple-touch-icon.png"
+                    href="/favicon/apple-touch-icon.png"
                 />
                 <link
                     rel="icon"
                     type="image/png"
                     sizes="32x32"
-                    href="favicon/favicon-32x32.png"
+                    href="/favicon/favicon-32x32.png"
                 />
                 <link
                     rel="icon"
                     type="image/png"
                     sizes="16x16"
-                    href="sfavicontatic/favicon-16x16.png"
+                    href="/favicon/favicon-16x16.png"
                 />
                 <link
                     rel="icon"
                     type="image/png"
                     sizes="16x16"
-                    href="favicon/favicon.ico"
+                    href="/favicon/favicon.ico"
                 />
-                <link rel="manifest" href="favicon/site.webmanifest" />
+                <link rel="manifest" href="/favicon/site.webmanifest" />
             </head>
             <body>
                 <div>

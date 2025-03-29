@@ -154,8 +154,10 @@ const CardProject: React.FC<Project> = ({
     slug,
     supportHeadline,
 }) => {
-    const ref = useRef() as React.MutableRefObject<HTMLDivElement>;
-    const isOnViewport = useOnVieport(ref);
+    const ref = useRef<HTMLDivElement | null>(null);
+    const isOnViewport = useOnVieport(
+        ref as React.MutableRefObject<HTMLElement>
+    );
 
     return (
         <div

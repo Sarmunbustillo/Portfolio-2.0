@@ -3,14 +3,22 @@ import { useOnVieport } from '../../lib/useOnVieport';
 import { TextContainer } from '../Containers/Containers';
 
 const Experience: React.FC = () => {
-    const refF7 = useRef() as React.MutableRefObject<HTMLElement>;
-    const refFr = useRef() as React.MutableRefObject<HTMLElement>;
-    const refTc = useRef() as React.MutableRefObject<HTMLDivElement>;
-    const refLg = useRef() as React.MutableRefObject<HTMLDivElement>;
-    const isOnViewportF7 = useOnVieport(refF7);
-    const isOnViewportFr = useOnVieport(refFr);
-    const isOnViewportTc = useOnVieport(refTc);
-    const isOnViewportLg = useOnVieport(refLg);
+    const refF7 = useRef<HTMLElement | null>(null);
+    const refFr = useRef<HTMLElement | null>(null);
+    const refTc = useRef<HTMLDivElement | null>(null);
+    const refLg = useRef<HTMLDivElement | null>(null);
+    const isOnViewportF7 = useOnVieport(
+        refF7 as React.MutableRefObject<HTMLElement>
+    );
+    const isOnViewportFr = useOnVieport(
+        refFr as React.MutableRefObject<HTMLElement>
+    );
+    const isOnViewportTc = useOnVieport(
+        refTc as React.MutableRefObject<HTMLElement>
+    );
+    const isOnViewportLg = useOnVieport(
+        refLg as React.MutableRefObject<HTMLElement>
+    );
 
     return (
         <>
@@ -110,7 +118,7 @@ const Experience: React.FC = () => {
 
             <TextContainer
                 headline="Technologies"
-                text="Here are a few technologies I’ve been working recently:"
+                text="Here are a few technologies I've been working recently:"
             >
                 <div
                     ref={refTc}

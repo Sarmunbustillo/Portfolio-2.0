@@ -11,11 +11,12 @@ export async function generateStaticParams() {
     }));
 }
 
-export async function generateMetadata({
-    params,
-}: {
-    params: ParamsParsed;
-}): Promise<Metadata | undefined> {
+export async function generateMetadata(
+    props: {
+        params: Promise<ParamsParsed>;
+    }
+): Promise<Metadata | undefined> {
+    const params = await props.params;
     const snippet = await getSnippetBySlug(`/snippets/${params?.slug}`);
 
     if (!snippet) {
@@ -52,11 +53,12 @@ export async function generateMetadata({
     };
 }
 
-export default async function SingleSnippet({
-    params,
-}: {
-    params: ParamsParsed;
-}) {
+export default async function SingleSnippet(
+    props: {
+        params: Promise<ParamsParsed>;
+    }
+) {
+    const params = await props.params;
     const snippet = await getSnippetBySlug(`/snippets/${params?.slug}`);
     if (!snippet)
         return (
