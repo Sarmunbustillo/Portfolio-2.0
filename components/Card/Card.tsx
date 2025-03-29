@@ -37,7 +37,6 @@ const Card: React.FC<SimpleCard> = ({ headline, slug, external = false }) => {
                 target="_blank"
                 href={slug}
                 title={headline}
-                aria-label={headline}
                 rel="noreferrer"
             >
                 <div>
@@ -50,12 +49,7 @@ const Card: React.FC<SimpleCard> = ({ headline, slug, external = false }) => {
         );
     }
     return (
-        <Link
-            href={slug!}
-            className={styles.card}
-            title={headline}
-            aria-label={headline}
-        >
+        <Link href={slug!} className={styles.card} title={headline}>
             <div>
                 <span>
                     <h3 className="h4">{headline}</h3>
@@ -79,7 +73,6 @@ const CardArticlePreview: React.FC<PostPreview> = ({
                 target="_blank"
                 href={slug}
                 title={headline}
-                aria-label={headline}
                 rel="noreferrer"
             >
                 <div>
@@ -90,12 +83,7 @@ const CardArticlePreview: React.FC<PostPreview> = ({
         );
     }
     return (
-        <Link
-            href={slug!}
-            className={styles.articlePreview}
-            title={headline}
-            aria-label={headline}
-        >
+        <Link href={slug!} className={styles.articlePreview} title={headline}>
             <div>
                 {headline && <h3 className="h4">{headline}</h3>}
                 {previewText && <p>{previewText}</p>}
@@ -113,12 +101,7 @@ const CardSnippet: React.FC<SnippetPreview> = ({
     previewText,
 }: SnippetPreview) => {
     return (
-        <Link
-            href={slug!}
-            className={styles.Cardsnippet}
-            title={headline}
-            aria-label={headline}
-        >
+        <Link href={slug!} className={styles.Cardsnippet} title={headline}>
             <div>
                 {headline && <h3 className="h4">{headline}</h3>}
                 {previewText && <p>{previewText}</p>}

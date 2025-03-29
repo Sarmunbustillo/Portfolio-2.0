@@ -63,7 +63,6 @@ const NavbarLinks: React.FC<NavbarLinksProps> = ({ toggle }) => {
                             <Link
                                 href={link.href}
                                 title={link.label}
-                                aria-label={link.label}
                                 onClick={toggle}
                                 aria-current={isActive ? 'page' : undefined}
                             >
